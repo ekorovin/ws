@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<head>
+	 <title>Identity Access Management | Simeio Solutions</title>
+	 <!--#include file="includes/head.html" -->    
+  
+</head>
+<body id="home-page" class="simeio">
+    <!-- Static navbar -->
+    
+<div class="container" id="page-container"> 
+
+<!--#include file="includes/nav.html" -->
+
+    
+    <!-- Carousel
+    ================================================== -->
+    
+    <div id="simeio-carousel" class="carousel slide row w-font"  data-ride="carousel" id="simeio-carousel" data-interval="3000">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#simeio-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#simeio-carousel" data-slide-to="1"></li>
+        <li data-target="#simeio-carousel" data-slide-to="2"></li>
+        <li data-target="#simeio-carousel" data-slide-to="3"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active" id="slide1">
+          <img src="/images/hero_home_1_1.jpg" alt="First slide">
+
+          <div class="carousel-caption">
+              <h1 class="font-brand">Simeio Solutions <small>Secure Identity, Intelligently Managed</small></h1>
+                  <p class="hidden-xs">Complete end-to-end Identity and Access Management (IAM) services and solutions. Plus the power of Simeio IIC<sup>TM</sup>.</p>
+          </div>
+
+        </div>
+        <div class="item" id="slide2">
+        <img src="/images/hero_home_1_2.jpg" alt="Second slide">
+        <div class="carousel-caption">
+              			<h1><small class="font-brand"><strong>Gartner's</strong> Magic Quadrant Report for IDaaS positions Simeio as a</small>Niche Player</h1>
+              				<p class="font-brand hidden-xs text-right"><i>"Niche vendors may be best for your needs."</i></p>
+              				<a class="view-more" href="#" >Read the press release</a>
+            		</div>
+                    
+        </div>
+        <div class="item" id="slide3">
+          <img src="/images/hero_home_1_3.jpg" alt="Third slide">
+               
+                    <div class="carousel-caption">
+              			<h1>Simeio IIC<sup>TM</sup><small>Identity Intelligence Center</small></h1>
+              			<p class="hidden-xs">
+                        The unique, powerful, all-in-one Identity and Access Management (IAM) solution.</p>
+              			<a href="simeio-iic.shtml" class="view-more font-brand">Learn More</a>	
+            		</div>
+                    
+              			
+                 
+        </div>
+        <div class="item" id="slide4">
+          <img src="/images/hero_home_1_4.jpg" alt="Fourth slide">
+                
+            		<div class="carousel-caption">
+              			<h1>Oracle Excellence Award <img src="/images/award_winner_banner.png" alt="Winner"/></h1>
+              				<p class="hidden-xs">Simeio named 2013 Specialized Partner of the Year</p>
+              				<a class="view-more" href="#">Read the press release</a>
+            		</div>
+        </div>
+        
+      </div>
+      <span class="left carousel-control"><a href="#simeio-carousel" data-slide="prev" class="glyphicon glyphicon-chevron-left">&nbsp;</a></span>
+      <span class="right carousel-control"><a href="#simeio-carousel" data-slide="next" class="glyphicon glyphicon-chevron-right">&nbsp;</a></span>
+    </div><!-- /.carousel -->
+       
+ <!--- ====================
+ /////////  page nav
+ -->      
+       <ul class="row page-nav up-down">       
+        <li><a href="#page-item1">Overview</a></li>
+        <li><a href="#page-item2">Expert Managed Services</a></li>
+        <li><a href="#page-item3">Business-Ready IAM Cloud</a></li>
+        <li><a href="#page-item4">Professional Services</a></li>
+      </ul> 
+ <!--- ====================
+ /////////  end of page nav
+ -->   	
+ <div class="page-accordion">    
+    <h2 class="squeezhead accord-sty">Overview</h2>        
+    
+        <div class="row w-font banner-blue squeezecnt" id="page-item1">
+        	<div class="col-sm-6 col-md-6 pic">
+           
+            <img src="/images/pic_simeio_IIC.jpg" alt="Simeio IIC Identity Intelligence Center" class="sm-video" />
+            <div class="clearfix"><a href="https://www.youtube.com/watch?v=Vd38A6008J0" ><img src="/images/button_play_video.png" alt="Simeio IIC Identity Intelligence Center, click to play video" class="sm-video" /></a>
+				</div>            
+            </div>
+            <div class="col-sm-6 col-md-6 txt">
+            <h2>Taking IAM to an entirely new level</h2>
+            
+            <p><strong>Simeio Identity Intelligence Center<sup>TM</sup></strong> (IIC) is the first and only solution designed to operate, monitor and defend your enterprise Identity and Access Management (IAM) infrastructure, and to leverage that infrastructure to deliver actionable business intelligence.</p>
+            
+<p>Simeio IIC is a powerful combination of cutting-edge and proprietary IAM technologies backed by a team of highly skilled professionals. It enables us to take the delivery of IAM services to an entirely new level.</p>
+
+<p><a href="simeio-iic.shtml" class="h4">Learn more</a></p>
+            </div>
+        </div>
+        
+  <!-- .accordion start -->
+	
+    <h2 class="squeezhead accord-sty">Expert Managed Services</h2>        
+        <div class="row banner squeezecnt" id="page-item2">
+             <div class="col-sm-6 pic"><img src="/images/pic_simeio_managed_services_1a.png" /></div>
+            <div class="col-sm-6 txt">
+            <h2 class="main">Expert Managed Services <small>Powered by Simeio IIC<sup>TM</sup></small></h2>
+            
+            <p>Whether on-premise or remotely managed, we can handle the complete, end-to-end management of your Identity and Access Management (IAM) infrastructure, including:</p>
+            <ul>
+              <li>Reliable 24/7 support</li>
+              <li>Day-to-day operations such as infrastructure sizing, development, integration and implementation</li>
+              <li>Solution architecture and design</li>
+              <li>Technology evaluation and recommendation</li>
+              <li>Project management</li>
+              </ul>
+              <p><a class="btn btn-lg btn-primary" href="expert-managed-services.shtml" role="button">Learn more</a></p>
+            </div>   
+        </div>
+     <h2 class="squeezhead accord-sty">Business-Ready IAM Cloud</h2>        
+        <div class="row banner squeezecnt" id="page-item3">  
+             <div class="col-sm-6 pic"><img src="/images/pic_simeio_identity_as_a_service.png" /></div>
+            <div class="col-sm-6 txt">
+            <h2 class="main">Business-Ready IAM Cloud: Identity-as-a-Service<small>Powered by Simeio IIC<sup>TM</sup></small></h2>           
+            <p>Get a secure, reliable and feature-rich IAM solution while freeing your businesses from the cost and distraction of maintaining your own infrastructure.</p>
+            <p>Our Business-Ready IAM Cloud delivers on the promise of Identity-as-a-Service (IaaS). It eliminates the large investment required to deploy and maintain an IAM infrastructure: the hardware costs, in many cases the software licenses, and all the configurations and integrations in between. It eliminates ongoing maintenance and upgrade costs, too.
+              </p>
+              <p><a class="btn btn-lg btn-primary" href="business-ready-iam-cloud.shtml" role="button">Learn more</a></p>
+            </div>   
+        </div>
+
+     <h2 class="squeezhead accord-sty">Professional Services</h2>        
+        <div class="row banner squeezecnt" id="page-item4">    
+             <div class="col-sm-6 pic"><img src="/images/pic_simeio_proservices.png" alt="Professional Services"/></div>
+            <div class="col-sm-6 txt">
+            <h2 class="main">Professional Services<small>Your partner from planning to implementation.</small></h2>
+           
+            <p>From IAM strategy and assessment to complete solution implementation, the Simeio IIC team of highly skilled and experienced professionals has got you covered.</p> 
+            <p>Our approach is highly flexible and always tailored to meet your specific needs. We offer proven methodologies and quick-start modules that can lower project costs, speed implementation and help assure your project's success.</p>
+              <p><a class="btn btn-lg btn-primary" href="professional-services.shtml" role="button">Learn more</a></p>
+            </div>   
+        </div>  
+
+ </div>
+ <!-- end of page accordion -->
+        
+         <section class="banner pixset">
+         	<div class="row">
+            	<div class="col-md-12">
+                <h2>Customers</h2>
+             	</div>
+              </div>
+             <div class="row">
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_cust__alberta_health_services.jpg" alt="Alberta Health Services"></div>
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_cust_abn_amro_clearing.jpg" alt="ABN AMRO Clearing"></div>
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_cust_abt associates.jpg" alt="Abt Associates"></div>
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_cust_aerojet.jpg" alt="Aerojet Rocketdyne"></div>
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_cust_aglc.jpg" alt="AGLC - Alberta Gaming & Liquor Comission"></div>
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_cust_asurion.jpg" alt="Asurion"></div>              
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_cust_baptist_health.jpg" alt="Baptist Health South Florida"></div>
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_cust_barclays.jpg" alt="Barclays"></div> 
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_cust_best western.jpg" alt="Best Western"></div>
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_cust_bnpparibas.jpg" alt="BNP Paribas"></div>
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_cust_ca.jpg" alt="Ca Technologies"></div>
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_cust_cargolux.jpg" alt="Cargolux"></div>              
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_cust_cfa.jpg" alt="CFA Institute"></div>
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_cust_csf.jpg" alt="CSF"></div>
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_cust_deutsche bank.jpg" alt="Deutsche Bank USA"></div>
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_cust_efh.jpg" alt="Energy Future Holdings"></div>
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_cust_flatirons_solutions.jpg" alt="Flatirons Solutions"></div>  
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_cust_graco.jpg" alt="Graco"></div>
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_cust_home_depot.jpg" alt="Home Depot"></div>
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_cust_icbc.jpg" alt="ICBC"></div>
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_cust_inova.jpg" alt="INOVA"></div>  
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_cust_jefferies.jpg" alt="Jefferies"></div>
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_cust_pega_systems.jpg" alt="Pega Systems"></div>
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_cust_ping_identity.jpg" alt="Ping Identity"></div>           
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_cust_raintree.jpg" alt="RainTree"></div>
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_cust_sony_electronics.jpg" alt="Sony Electronics"></div>  
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_cust_sony_pictures.jpg" alt="Sony Pictures"></div>
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_cust_sony_playstation.jpg" alt="Sony Playstation"></div>
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_cust_td_bank_bank.jpg" alt="TD Bank"></div>            
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_cust_ul.jpg" alt="UL"></div>
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_cust_uOttawa.jpg" alt="uOttawa"></div>
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_cust_vantiv.jpg" alt="Vantiv"></div>  
+             
+            </div>
+        </section>  
+        
+        <section class="banner pixset">
+         	<div class="row">
+            	<div class="col-lg-12">
+                <h2>Partners</h2>
+             	</div>
+              </div>
+             <div class="row">
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_partner_alien_vault_160x120.png" alt="Alien Vault"></div>
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_partner_blinqa_160x120.png" alt="Blinqa"></div>
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_partner_ca_technologies_160x120.png" alt="Ca Technologies"></div>
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_partner_cyberark_160x120.png" alt="Cyberark"></div>
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_partner_dell_160x120.png" alt="Dell"></div>
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_partner_forgerock_160x120.png" alt="Forgerock"></div> 
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_partner_oracle_160x120.png" alt="Oracle"></div>
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_partner_ping_identity_160x120.png" alt="Ping Identity"></div> 
+             <div class="col-xs-6 col-sm-3 col-md-2 partners"><img src="/images/logo_partner_radiant_160x120.png" alt="Radiant Logic"></div>
+            </div> 
+        </section> 
+        
+    <section class="banner pixset">
+         	<div class="row">
+            	<div class="col-lg-12">
+                <h2>Analysts</h2>
+             	</div>
+              </div>
+             <div class="row">
+             <div class="col-xs-6  col-md-offset-3 col-sm-offset-2 col-sm-3 col-md-2 partners"><img src="/images/logo_analyst_forrester.jpg" alt="Forrester"></div>
+             <div class="col-xs-6 col-md-2 col-sm-3 partners"><img src="/images/logo_analyst_gartner.jpg" alt="Gartner"></div>
+             <div class="col-xs-6 col-md-2 col-sm-3 partners"><img src="/images/logo_analyst_kuppingercole.jpg" alt="Ca Kuppingercole"></div>
+            </div> 
+        </section>       
+        
+        
+        <section class="bottom-cols">     
+        	
+             <div class="row">
+             <div class="col-xs-12 col-sm-6">
+             <ul class="bottom-links"> 
+             	<li class="header"><h3><a href="#">News</a></h3></li>
+                <!--#include file="includes/newsfeed.html" --> 
+                             
+             </ul>
+             </div>
+            <!-- NO BLOG FOR NOW
+             <div class="col-xs-12 col-md-4">
+             <ul class="bottom-links"> 
+             	<li class="header"><h3><a href="#">Blog</a></h3></li>
+                <li class="hidden-xs"><p>News Bit 1 Link Nullam consequat, urna nec iaculis hendrerit, massa justo condimentum nunc, a fringilla magna metus in.</p>
+                <a href="#" class="read-more">Read more</a> <date>June 12, 2014</date>
+                </li>
+                <li class="hidden-xs"><p>News Bit 1 Link Nullam consequat, urna nec iaculis hendrerit, massa justo condimentum nunc, a fringilla magna metus in.</p>
+                <a href="#" class="read-more">Read more</a> <date>June 12, 2014</date>
+                </li>
+                <li class="hidden-xs"><p>News Bit 1 Link Nullam consequat, urna nec iaculis hendrerit, massa justo condimentum nunc, a fringilla magna metus in.</p>
+                <a href="#" class="read-more">Read more</a> <date>June 12, 2014</date>
+                </li>               
+             </ul>             
+             </div>
+             
+             -->
+             <div class="col-xs-12 col-sm-6">
+             <ul class="bottom-links"> 
+             	<li class="header"><h3><a href="#">Careers</a></h3></li>
+                <!--#include file="includes/jobsfeed.html" --> 
+                              
+             </ul>
+             
+             </div>
+            </div> 
+        </section>  
+  <div class="row">    
+  	<div class="col-sm-12 bottom-banner">
+    	<div>
+    		<img src="/images/oow-tk-bn-728x90-2221001.jpg">
+        </div>
+    </div>
+  </div>  
+        
+<!--#include file="includes/footer.html" -->   
+ 
+
+<p id="back-top">
+	<a href="#top"><span></span>Back to Top</a>
+</p>
+  </div>
+  
+
+<!-- Video / Generic Modal -->
+<div class="modal fade" id="mediaModal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+<!-- content dynamically inserted -->
+			</div>
+		</div>
+	</div>
+</div>
+
+
+    
+<!--[if lt IE 9]>
+<script src="/js/respond.min.js"></script>
+<![endif]--> 
+</body>
+</html>

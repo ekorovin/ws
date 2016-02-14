@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<head>
+	 <title>Press Release: Simeio Solutions Announces DirectAxs Hosted Identity Services for Canada</title>
+
+<!--#include file="includes/head.html" -->    
+
+</head>
+<body id="pr-page" class="simeio reg smpl">
+    <!-- Static navbar -->
+    
+<div class="container" id="page-container"> 
+
+<!--#include file="includes/nav.html" -->
+
+<section class="row">
+<div class="col-md-12">
+<img src="/images/banner_divider.png" class="section-divider" alt="section divider"/>  
+</div> 
+	<div class="col-md-12 txt">
+    <h1>Simeio Solutions Announces DirectAxs Hosted Identity Services for Canada</h1>
+    
+<p>Toronto – July 27, 2012 – Simeio Solutions (<a href="http://www.inmage.com/">www.simeiosolutions.com</a>) today announced the newest version of its flagship DirectAxs Hosted Identity SaaS offering for Canada. Based on pay-as-you-go subscription pricing, DirectAxs combines essential identity and access management (IAM) and governance, risk and compliance (GRC) capabilities into one package that can be deployed at a fraction of the time and cost of a traditional IAM or GRC implementation. Customers can choose to have DirectAxs fully hosted and managed by Simeio offsite or on-premise using an appliance. DirectAxs is ideal for both small to medium-sized and large organizations with 500-100,000 users.</p>
+<p>DirectAxs offers the following services:</p>
+<ul class="unordered">
+<li>Identity Administration</li>
+<li>Access Request</li>
+<li>Web Access Management</li>
+<li>Compliance Management</li>
+<li>Role Management</li>
+<li>Directory</li>
+<li>IT GRC</li>
+</ul>
+<p>“Traditional IAM implementations are process and labor intensive, which significantly drives up their costs,” said Asif Savvas, Associate Partner, Simeio Solutions. “The specific skill sets needed to install and integrate these products can be expensive, and the time to realize the return on investment can be long.”</p>
+<p>Sustainability is also an issue with ongoing operational costs such as support and upgrade. These are all compelling reasons why Fortune 500, federal, provincial and local government customers are deploying packaged and hosted IAM solutions such as DirectAxs, reducing the time to rollout from months to weeks.</p>
+<p>Recently, Simeio Solutions was among the select companies that Forrester Research, Inc., invited to participate in its July 19, 2012 report, “The Forrester Wave ™: Enterprise Cloud Identity and Access Management, Q3 2012: Six Vendors That Matter Most and How They Stack Up.” In this evaluation, Simeio Solutions was cited as a Strong Performer.</p>
+<p>“We are very proud to have been selected for inclusion in this prestigious Forrester Wave report and cited as a Strong Performer,” said Simeio Solutions Managing Partner Hemen Vimadalal.  “Forrester Research is one of the preeminent research and advisory firms in the world, and we know that the marketplace relies on them for independent insight to make important strategic and product decisions.”</p>
+<p>Additional features of DirectAxs include:</p>
+<ul class="unordered">
+<li>Identity management, role management, compliance management and GRC in one package</li>
+<li>Simple-to-use IAM capabilities leveraging best-of-breed vendor products</li>
+<li>Quick three-step deployment process to reduce customer costs exponentially</li>
+<li>Service-based approach without the need to upgrade and sustain the solution</li>
+<li>Directory services in the cloud and sync with on-premise directories</li>
+<li>Architected for multi-tenancy, scalability, reliability, fault tolerance and disaster recovery</li>
+<li>All data encrypted with customer-specific encryption keys and 3DES encryption</li>
+<li>Support for SAML &amp; SPML standards</li>
+<li>Pay-as-you-go subscription pricing and reduced infrastructure requirements</li>
+<li>Comprehensive integration, management and reporting of the IAM implementation</li>
+</ul>
+<p>For information on Simeio Solutions, visit <a href="http://www.simeiosolutions.com">www.simeiosolutions.com</a>.</p>
+					
+</div>
+
+</section>     
+ 
+       
+<!--#include file="includes/footer.html" -->    
+
+<p id="back-top">
+	<a href="#top"><span></span>Back to Top</a>
+</p>
+</div>
+ 
+
+<!--[if lt IE 9]>
+<script src="/js/respond.min.js"></script>
+<![endif]--> 
+</body>
+</html>

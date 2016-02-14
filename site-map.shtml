@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<head>
+	 <title>Site Map | Identity Access Management | Simeio Solutions</title>
+
+<!--#include file="includes/head.html" -->    
+
+</head>
+<body id="sitemap-page" class="simeio reg">
+    <!-- Static navbar -->
+    
+<div class="container" id="page-container"> 
+
+<!--#include file="includes/nav.html" -->
+
+<section>
+<img src="/images/banner_divider.png" class="section-divider" alt="section divider"/>   
+	<div class="row">
+    	<div class="col-md-12 txt">
+    		<h1>Site Map</h1>     
+		</div>
+	</div>
+    <div class="row">
+    	<div class="col-md-12 txt">
+    		  <ul class="site-map">
+              	<li><a href="index.shtml" class="sitemap-link">Home</a> – Simeio Solutions offers complete end-to-end Identity and Access Management (IAM) services and solutions, plus the power of Simeio IICTM.</li>
+                <li><a href="expert-managed-services.shtml" class="sitemap-link">Expert Managed Services</a> – Our Expert Managed Services, powered by Simeio IICTM, can transform the way you deliver security and identity. Whether on-premise or remotely managed, we can handle the complete, end-to-end management of your IAM infrastructure. </li>
+                <li><a href="professional-services.shtml" class="sitemap-link">Professional Services</a> – From strategy to implementation, Simeio Solutions delivers successful IAM solutions with highly flexible and tailored approach to meet the needs of each specific customer.</li>
+                <li><a href="business-ready-iam-cloud.shtml" class="sitemap-link">Business-Ready IAM Cloud</a> – Simeio Solutions Business-Ready IAM Cloud provides a simple and low-cost alternative to building and maintaining your own IAM infrastructure.</li>
+                <li><a href="simeio-iic.shtml" class="sitemap-link">Simeio IICTM</a> – Simeio Identity Intelligence Center is the first and only solutions of its kind designed specifically to operate, monitor and defend complex, multi-vendor IAM infrastructures to deliver actionable business intelligence.				</li>
+                <li><a href="company.shtml" class="sitemap-link">Company - About Us</a> – Simeio Solutions is a unique strategic partner offering a comprehensive suite of enterprise IAM resources designed to provide a fully integrated solutions that meets the specific needs of each client. 
+					<ul>
+                    	<li><a href="leadership.shtml" class="sitemap-link">Leadership</a> – Simeio Solutions' leadership team.</li>
+                        <li><a href="awards.shtml" class="sitemap-link">Awards</a> – Simeo Solutions ‘ awards and recognitions.</li>
+                        <li><a href="careers.shtml" class="sitemap-link">Careers</a> – Careers at Simeio solutions.</li>
+                   </ul>
+				</li>
+                <li><a href="news-press.shtml" class="sitemap-link">News</a> – Simeio Solutions' newsletters and relevant press releases.</li>
+                <li><a href="resources.shtml" class="sitemap-link">Resources</a> – Simeio Solutions' resources include case studies, webinars, whitepapers & reports and data sheets.
+                <!--
+                <ul>
+                	<li><a href="expert-managed-services.shtml" class="sitemap-link">Case studies – Request a Simeio case study.</li>
+                    <li><a href="expert-managed-services.shtml" class="sitemap-link">Whitepapers and Reports</a> – Request Simeio whitepapers and reports.</li>
+                    <li><a href="expert-managed-services.shtml" class="sitemap-link">Data sheets</a> – Simeio Solutions' data sheet archive.</li>
+                 </ul>
+                 -->
+				</li>
+                <li><a href="contact-us.shtml" class="sitemap-link">Contact Us</a> – Simeio Solutions' contact form, information and office location map.</li>
+              </ul>   
+		</div>
+	</div>
+    
+    
+</section>     
+ 
+       
+<!--#include file="includes/footer.html" -->    
+
+<p id="back-top">
+	<a href="#top"><span></span>Back to Top</a>
+</p>
+</div>
+ 
+
+<!--[if lt IE 9]>
+<script src="/js/respond.min.js"></script>
+<![endif]--> 
+</body>
+</html>
