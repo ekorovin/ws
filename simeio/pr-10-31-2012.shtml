@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<head>
+	 <title>Press Release: Simeio Solutions Included in Cloud-Based IAM Sourcing Report by Independent Research Firm</title>
+
+<!--#include file="includes/head.html" -->    
+
+</head>
+<body id="pr-page" class="simeio reg smpl">
+    <!-- Static navbar -->
+    
+<div class="container" id="page-container"> 
+
+<!--#include file="includes/nav.html" -->
+
+<section class="row">
+<div class="col-md-12">
+<img src="/images/banner_divider.png" class="section-divider" alt="section divider"/>  
+</div> 
+	<div class="col-md-12 txt">
+    <h1>Simeio Solutions Included in Cloud-Based IAM Sourcing Report by Independent Research Firm</h1>
+    
+<p><strong>Hoboken, NJ – November 1, 2012</strong> – Simeio Solutions, provider of a comprehensive suite of enterprise Identity and Access Management (IAM) resources designed to offer a fully integrated solution, has been included in a September 2012 report from Forrester Research, Inc., entitled “Source Your Identity and Access Management Capabilities” with the subtitle “Build/Buy Capabilities: The Identity and Access Management Playbook.”</p>
+<p>The report looks at cloud-based IAM as a potentially cost-effective alternative in four categories:</p>
+<p>• IAM for SaaS that allows users to access and manage cloud-based business applications<br />
+• IAM as SaaS that moves provisioning into the cloud<br />
+• IAM to SaaS that integrates on-premises IAM solutions with SaaS business applications<br />
+• Federation broker networks that align partners in a federated IAM network</p>
+<p>Simeio is shown as active in all of the first three categories.</p>
+<p>The report also offers a self-assessment tool to assist security and risk professionals in weighting and quantifying several criteria to help guide a buy/build decision for the most effective cloud-based IAM solution.</p>
+<p>“Cloud-based IAM can offer significant advantages in situations where capital resources or internal staffing is limited vs. an on-premises implementation,” said Simeio Solutions Managing Partner Hemen Vimadalal. “We are pleased to have been included in this valuable Forrester Research report and applaud them for developing a tool for helping to evaluate which cloud-based approach may be the best fit.”</p>
+<p>Simeio Solutions is a unique strategic partner offering a comprehensive suite of enterprise Identity and Access Management resources designed to provide a fully integrated solution that meets the specific needs of each client. The company’s single-source approach to IAM encompasses managed services (both on-premise and remotely managed), cloud-based identity-as-a-service, and professional services that ensure on-target, smooth and cost-effective system design and implementation.</p>
+<p>For information on Simeio Solutions, visit www.simeiosolutions.com</p>
+<p>###</p>
+<p>About Simeio Solutions<br />
+Simeio Solutions, LLC is a systems integration and compliance services company specializing in enterprise security consulting. Simeio provides business process, implementation, managed services and software-as-a-service (SaaS) in the areas of identity and access management (IAM), role-based access controls (RBAC), and IT governance, risk and compliance (IT-GRC). Simeio is headquartered in Hoboken, New Jersey, and currently provides services to numerous Fortune 1000 companies. www.simeiosolutions.com</p>	
+</div>
+
+</section>     
+ 
+       
+<!--#include file="includes/footer.html" -->    
+
+<p id="back-top">
+	<a href="#top"><span></span>Back to Top</a>
+</p>
+</div>
+ 
+
+<!--[if lt IE 9]>
+<script src="/js/respond.min.js"></script>
+<![endif]--> 
+</body>
+</html>

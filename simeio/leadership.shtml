@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<head>
+	 <title>Leadership | Identity Access Management | Simeio Solutions</title>
+
+<!--#include file="includes/head.html" -->    
+
+</head>
+<body id="leadership-page" class="simeio reg">
+    <!-- Static navbar -->
+    
+<div class="container" id="page-container"> 
+
+<!--#include file="includes/nav.html" -->
+    
+    <!-- Hero and subhero
+    ================================================== -->
+    
+    
+<section class="hero brand">
+	<div class="row w-font">
+    <div class="col-xs-3 col-sm-3"><img src="/images/bkg_banner_leadership.png" /></div>
+	<div class="col-xs-9 col-sm-9 txt">
+		<h2>Leadership</h2>
+     </div>
+	</div>
+</section>
+
+ <!--End of Hero and subhero
+    ================================================== -->     
+ <!-- 
+  <ul class="row page-nav up-down narrow">
+	<li><a href="#page-item1">Overview</a></li>
+	<li><a href="#page-item2">Executive Team</a></li>
+</ul>
+-->
+  
+
+  
+   
+
+
+  <section class="company">	
+<!--
+    <div class="col-xs-12 section-head">
+    	<h2>Executive Team</h2>
+    </div>
+ -->
+ <div class="row pic-txt-set">
+		<div class="col-xs-12 col-sm-3 pic">
+        <img src="/images/team_hemen.jpg" alt="Hemen Vimadalal photo" class="thumb-info"/></div>
+        <div class="col-xs-12 col-sm-9 txt">
+        	<h4>Hemen Vimadalal<small>Managing Partner / CEO</small></h4> 
+            <section class="collapse-group"> 
+        	<p>Hemen Vimadalal is the Managing Partner / CEO at Simeio Solutions and the identity and access management (IAM) practice lead for Simeio Solutions. He drives the vision and overall business strategy for Simeio Solutions.</p>
+            <section class="collapse">
+            <p>He was with VAAU from its inception where he helped establish the company to be positioned as the leader in the identity management industry. He has led many assessments and end-to-end implementations of role-based access control, user provisioning, identity auditing, identity certification, access control, web services, directory and password management products.</p> 
+            
+            <p>Recognized as a thought leader in the identity management space, he regularly speaks at professional conferences and has published several whitepapers around IAM. In addition, he is knowledgeable about the regulatory and compliance requirements of Sarbanes-Oxley, HIPAA, GLBA, and similar statutes as they relate to user provisioning, administration, access control and segregation of duties.</p>
+            </section>
+            <p>
+            	<a href="#" class="rm-collapse read-more">Read more</a>
+            </p>
+		</section>
+        </div>
+  </div> 
+   <div class="row pic-txt-set">     
+        <div class="col-xs-12 col-sm-3 pic">
+        <img src="/images/team_naynesh.jpg" alt="Naynesh Patel photo" class="thumb-info"/> </div>            
+        <div class="col-xs-12 col-sm-9 txt">
+        	 <h4>Naynesh Patel<small>Partner</small></h4>
+            <section class="collapse-group">
+            
+            
+        	<p>Naynesh Patel is a Partner with Simeio Solutions. In his position, he will shape and guide Simeio’s business strategies and operations, as well as lead the company’s technology and product direction.</p>
+            <section class="collapse">
+            
+            <p>He joins Simeio from KPMG LLP, where he served as practice director and Americas leader for identity and access management (IAM) services. During his tenure with KPMG, he led the development of, and served in a national instructor capacity, for the global delivery methodology around identity and access management.</p>
+             <p>Naynesh has over 15 years of experience in the implementation, strategy, design and assessment of identity and access management solutions for clients in the telecom, retail, energy, automotive, pharmaceutical, food and beverage, entertainment, financial services and insurance sectors. He is a frequent speaker at industry conferences and holds a Bachelor’s degree in Computer Science from Kennesaw State University.</p>			
+             </section>
+            <p>
+            	<a href="#" class="rm-collapse read-more">Read more</a>
+            </p>
+             
+             
+             
+             </section>
+        </div>
+    
+	</div>
+    
+    
+  <div class="row pic-txt-set">
+		<div class="col-xs-12 col-sm-3 pic">
+        <img src="/images/team_shawn.jpg" alt="Shawn Keve photo" class="thumb-info"/></div>
+        <div class="col-xs-12 col-sm-9 txt">
+        	<h4>Shawn Keve<small>Partner</small></h4>  
+            <section class="collapse-group">   
+          <p>Shawn Keve is a Partner with Simeio Solutions. He plays a key role in helping to grow Simeio’s business and to expand Simeio’s mindshare in the marketplace.</p>
+          <section class="collapse">
+          <p>Most recently, he was Consulting Director at Oracle and Director of Professional Services for Sun Microsystems prior to Oracle’s acquisition of Sun. He was responsible for the Sales and Delivery of a nearly $100M portfolio of IT services. Before joining Sun, he was part of Netscape eCommerce Solutions (acquired by AOL), KPMG Consulting, and MIT Lincoln Laboratory. Shawn has over 18 years of experience in the strategy, architecture, design, and implementation of enterprise solutions across several industries, including financial services, health care and life sciences, manufacturing, media and entertainment, telecommunications, and retail. He holds a Bachelor of Science degree in Business Administration (Management Information Systems) from Northeastern University.</p>
+			</section>
+            <p>
+            	<a href="#" class="rm-collapse read-more">Read more</a>
+            </p>
+             </section>
+        </div>
+  </div>    
+  
+     <div class="row pic-txt-set">  
+         <div class="col-xs-12 col-sm-3 pic">
+        <img src="/images/team_asif.jpg" alt="Asif Savvas photo" class="thumb-info"/> </div>                   
+        <div class="col-xs-12 col-sm-9 txt">
+        	 <h4>Asif Savvas<small>Associate Partner</small></h4>
+             <section class="collapse-group">
+        	<p>Asif Savvas is an Associate Partner with Simeio Solutions. He is responsible for sales and delivery for the Simeio Canada IAM practice. Prior to joining Simeio, Asif held responsibility for delivery of identity solutions across Canada at Oracle/Sun.</p>
+            <section class="collapse">
+<p>At Oracle, he contributed to growing the identity footprint in Canada. Asif played a unique role of a solutions advisor to some of Oracle’s largest customers in Canada. He joined Sun as part of the Vaau acquisition where he played a vital role in establishing the Vaau Role Management Product (now renamed Oracle Identity Analytics) as an industry leader in the areas of Role Management and Compliance. He has worked across North America serving clients in the Utility, energy, telecommunications, and financial services industries and is seen as thought leader in the areas of Identity Management, RBAC and Compliance.</p>
+<p>He holds a B.Tech in Information Technology from Madras University and an MBA from The University of British Columbia’s, Sauder School of Business.</p>
+        </section>
+            <p>
+            	<a href="#" class="rm-collapse read-more">Read more</a>
+            </p>
+             </section>
+        
+        </div> 
+	</div>
+ 
+     <div class="row pic-txt-set">  
+         <div class="col-xs-12 col-sm-3 pic">
+        <img src="/images/team_debbie.jpg" alt="Debbie Cuadros photo" class="thumb-info"/> </div>                   
+        <div class="col-xs-12 col-sm-9 txt">
+        	 <h4>Debbie Cuadros<small>Associate Partner</small></h4>
+             <section class="collapse-group">
+        	<p>Debbie Cuadros is an Associate Partner with Simeio Solutions. She is responsible for identifying new revenue and partnership opportunities, in addition to building Simeio’s existing partner base.</p>
+            <section class="collapse">
+			<p>Debbie is a recognized thought leader in user provisioning implementations, including business process remediation and other operational enhancements. She is a frequent speaker at industry conferences including Digital ID World, Gartner Identity and Access Management Summit, Burton Catalyst Conference and CA World. During her career, Debbie has led multiple large-scale implementations for user provisioning, role-based access control, audit and compliance from both the client and vendor partner sides.</p> 
+            <p>She holds a Master of Arts in Organizational Leadership and Organizational Change Management from Chapman University.</p>
+            </section>
+            <p>
+            	<a href="#" class="rm-collapse read-more">Read more</a>
+            </p>
+             </section>
+        </div> 
+	</div>  
+    
+       <div class="row pic-txt-set">  
+         <div class="col-xs-12 col-sm-3 pic">
+        <img src="/images/team_abhimanyu.jpg" alt="Abhimanyu Yadav photo" class="thumb-info"/></div>                   
+        <div class="col-xs-12 col-sm-9 txt">
+        	 <h4>Abhimanyu Yadav<small>Vice President U.K.</small></h4>
+             <section class="collapse-group">
+             <p>Abhimanyu is a Vice President with Simeio responsible for sales and delivery of the Security practice in Europe. He is a recognized thought leader in the areas of roles and compliance management.</p>
+             <section class="collapse">
+			<p>Prior to joining Simeio, he led the Global Technical Enablement team at Oracle and Sun, which provides strategic technical pre-sales and advisory services across the security portfolio for premier customers worldwide. Abhimanyu also has over six years experience in the assessment, strategy, design and implementation of identity and access management solutions for clients in the financial services, telecom, transportation and insurance sectors.</p>
+            </section>
+            <p>
+            	<a href="#" class="rm-collapse read-more">Read more</a>
+            </p>
+             </section>
+        </div> 
+	</div>     
+   
+        <div class="row pic-txt-set">  
+         <div class="col-xs-12 col-sm-3 pic">
+        <img src="/images/team_jeanne.jpg" alt="Jeanne Maguire photo" class="thumb-info"/> </div>                   
+        <div class="col-xs-12 col-sm-9 txt">
+        	 <h4>Jeanne Maguire<small>Director of Operations</small></h4>
+             <section class="collapse-group">     
+              <p>Jeanne Maguire is the Director of Operations for Simeio Solutions. Her areas of responsibility include overall management of operations, including human resources, accounts receivable, project tracking, customer relations, payroll and consultant personnel services.</p>
+              <section class="collapse">
+              <p>Jeanne brings more than 12 years of financial operations leadership experience and a track record of success to Simeio Solutions. She is a proactive, strategic thinker whose skills contribute to the efficient, systematic and profitable operation of the company’s consulting department. Jeanne’s background includes all areas of human resources, personnel training and management, financial processing and reporting.</p>
+			</section>
+            <p>
+            	<a href="#" class="rm-collapse read-more">Read more</a>
+            </p>
+             </section>
+        </div> 
+	</div> 
+     
+</section>
+
+ 
+
+ 
+
+
+<!--#include file="includes/contact-form.html" -->        
+        
+<!--#include file="includes/footer.html" -->    
+
+<p id="back-top">
+	<a href="#top"><span></span>Back to Top</a>
+</p>
+
+</div>
+ 
+
+<!--[if lt IE 9]>
+<script src="/js/respond.min.js"></script>
+<![endif]--> 
+</body>
+</html>

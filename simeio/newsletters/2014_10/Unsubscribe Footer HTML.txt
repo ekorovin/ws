@@ -1,0 +1,11 @@
+<tr>
+    <td width="10">
+      <img alt="" border="0" height="1" src="http://www.simeiosolutions.com/newsletters/2013_10/images/a.gif" width="1" />
+    </td>
+    <td colspan="2" width="100%">
+      <font color="#545454" face="Geneva, Arial, Helvetica, sans-serif" size="1">You are receiving this email at @@@email@@@ because you have opted in to receive emails from Simeio Solutions. If you no longer wish to receive communications from Simeio, click <a href="@@@dndurl@@@" target="_blank">here</a>.</font>
+    </td>
+    <td width="10">
+      <img alt="" border="0" height="1" src="http://www.simeiosolutions.com/newsletters/2013_10/images/a.gif" width="1" />
+    </td>
+    </tr>
