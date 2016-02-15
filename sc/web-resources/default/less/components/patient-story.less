@@ -1,0 +1,834 @@
+/* Patient Story Component */
+/* variables */
+@lightCherry: #a42124;
+@cherry: #8c1515;
+@magenta: #ff2e35;
+@white: #ffffff;
+@grayMedium: #dddddd;
+@bx-pager-inactive: #bfbfbf;
+@tab-border: #939293;
+@tab-font-color: #4d4d4f;
+
+.patient-story {
+    /* Default mobile first styles */
+    /* makes bg images scale with div size */
+    .bgSize(@width, @height) {
+        background-size: @width @height;
+        -webkit-background-size: @width @height;
+        -moz-background-size: @width @height;
+        -o-background-size: @width @height;
+    }
+    
+    .sharing {
+	   &.visible-phone {
+			margin: 0 20px; 
+	   }
+	}
+
+    .panel {
+//        max-height: 526px;
+        background-color: @white;
+        overflow: hidden;
+
+        // custom panel css: home
+        &.home {
+
+            .slide, .desktop-slide {
+                position: relative;
+
+                .info {
+                    h1 {
+                        font-family: 'BrandonGrotesqueBlack';
+                        font-size: 18px;
+                        font-weight: bold;
+                        margin: 15px 20px 15px 20px;
+                        color: @grayDark;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+
+        &.read-his-story .inner-panel {
+            z-index: 1;
+
+            .slide {
+                
+                .inner-slide {
+                    display: block;
+                    position: relative;
+                    width: 80%;
+                }
+            }
+
+            .bx-viewport .bxslider {
+
+                .slide {
+                    .inner-slide {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+
+        // custom panels css: meet the team & how we helped
+        &.meet-team .inner-panel, &.how-we-helped .inner-panel {
+            z-index: 2;
+
+            h4 {
+                margin-top: 20px;
+            }
+
+            h4, a {
+                text-align: center;
+                display: block;
+            }
+
+            a {
+                margin: 10px 0 30px 0;
+                font-family: 'BrandonGrotesqueBold';
+                font-size: 16px;
+                font-weight: bold;
+                color: @magenta;
+                display: inline-block;
+                &:hover, &:focus {
+                    text-decoration: none;
+                    border-bottom: 2px dotted #e44039;
+                }
+            }
+
+            img {
+                margin: 23px auto 0 auto;
+                padding: 8px;
+                .box-shadow(0px 1px 4px rgba(0,0,0,.45));
+                .border-radius(5px);
+            }
+        }
+        &.how-we-helped .inner-panel {
+            z-index: 3;
+        }
+
+        &.watch-video {
+            .inner-panel {
+                z-index: 1;
+            }
+
+            .video {
+                img {
+                    width: 95%;
+                    margin: 0 auto;
+                    position: relative;
+                    display: block;
+                    padding: 10px 0 10px 0;
+                }
+            }
+        }
+
+        h3.visible-phone {
+            position: relative;
+            margin: 0;
+            padding: 0 0 0 20px;
+            font: @bold 24px/44px 'BrandonGrotesqueMedium';
+            color: @grayDark;
+            #gradient > .vertical(@white, @grayMedium);
+            border-top: 1px solid @grayLight;
+            border-bottom: 1px solid @grayLight;
+            cursor: pointer;
+
+            .arrow {
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: 43%;
+                right: 1%;
+
+                &.open {
+                    background: url('/web-resources/default/img/arrow-open-gray.gif') top left no-repeat;
+                }
+                &.closed {
+                    background: url('/web-resources/default/img/arrow-closed-gray.gif') top left no-repeat;
+                }
+            }
+        }
+
+        // generic slider layout css
+        .inner-panel {
+
+            .bx-viewport {
+                margin: 0 0 45px 0;
+
+                .bxslider {
+                    margin: 0;
+
+                    div.inner-slide {
+                        position: relative;
+                        margin: 0 auto;
+                        text-align: center;
+
+                        h4 {
+                            color: @cherry;
+                            font-family: 'BrandonTextBold';
+                            font-weight: bold;
+                            font-size: 18px;
+                            text-transform: capitalize;
+                        }
+
+                        p {
+                            font-family: 'BrandonTextRegular';
+                            font-size: 16px;
+                            color: @grayDark;
+                            line-height: 24px;
+                        }
+                    }
+                }
+            }
+
+            .bx-controls {
+                .bx-pager {
+                    bottom: -2%;
+
+                    .bx-pager-item {
+                        a {
+                            width: 9px;
+                            height: 9px;
+                            margin: 0 3px;
+                            background-color: @bx-pager-inactive;
+
+                            &.active {
+                                background-color: @magenta;
+                            }
+                        }
+                    }
+                }
+                .bx-controls-direction {
+                    .bx-prev, .bx-next {
+                        top: 45%;
+                        width: 15px;
+                        height: 25px;
+                        background: transparent url('/web-resources/default/img/patient-story-slider-left.png') top left no-repeat;
+                        text-decoration: none;
+                        z-index: 999;
+                        .bgSize(100%, 100%);
+
+                        &:hover {
+                            border: none;
+                        }
+                    }
+                    .bx-next {
+                        background: transparent url('/web-resources/default/img/patient-story-slider-right.png') top left no-repeat;
+                        .bgSize(100%, 100%);
+                    }
+                }
+            }
+        }
+    }
+
+    /* Tablet next styles */
+    @media only print, only screen and (min-width: 720px) {
+        .sharing {
+            padding: 0;
+            position: absolute;
+            z-index: 999;
+            top: 140px;
+            right: 0px;
+
+            .icon-share {
+                background-position: -23px 0;
+            }
+            .icon-email {
+                background-position: -23px -20px;
+            }
+            .icon-print {
+                background-position: -23px -40px;
+            }
+
+            &.white {
+                .icon-share {
+                    background-position: 0px 0;
+                }
+                .icon-email {
+                    background-position: 0px -20px;
+                }
+                .icon-print {
+                    background-position: 0px -40px;
+                }
+            }
+        }
+
+        .panel {
+            max-height: 790px;
+
+            .breadcrumb {
+                position: absolute;
+                top: -20px;
+                left: 75px;
+                padding-left: 15px;
+                color: @white;
+                font-family: "BrandonGrotesqueBlack";
+                font-size: 10px;
+                text-transform: uppercase;
+                background: transparent url("/web-resources/default/img/patient-story-breadcrumb-arrow.png") 0 5px no-repeat;
+                z-index: 99;
+                cursor: pointer;
+                -webkit-backface-visibility: hidden; /** fixes flicker in webkit during CSS3 transitions:
+                                                http://stackoverflow.com/questions/3461441/prevent-flicker-on-webkit-transition-of-webkit-transform?codekitCB=397078222.621080 **/
+
+            }
+
+            div.image-container {
+                max-height: 390px;
+                -webkit-backface-visibility: hidden;
+
+                .video {
+                    position: absolute;
+                    top: 45%;
+                    left: 50%;
+
+                    .youtube {
+                        img {
+                            left: -50%;
+                            width: 100%;
+                            margin: 0;
+                            padding: 8px;
+                            background-color: @white;
+                            .box-shadow(0px 1px 4px rgba(0,0,0,.45));
+                            .border-radius(5px);
+                        }
+                    }
+                }
+            }
+
+            .inner-panel {
+                position: relative;
+                background-color: @white;
+                -webkit-backface-visibility: hidden;
+
+                * { /** fixes flicker in webkit during CSS3 transitions:
+                    http://stackoverflow.com/questions/3461441/prevent-flicker-on-webkit-transition-of-webkit-transform?codekitCB=397078222.621080 **/
+                    -webkit-backface-visibility: hidden;
+                }
+
+                h3 {
+                    width: 100%;
+                    padding: 20px 0 0 70px;
+                    font-size: 24px;
+                    font-family: "BrandonGrotesqueBold";
+                    background-color: @white;
+                    color: @cherry;
+                }
+
+                .bx-viewport {
+                    margin: 5px 0 30px 0;
+
+                    .bxslider {
+                        margin: 0;
+
+                        div.inner-slide {
+                            width: 80%;
+                            position: relative;
+                            margin: 0 auto;
+                            text-align: center;
+
+                            h4 {
+                                color: @cherry;
+                                font-family: 'BrandonTextBold';
+                                font-weight: bold;
+                                font-size: 18px;
+                            }
+
+                            p {
+                                font-family: 'BrandonTextRegular';
+                                font-size: 16px;
+                                color: @grayDark;
+                                line-height: 24px;
+                            }
+                        }
+                    }
+                }
+
+                .bx-controls {
+                    .bx-pager {
+                        bottom: -7%;
+
+                        .bx-pager-item {
+                            a {
+                                width: 9px;
+                                height: 9px;
+                                margin: 0 3px;
+                                background-color: @bx-pager-inactive;
+
+                                &.active {
+                                    background-color: @magenta;
+                                }
+                            }
+                        }
+                    }
+                    .bx-controls-direction {
+                        .bx-prev, .bx-next {
+                            width: 20px;
+                            height: 32px;
+                            background: transparent url('/web-resources/default/img/patient-story-slider-left.png') top left no-repeat;
+                            text-decoration: none;
+
+                            &:hover {
+                                border: none;
+                            }
+                        }
+                        .bx-next {
+                            background: transparent url('/web-resources/default/img/patient-story-slider-right.png') top left no-repeat;
+                        }
+                    }
+                }
+            }
+
+            &.home {
+
+                .slide {
+                    .info {
+                        h1 {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            line-height: 50px;
+                            width: 45%;
+                            margin: 65px 0 0 75px;
+                            font-size: 45px;
+                            color: @white;
+                        }
+                    }
+                }
+            }
+
+            &.read-his-story .inner-panel {
+
+                .bx-viewport {
+                    margin: 5px 0 30px 0;
+
+                    .bxslider {
+                        margin: 0;
+
+                        div.inner-slide {
+                            width: 80%;
+                            position: relative;
+                            margin: 0 auto 10px auto;
+                            text-align: left;
+                            padding-top: 15px;
+
+                            h4 {
+                                font-size: 24px;
+                                margin-bottom: 15px;
+                            }
+
+                            p {
+                                font-family: 'BrandonTextRegular';
+                                font-size: 14px;
+                                color: @grayDark;
+                                line-height: 22px;
+
+                                .bold {
+                                    font-family: 'BrandonTextBold';
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.meet-team .inner-panel, &.how-we-helped .inner-panel {
+                h4 {
+                    font-size: 18px;
+                    margin-top: 10px;
+                }
+
+                a {
+                    margin: 0 0 30px 0;
+                    font-family: 'BrandonGrotesqueBold';
+                    font-size: 14px;
+                    &:hover, &:focus {
+                        text-decoration: none;
+                        border-bottom: 2px dotted #e44039;
+                    }
+                }
+
+                img {
+                    width: 90px;
+                    margin: 10px auto 20px auto;
+                    padding: 6px;
+                    .box-shadow(0px 1px 4px rgba(0,0,0,.45));
+                    .border-radius(3px);
+                }
+            }
+
+            &.watch-video .inner-panel {
+                min-height: 785px;
+
+                div.image-container {
+                    max-height: none;
+
+                    .video {
+                        width: 80%;
+                        z-index: 9;
+                        display: block;
+                        top: 15%;
+
+                        .youtube {
+                            img {
+                                margin-top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .icon-read {
+            width: 28px;
+            height: 24px;
+            display: block;
+            margin: 7px auto 5px auto;
+            background: url('/web-resources/default/img/patient-story-tab-icons.png') 0 1px no-repeat;
+        }
+
+        .icon-meet {
+            width: 28px;
+            height: 24px;
+            display: block;
+            margin: 7px auto 5px auto;
+            background: url('/web-resources/default/img/patient-story-tab-icons.png') 4px -24px no-repeat;
+        }
+
+        .icon-helped {
+            width: 28px;
+            height: 24px;
+            display: block;
+            margin: 7px auto 5px auto;
+            background: url('/web-resources/default/img/patient-story-tab-icons.png') 2px -48px no-repeat;
+        }
+
+        .icon-video {
+            width: 28px;
+            height: 24px;
+            display: block;
+            margin: 7px auto 5px auto;
+            background: url('/web-resources/default/img/patient-story-tab-icons.png') 0 -74px no-repeat;
+        }
+
+        .tabs {
+            position: relative;
+            width: 600px;
+            margin: 0 auto;
+            margin-bottom: -5px;
+            margin-top: -68px;
+            z-index: 5;
+            font-size: 0; /* removes whitespace between <li>'s */
+
+            .tab {
+                position: relative;
+                display: inline-block;
+                width: 145px;
+                height: 65px;
+                padding: 0;
+                margin: 0;
+                font-size: 16px;
+                font-family: "BrandonGrotesqueBlack";
+                font-weight: normal;
+                color: @tab-font-color;
+                #gradient > .vertical(@white, @grayMedium);
+                border: 1px solid @tab-border;
+                .border-radius(5px);
+                text-align: center;
+                vertical-align: bottom;
+                cursor: pointer;
+
+                &.active {
+                    position: relative;
+                    height: 70px;
+                    margin-top: -5px;
+                    background: none;
+                    color: @white;
+                    border: 1px solid @cherry;
+                    #gradient > .vertical(@lightCherry, @cherry);
+
+                    .icon-read {
+                        background: url('/web-resources/default/img/patient-story-tab-icons.png') -26px 1px no-repeat;
+                    }
+                    .icon-meet {
+                        background: url('/web-resources/default/img/patient-story-tab-icons.png') -26px -24px no-repeat;
+                    }
+                    .icon-helped {
+                        background: url('/web-resources/default/img/patient-story-tab-icons.png') -26px -48px no-repeat;
+                    }
+                    .icon-video {
+                        background: url('/web-resources/default/img/patient-story-tab-icons.png') -26px -74px no-repeat;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Desktop last styles */
+    @media only print, only screen and (min-width: 980px) {
+        .sharing {
+            .icon-share {
+                background-position: -23px 0;
+            }
+            .icon-email {
+                background-position: -23px -20px;
+            }
+            .icon-print {
+                background-position: -23px -40px;
+            }
+        }
+
+        .panel {
+            max-height: 527px;
+
+            img.hidden-phone {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            .breadcrumb {
+                top: 20px;
+                left: 50px;
+            }
+
+            div.image-container {
+                max-height: 390px;
+                position: absolute;
+
+                .video {
+                    top: 25%;
+                }
+            }
+
+            .inner-panel {
+                width: 50%;
+                height: 527px;
+                float: right;
+                height: 531px;
+                background-color: @white;
+                background: @white url('/web-resources/default/img/patient-story-slide-bg.jpg') top left repeat-x;
+
+                h3 {
+                    width: 100%;
+                    padding: 60px 0 30px 40px;
+                    font-size: 24px;
+                    font-family: "BrandonGrotesqueBold";
+                    background-color: transparent;
+                    color: @cherry;
+                    text-transform: capitalize;
+                }
+
+                .bx-viewport {
+                    margin: 5px 0 30px 0;
+                    background-color: transparent;
+
+                    .bxslider {
+                        margin: 0;
+
+                        div.inner-slide {
+                            width: 80%;
+                            position: relative;
+                            margin: 0 auto;
+                            text-align: center;
+
+                            img {
+                                background-color: @white;
+                            }
+
+                            h4 {
+                                color: @cherry;
+                                font-family: 'BrandonTextBold';
+                                font-weight: bold;
+                                font-size: 18px;
+                            }
+
+                            p {
+                                font-family: 'BrandonTextRegular';
+                                font-size: 16px;
+                                color: @grayDark;
+                                line-height: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.home {
+                .inner-panel {
+                    width: 100%;
+                }
+
+                .slide {
+                    .info {
+                        h1 {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            line-height: 50px;
+                            width: 45%;
+                            margin: 65px 0 0 50px;
+                            font-size: 45px;
+                            color: @white;
+                        }
+                    }
+                }
+            }
+
+            &.read-his-story {
+                .breadcrumb {
+                    color: @grayDark;
+                }
+            }
+            &.read-his-story .inner-panel {
+                width: 50%;
+                float: left;
+
+                .bx-viewport {
+                    margin: 5px 0 30px 0;
+
+                    .bxslider {
+                        margin: 0;
+
+                        div.inner-slide {
+                            width: 80%;
+                            position: relative;
+                            margin: 0 auto 10px auto;
+                            text-align: left;
+
+                            h4 {
+                                font-size: 24px;
+                                margin: 45px 0 15px 0;
+                            }
+
+                            p {
+                                font-family: 'BrandonTextRegular';
+                                font-size: 14px;
+                                color: @grayDark;
+                                line-height: 20px;
+                                margin-bottom: 20px;
+
+                                .bold {
+                                    font-family: 'BrandonTextBold';
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.meet-team .inner-panel, &.how-we-helped .inner-panel {
+                .bx-viewport {
+                    margin: 5px 0 30px 0;
+
+                    .bxslider {
+                        margin: 0;
+
+                        div.inner-slide {
+                            h4 {
+                                font-size: 16px;
+                                margin-top: 10px;
+                            }
+
+                            a {
+                                margin: 0 0 30px 0;
+                                font-family: 'BrandonGrotesqueBold';
+                                font-size: 14px;
+                                &:hover, &:focus {
+                                    text-decoration: none;
+                                    border-bottom: 2px dotted #e44039;
+                                }
+                            }
+
+                            img {
+                                width: 100px;
+                                margin: 10px auto 20px auto;
+                                padding: 6px;
+                                .box-shadow(0px 1px 4px rgba(0,0,0,.45));
+                                .border-radius(3px);
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            &.watch-video .inner-panel {
+                width: 100%;
+                float: none;
+
+                div.image-container {
+                    .video {
+                        top: 17%;
+                        width: 50%;
+
+                        .youtube {
+                            img {
+                                margin-top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .tabs {
+            position: relative;
+            width: 650px;
+            margin: 0 auto;
+            margin-bottom: -5px;
+            margin-top: -68px;
+            z-index: 5;
+            font-size: 0; /* removes whitespace between <li>'s */
+
+            .tab {
+                position: relative;
+                display: inline-block;
+                width: 160px;
+                height: 70px;
+                padding: 0;
+                margin: 0;
+                font-size: 18px;
+                font-family: "BrandonGrotesqueBlack";
+                font-weight: normal;
+                color: @tab-font-color;
+                #gradient > .vertical(@white, @grayMedium);
+                border: 1px solid @tab-border;
+                .border-radius(5px);
+                text-align: center;
+                vertical-align: bottom;
+
+                i {
+                    display: block;
+                    margin: 7px auto;
+                }
+
+                &.active {
+                    position: relative;
+                    height: 80px;
+                    margin-top: -10px;
+                    background: none;
+                    color: @white;
+                    border: 1px solid @cherry;
+                    #gradient > .vertical(@lightCherry, @cherry);
+
+                    .icon-read {
+                        background: url('/web-resources/default/img/patient-story-tab-icons.png') -26px 1px no-repeat;
+                    }
+                    .icon-meet {
+                        background: url('/web-resources/default/img/patient-story-tab-icons.png') -26px -24px no-repeat;
+                    }
+                    .icon-helped {
+                        background: url('/web-resources/default/img/patient-story-tab-icons.png') -26px -48px no-repeat;
+                    }
+                    .icon-video {
+                        background: url('/web-resources/default/img/patient-story-tab-icons.png') -26px -74px no-repeat;
+                    }
+                }
+            }
+        }
+    }
+}

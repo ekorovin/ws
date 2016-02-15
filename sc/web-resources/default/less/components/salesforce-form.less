@@ -1,0 +1,134 @@
+/* salesforce-form component */
+.salesforce-form {
+	background: url("/web-resources/default/img/bg-search-result.png") repeat scroll left top transparent;
+	.box-shadow(0 2px 2px rgba(0,0,0,.2));
+	.border-radius(6px);
+	.form-template-newletter {
+		padding: 26px 20px 20px;
+		
+		line-height: 40px;
+		font-family: 'BrandonGrotesque';
+		color: #333333;
+		.sales-force-form-wrapper{
+			width: 240px;
+			font-style: normal;
+			font-size: 16px;
+			form {
+				label{
+					font-weight: @regular;
+					width: 46%;
+					float: left;
+					font-size: 16px;
+					font-style: normal;
+					font-family: 'BrandonGrotesqueMedium';
+				}
+				.error-text-right {
+					font-size: 16px;
+					font-style: normal;
+					font-family: 'BrandonGrotesqueMedium';
+					font-weight: @regular;
+					color: #ff7033;
+					overflow: hidden;
+					float: right;
+					text-align: right;
+					margin-left: 6.83%;
+				}
+				input[type=text] {
+					width: 226px;
+					margin-bottom: 15px;
+					color: #5f574f;
+					font-size: 16px;
+					font-style: normal;
+					font-family: 'BrandonGrotesqueMedium';
+					font-weight: @regular;
+					background: url("/web-resources/default/img/bg-input-showdow.png") repeat-x scroll 0 0 transparent;
+					background-color:  #ffffff;
+				}
+				[type=submit]{
+					width: 125px;
+					height: 33px;
+					font-size: 16px;
+					line-height: 32px;
+					font-family: 'BrandonGrotesqueBold';
+					font-weight: @regular;
+					color: #ffffff;
+					text-transform: uppercase;
+					.box-shadow(0 1px 1px rgba(0,0,0,1));
+					text-shadow: 1px 1px 1px #000000;
+					background: url("/web-resources/default/img/bg-button-submit.png") repeat-x scroll 0 0 transparent;
+					border: 0px;
+					.border-radius(4px);
+					margin-top: 10px;
+					&:hover{
+						background: #ff7033;
+					}
+				}							
+			}
+		}
+		p {
+			line-height: 20px;
+			font-size: 16px;
+		}
+		.note {
+			margin-top: 20px;
+		}	
+		.required{
+			margin-top: 0;
+			font-family: 'BrandonGrotesqueMedium';
+		}
+	}					
+}
+/* Tablet next styles */
+@media only print, only screen and (min-width: 720px) {
+	.salesforce-form {					
+		max-width: auto;
+		padding-left: 10px;
+		margin-left: 15px;				
+		.form-template-newletter {
+			padding: 26px 20px 32px;			
+			font-size: 14px;
+			.sales-force-form-wrapper{
+				width: 258px;
+				form {
+					label{						
+						font-size: 14px;						
+					}					
+					input[type=text] {
+						font-size: 14px;
+						width: 244px;
+					}					
+				}
+			}
+			p {
+				line-height: 14px;
+				font-size: 14px;
+			}
+			.note {
+				width: 258px;
+				font-family: 'BrandonGrotesque';
+			}			
+		}
+	}
+}	
+/* Desktop last styles */
+@media only print, only screen and (min-width: 980px) {
+	.salesforce-form {
+		margin-left: 20px;			
+		padding-left: 20px;
+		.form-template-newletter {			
+			.sales-force-form-wrapper{
+				width: 264px;
+				form {									
+					input[type=text] {
+						width: 250px;
+						font-size: 14px;
+					}
+				}
+			}
+			.note {
+				width: 350px;
+			}			
+		}						
+	}
+}
+

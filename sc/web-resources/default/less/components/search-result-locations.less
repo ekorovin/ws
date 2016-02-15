@@ -1,0 +1,194 @@
+
+@colorLocation: #ff2e37;
+@colorLocation1: #666666;
+@colorLocation2: #4d4d4f;
+@font: 'BrandonGrotesque';	
+.tab-content {	
+	background: url(/web-resources/default/img/bg-search-result.png) top left repeat;	
+	position: relative;
+	font-family: @fontNormal;
+	.box-shadow(0 1px 6px rgba(0,0,0,.2));	
+	#locations {
+		.list-component-wrap {
+			.results-body {				
+				min-height: 650px;
+				.map-panel {
+					width: 100%;
+					position: relative;					
+					.map {
+						width: 100%;						
+						border-bottom: 1px solid #C4C4C4;						
+						display: block;
+    					margin: 0 auto 30px;	
+    					img {
+    						max-width: none;
+    						width: 100%;
+    					}					
+					}
+				}
+				.list-panel {
+					width: 100%;
+					ul.locations-list{
+						li {					
+							font-family: @font;	
+							padding-top: 7px;
+							padding-bottom: 44px;
+							position: relative;
+							margin-bottom: 20px;
+							border-bottom: 1px solid #C4C4C4;							
+							.mini-layout-thumb {								
+								float: left;
+								width: auto;
+								position: relative;
+								.avatar {
+									img {
+										
+									}
+									p {
+										width: 39px;
+										margin-top: 9px;
+										text-align: center;
+										color: black;
+										position: absolute;
+										top: 0;
+									}
+								}
+							}
+							.address-detail {
+								margin-left: 31.25%;
+								width: 170px;
+								color: @colorLocation1;
+								p {
+									font-size: 16px;
+									line-height: 16px;
+									color: #666;
+									.heading{
+										font-size: 18px;																
+										color: @colorLocation;
+										font-family: 'BrandonGrotesqueBold';
+										line-height: 24px;
+									}									
+								}
+								a{
+									&:hover, &:focus{										
+										text-decoration: none;
+										border-bottom: 2px dotted #ff2e37;
+									}
+								}									
+							}
+						}
+						li.odd {
+							background: url("/web-resources/default/img/odd-doctor-bg.png") repeat;
+						}
+						li:last-child, li.last-child {
+							padding-bottom: 60px;
+						}						
+					}
+				}
+			}			
+		}
+	}
+	/* Tablet next styles */
+	@media only print, only screen and (min-width: 720px) {
+		#locations {			
+			.list-component-wrap {				
+				.results-body {				
+					margin-left: 4.1667%;
+					width: 87.489%;
+					.map-panel {
+						float: right;
+						margin-bottom: 0;
+						width: 45.936%;
+						.map {
+							width: 305px;
+							/*height: 312px;*/
+							margin: 0 auto;
+							border: 6px solid #ffffff;
+						}
+					}
+					.list-panel {
+						width: 48.9362%;
+						margin-left: 0;
+						padding-top: 6px;
+						ul.locations-list{
+							li {					
+								padding-bottom: 24px;
+								margin-bottom: 35px;
+								.mini-layout-thumb {								
+									float: left;
+									width: auto;
+								}
+								.address-detail {
+									margin-left: 31.25%;
+									width: 170px;
+									color: @colorLocation1;
+									p {
+										font-size: 14px;
+										line-height: 18px;
+										margin-bottom: 7px;
+										.heading{
+											line-height: 24px;
+										}										
+									}									
+								}															
+							}
+							li:last-child, li.last-child {
+								padding-bottom: 28px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}	
+	/* Desktop last styles */
+	@media only print, only screen and (min-width: 980px) {
+		#locations {			
+			.list-component-wrap {				
+				.results-body {				
+					margin-left: 6.167%;
+					width: 87.489%;
+					.map-panel {
+						margin-right: 3.61%;
+						width: 55.1%;				
+						.map {
+							width: 451px;
+							/*height: 323px;*/										
+						}
+					}
+					.list-panel {
+						width: 39.55%;
+						ul.locations-list{
+							li {					
+								margin-bottom: 29px;
+								padding-bottom: 43px;
+								padding-top: 2px;
+								.mini-layout-thumb {								
+									margin-left: 9.511%;
+								}
+								.address-detail {
+									margin-left: 32.25%;
+									width: 170px;
+									color: @colorLocation1;
+									p {
+										line-height: 17px;
+										margin-bottom: 5px;
+										.heading{
+											
+										}										
+									}									
+								}
+							}
+							
+							li:last-child, li.last-child {
+								padding-bottom: 60px;
+							}							
+						}
+					}
+				}				
+			}
+		}
+	}
+}
+
+.map{width:450px; height:320px;}

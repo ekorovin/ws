@@ -1,0 +1,119 @@
+/* next-prev component */
+.next-prev {
+	/* Mobile first styles */
+	padding: 0 20px 25px 20px;
+	ul {
+		margin:0;
+		padding: 0;
+		border: 1px solid #e9eaeb;
+		background: url(/web-resources/default/img/bg-next-prev.png) left top repeat;
+		li {
+			display: inline-block;
+			font: @bold 18px/24px 'BrandonGrotesque';
+			width: 100%;
+			text-align: center;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;		
+			p {
+				color: #231f20;
+				margin:0;
+				padding: 11px 0 0 0;
+			}
+			a {
+				color: #ff2e37;
+				&:hover, &:focus{					
+					text-decoration: none;
+					border-bottom: 2px dotted #ff2e37;
+				}
+			}
+			&.next {
+				border-bottom: 1px solid #d9dada;
+				a {
+					padding-right: 10px;
+					background:url("/web-resources/default/img/icon-arrow-7x7.png") no-repeat right 10px;
+				}
+			}
+			&.previous {
+				border-top: 1px solid #ffffff;
+				a {
+					padding-left: 10px;
+					background:url("/web-resources/default/img/icon-arrow-7x7-l.png") no-repeat left 10px;
+				}
+			}
+		}
+	}
+	/* Tablet next styles */
+	@media only print, only screen and (min-width: 720px) {
+		padding: 35px 0 25px 0;
+		ul {
+			border: 1px solid #e6e7e8;
+			.clearfix();
+			li {
+				height: auto;
+				width: 50%;
+				display: block;
+				font: @bold 14px/24px 'BrandonGrotesque';
+				p {
+					color: #333333;
+					margin:0;
+					padding: 12px 0 0 0;
+				}
+				a {
+					color: #ff2e37;
+					&:hover {
+						text-decoration: none
+					}
+				}
+				&.next {
+					border-bottom: none;
+					border-left: 1px solid #c4c5c7;
+					float: right;
+					text-align: right;
+					padding-right: 20/475*100%;
+					a {
+						background:url("/web-resources/default/img/icon-arrow-7x7.png") no-repeat right 6px;
+					}
+				}
+				&.previous {
+					border-top: none;
+					border-right: 1px solid #edecee;
+					float: left;
+					text-align: left;
+					padding-left: 20/475*100%;
+					a {
+						background:url("/web-resources/default/img/icon-arrow-7x7-l.png") no-repeat left 6px;
+					}
+				}
+			}
+		}
+	}
+	/* Desktop last styles */
+	@media only print, only screen and (min-width: 980px) {
+		padding: 41px 0 25px 160px; 
+		ul {
+			width: 511px;
+			li {
+				p {
+					color: #333333;
+					margin:0;
+					padding: 12px 0 0 0;
+				}
+				a {
+					color: #ff2e37;
+					&:hover {
+						text-decoration: none
+					}
+				}
+				&.next {
+					padding-right: 19px;
+				}
+				&.previous {
+					
+					border-left: 1px solid #ecedee;
+					padding-left: 17px;
+				}
+			}
+		}
+	}
+}

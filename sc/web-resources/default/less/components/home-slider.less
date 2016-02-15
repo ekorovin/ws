@@ -1,0 +1,343 @@
+/* bxslider component */
+.home-slider {
+	
+	.bxslider  {
+		list-style-type: none;
+		position: relative;
+		margin: 0;
+		padding: 0;
+		
+		&>li {
+			.clearfix();
+			position: relative;
+			display: none !important;
+			
+			img {
+				float: right;
+				max-width: 50%;
+			}
+			
+			&.hero {
+				position: relative;
+				padding: 0;
+				display: block !important;
+				img {
+					float: none;
+					max-width: 100%;
+				}
+				
+				.content {
+					position: absolute;
+					width: 100%*(160/320);
+					top: 0;
+					left: 0;
+					
+					.headline {
+						font: @regular 18px/20px 'BrandonTextRegular';
+						
+						strong {
+							font: @bold 16px/20px 'BrandonTextBold';
+							text-transform: uppercase;
+						}
+					}
+					
+					a {
+						color: #ff2e35;
+						text-transform: uppercase;
+					}
+				}
+			}
+		}
+	}
+	
+	&.intro {
+		.bxslider  {
+			&>li {
+				&.hero {
+					.content {
+						top: 100%*(40/640);
+						left: 100%*(130/320);
+						
+						.headline {
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	&.obstetrics {
+		.bxslider  {
+			&>li {
+				&.hero {
+					.content {
+						top: 100%*(160/640);
+						left: 100%*(20/320);
+						
+						.headline {
+							color: #8c1515;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	&.pediatrics {
+		.bxslider  {
+			&>li {
+				&.hero {
+					.content {
+						top: 100%*(130/640);
+						left: 100%*(155/320);
+						
+						.headline {
+							color: #8c1515;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	&.our-team {
+		.bxslider  {
+			&>li {
+				&.hero {
+					.content {
+						top: 100%*(160/640);
+						left: 100%*(20/320);
+						
+						.headline {
+							color: #8c1515;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	.bx-wrapper .bx-prev {
+		left: 30px;
+		color: #000;
+		padding-left: 50px;
+		background: url(/web-resources/default/img/arrow-home-slider-prev-blk.png) no-repeat top left;
+		&:hover, &:focus {
+			color: #ff2e35;
+			background: url(/web-resources/default/img/arrow-home-slider-prev-red.png) no-repeat top left;
+		}
+	}
+
+	.bx-wrapper .bx-next {
+		right: 30px;
+		color: #fff;
+		padding-right: 50px;
+		background: url(/web-resources/default/img/arrow-home-slider-next-wht.png) no-repeat top right;
+		&:hover, &:focus {
+			color: #ff2e35;
+			background: url(/web-resources/default/img/arrow-home-slider-next-red.png) no-repeat top right;
+		}
+	}
+	.bx-wrapper .bx-controls-direction a {
+		position: absolute;
+		bottom: 35px;
+		top: auto;
+		outline: 0;
+		width: auto;
+		height: 40px;
+		line-height: 45px;
+		z-index: 9999;
+		text-indent: 0;
+		&:hover, &:focus {
+			text-decoration: none;
+		}
+	}
+	
+	@media only print, only screen and (min-width: 720px) {
+		.bxslider  {
+			&>li {
+				display: block !important;
+				background: url(/web-resources/default/img/bg-header-loop.png) left top repeat;
+				.content {
+					float: left;
+					max-width: 50%;
+					h3 {
+						font: @regular 32px/54px 'BrandonTextRegular';
+						color: #990000;
+					}
+					p {
+						font: @regular 14px/20px 'BrandonTextRegular';
+						margin: 0 0 100%*(20/720) 0;
+						
+						strong {
+							font: @medium 14px/20px 'BrandonTextMedium';
+							text-transform: uppercase;
+						}
+						
+					}
+					a {
+						color: #ff2e35;
+						font: 400 14px/20px 'BrandonTextRegular';
+						background: none;
+						&:hover, &:focus {
+							text-decoration: underline;
+							border-bottom: none;
+						}
+						&.related-link {
+							text-transform: uppercase;
+						}
+					}
+					.inner {
+						padding: 100%*(80/720) 100%*(60/720);
+						
+						h3 {
+							border-bottom: 1px solid #d9dada;
+							margin: 0 0 100%*(30/720) 0;
+						}
+						ul {
+							list-style-type: none;
+							margin: 0;
+							
+							li {
+								margin: 0 0 100%*(20/720) 0;	
+							}
+						}
+					}
+				}
+				
+				&.hero {
+					background: none;
+					.content {
+						width: 100%*(320/720);
+						
+						.headline {
+							font: @regular 36px/36px 'BrandonTextRegular';
+							
+							strong {
+								font: @bold 28px/28px 'BrandonTextBold';
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		&.intro {
+			.bxslider  {
+				&>li {
+					&.hero {
+						.content {
+							top: 100%*(110/640);
+							left: 100%*(310/720);
+							
+							.locations {
+								color: #fff;
+								padding-left: 25px;
+								height: 24px;
+								line-height: 24px;
+								background: url(/web-resources/default/img/ico-locations.png) no-repeat top left;
+								text-transform: uppercase;
+								font: 400 14px/20px 'BrandonTextRegular';
+								&:hover, &:focus {
+									border-bottom: none;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		&.obstetrics {
+			.bxslider  {
+				&>li {
+					&.hero {
+						.content {
+							top: 100%*(225/640);
+							left: 100%*(50/720);
+						}
+					}
+				}
+			}
+		}
+		
+		&.pediatrics {
+			.bxslider  {
+				&>li {
+					&.hero {
+						.content {
+							top: 100%*(140/640);
+							left: 100%*(370/720);
+						}
+					}
+				}
+			}
+		}
+		
+		&.our-team {
+			.bxslider  {
+				&>li {
+					&.hero {
+						.content {
+							top: 100%*(225/640);
+							left: 100%*(50/720);
+						}
+					}
+				}
+			}
+		}
+		
+	}
+	
+	@media only print, only screen and (min-width: 980px) {
+		height: 640px;
+	
+		.bxslider  {
+			&>li {
+				.content {
+					.inner {
+						padding: 80px 60px;
+					}
+				}
+				&.hero {
+					.content {
+						width: 420px;
+						top: 170px;
+						left: 420px;
+					}
+				}
+			}
+		}
+		
+		&.intro {
+			.bxslider  {
+				&>li {
+					&.hero {
+						.content {
+							top: 140px;
+							left: 420px;
+						}
+					}
+				}
+			}	
+		}
+	}
+	
+	@media only print {
+		page-break-inside:avoid;
+		height: 600px;
+		
+		.headline {
+			strong {
+				color: #8c1515 !important;
+			}
+		}
+		&.intro .headline {
+			color: white !important;
+			strong {
+				color: white !important;
+			}
+		}
+	}
+}

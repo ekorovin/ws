@@ -1,0 +1,117 @@
+/* sharing component */
+.social-newletter {
+	/* Mobile first styles */
+	.clearfix;
+	.social-newletter-wrap{
+		.clearfix;
+		.border-radius(6px);    
+		.box-shadow(1px 0px 5px rgba(0, 0, 0, 0.1));
+		margin-top: 20px;
+
+		.mini-thumb{
+			float: none;			
+		}
+		.information{
+			padding: 30px 20px 35px;			
+			font: @regular 18px/24px 'BrandonGrotesque';
+
+			.heading{
+				color: #106470;
+				line-height: 20px;
+				font-weight: @bold;
+			}
+			.description{
+				color: #333333;
+				margin-bottom: 32px;				
+			}
+			.links{				
+				line-height: 10px;
+				margin: 0;
+				a{
+					color: #ff2e35;
+					display: inline;
+					span{
+						display: none;
+					}
+					&:hover{
+						text-decoration: none;
+						border-bottom: 2px dotted #FF2E35;
+					}
+				}
+			}
+		}
+	}
+
+	/* Tablet next styles */
+	@media only print, only screen and (min-width: 720px) {
+		.social-newletter-wrap{
+		 	margin-right: 26px;
+
+			.mini-thumb{
+				float: left;
+				width: 191px;
+				height: 240px;
+			}
+			.information{
+				overflow: hidden;
+				padding: 30px;
+				font: @regular 18px/22px 'BrandonGrotesque';
+
+				.heading{
+					color: #106470;
+					line-height: 20px;
+					font-weight: @bold;
+				}
+				.description{
+					color: #333333;
+					margin-bottom: 10px;				
+				}
+				.links{				
+					line-height: 10px;
+					margin: 0;
+					a{
+						color: #ff2e35;						
+						&:hover{
+							text-decoration: none;
+							border-bottom: 2px dotted #FF2E35;
+						}
+					}
+				}
+			}
+		}
+	}
+	/* Desktop last styles */
+	@media only print, only screen and (min-width: 980px) {
+		.social-newletter-wrap{		
+			height: 148px;
+			.mini-thumb{				
+				width: 200px;
+				height: 150px;
+				overflow: hidden;
+			}			
+			.information{
+				padding: 20px;
+				font: @regular 18px/24px 'BrandonGrotesque';
+				.links{
+					a{
+						display: inline-block;
+						padding-bottom: 7px;
+						border-bottom: 2px solid #ffffff;
+						&:hover{
+							text-decoration: none;
+							border-bottom: 2px dotted #FF2E35;
+						}
+					}
+				}
+			}
+		}
+
+	}
+}	
+.ie8 {
+	.social-newletter {		
+		.social-newletter-wrap{			
+			border: 1px solid #bbbbbb;
+		}
+	}
+}

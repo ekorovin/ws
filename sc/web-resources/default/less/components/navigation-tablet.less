@@ -1,0 +1,63 @@
+/* Global site navigation inherit for tablet*/
+#navigation-tablet {
+	/* Default mobile first styles */
+	display: none;
+
+	/* Tablet styles next */
+	@media only print, only screen and (min-width: 720px) {
+		display: block;
+/* 		position: relative; */
+		height: 47px;
+		ul,ol {
+			margin:0;
+		}
+		
+		ul.tablet-nav {
+			height: 43px;
+			background: url("/web-resources/default/img/bg-nav-inherit.png") repeat-x scroll left bottom transparent;
+			list-style-type: none;
+			margin:0;
+			padding:0;
+			margin-top: 4px;
+			position: fixed;
+			z-index: @zindexPopover;
+			width: 100%;
+			.tablet-item{
+				font-family: 'BrandonGrotesqueBold';
+				font-weight: @bold;
+				width: 25%;
+				float: left;
+				background: url("/web-resources/default/img/bg-nav-li-inherit.png") no-repeat left 0;
+				text-transform: uppercase;
+				text-align: center;
+				font-size: 12px;
+				&:first-child {
+					background: none;
+				}
+				.tablet-btn {
+					padding: 13px 0 9px 0;
+					display: block;
+					color: #231f20;
+					&:hover {
+						text-decoration: none
+					}
+				}
+				
+			}
+			
+			.current {
+				.tablet-btn {
+					background: url("/web-resources/default/img/sprite-arrow.png") no-repeat center -350px;
+					margin-top:0px;
+				}
+			}
+	
+		}
+	}
+	
+	/* Desktop styles last */
+	@media only print, only screen and (min-width: 980px) {
+		display: none
+	}
+	
+}

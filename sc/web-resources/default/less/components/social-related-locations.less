@@ -1,0 +1,53 @@
+.social-related-locations{
+	/* Mobile first styles */	
+	.clearfix;
+
+	.social-related-locations-wrap{
+		padding: 20px 0 0;
+		ul.location-nav{
+			.clearfix;
+			padding: 0; 
+			margin: 0 auto;			
+			width: 100%;
+			background:#fffbf2;
+			list-style: none;
+			
+			li.location-item{				
+				float: left;
+				margin:0 0 2px 2/280*100%; 
+				width: 50% - 2/280*100%;
+				text-align: center;
+
+				a.location-btn{
+					font:@regular 14px/18px 'BrandonGrotesque';
+					display: block;
+					padding: 0px 10px 0px;/*top:16,bottom:16px*/
+					height: 51px;/*51px*/					
+					background: #fff1cc;
+					text-decoration: none;
+					text-transform:uppercase;
+					color: #333;
+					text-align:center;
+					
+					.wrap-center-text{
+						display:table;
+						height: 51px;
+						width: 100%;
+
+						.center-text{
+							display: table-cell;
+							vertical-align: middle;
+						}
+					}					
+					
+					&:hover, 
+					&.active { 
+						font:@bold 14px 'BrandonGrotesqueBold';
+						background: #ffb800;
+						color: #fbfaf8;
+					}
+				}
+			}
+		}
+	}
+}

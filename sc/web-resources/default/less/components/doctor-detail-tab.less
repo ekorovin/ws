@@ -1,0 +1,597 @@
+/* doctor-detail-tab component */
+.doctor-detail-tab {
+	@shadow-tabcontent : 0px 2px 2px 2px rgba(0, 0, 0, 0.1);
+	padding-top: 20px;
+	/* Mobile first styles */	
+	.doctor-detail-tab-nav {
+		display: block;
+		margin: 0px auto;
+		width: 100%;
+		border: none;
+		position: static;
+		border-radius: 0px;
+		background: url(/web-resources/default/img/bg-doctor-detail-tab-phone.png) bottom left repeat-x;
+		li {
+			background: none;
+			border: none;
+			position: relative;
+			margin: 0; 
+			padding: 0px;
+			height: 44px;
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+		}
+		li a {
+			background: none;
+			padding: 0px;
+			border: none !important;
+			margin: 0px;
+			border-radius: none;
+			position: relative;
+			text-transform: uppercase;
+			
+			&:hover {
+				color: #9f9a93;
+				background: none; 
+			}
+		}
+
+		li a span {
+			
+			height: 44px;
+			top: 0px;
+			background-position: 0px 0px;
+			background-repeat: no-repeat;
+
+			&.inner {
+				display: block;
+				text-indent: 0px;
+				font: @regular 16px/47px 'BrandonGrotesque';
+				color: #5f574f;
+				text-align: center;
+				margin: 0;
+				background: url(/web-resources/default/img/btn-doctor-profile.png) 0px -89px repeat-x;
+			}
+		}
+		li.active {
+			height: 44px;
+			a {
+				//line-height: 41px;
+			}
+			a span {
+				height: 44px;
+				&.inner {
+					color: #ffffff;
+					text-shadow: 0 1px 1px rgba(0,0,0,0.4);
+					margin: 0px;
+					font-family: 'BrandonGrotesqueBold';
+					font-weight: @bold;
+					background: url(/web-resources/default/img/btn-doctor-profile.png) 0px -134px repeat-x;						
+				}
+			}
+		}
+	}
+	.tab-content {		
+		background: url(/web-resources/default/img/bg-search-result.png) top left repeat;
+		position: relative;
+		font-family: 'BrandonGrotesque';
+		padding: 41px 20/320*100% 15px 20/320*100%;
+		h3{
+			font: @bold 24px/24px 'BrandonGrotesqueBold';
+			color: #5bc2c7;
+			margin: 0;
+			padding: 0 0 7px;
+		}
+		p{
+			margin: 0;
+			padding: 0 0 6px;
+			font: @regular 18px/24px 'BrandonTextRegular';
+			color: #363636;	
+			.read-more {
+				padding-right: 10px;
+				background:url('/web-resources/default/img/icon-arrow-7x7.png') no-repeat right 9px;
+				font: @medium 18px/22px 'BrandonTextMedium';
+				color: #ff2e35
+			}
+		}
+	}
+	.introduction {
+		border-bottom: 1px solid #dbdbdb;
+		padding-bottom: 35px;
+		.introduction-full {
+			display: none
+		}
+		h3 {
+			padding: 0 0 6px;
+		}
+		p {
+			padding: 0 0 4px;
+			font: @regular 18px/24px 'BrandonTextRegular';
+			overflow: hidden;
+			.read-more {
+				font: @medium 18px/22px 'BrandonTextMedium';
+				&:hover, &:focus{				
+					text-decoration: none;
+					border-bottom: 2px dotted #ff2e37;
+				}
+			}
+		}
+	}
+	.specialty {
+		border-top: 1px solid #fafafa;
+		border-bottom: 1px solid #dbdbdb;
+		padding: 24px 0 30px 0;
+
+		ul {
+			margin: -5px 0 0 0;
+			padding: 0;
+			list-style-type: none;
+			li {
+				font: @regular 18px/30px 'BrandonTextRegular';
+				a {
+					color: #363636;	
+				}
+			}
+		}
+		.btn-service-name {
+			display: none
+		}
+	}
+	.service-name {
+		padding: 26px 0 29px;
+		border-top: 1px solid #dbdbdb;
+		border-bottom: 1px solid #dbdbdb;
+		h3 {
+			padding: 0 0 6px;
+		}
+		p{
+			font: @regular 18px/24px 'BrandonGrotesque';
+		}
+		.btn-service-name {
+			background: url(../img/btn-doctor-profile.png) repeat left top;
+			font: @black 16px/35px 'BrandonGrotesqueBlack';
+			height: 35px;
+			color: #ffffff;
+			.border-radius(4px);
+			display: block;
+			text-transform: uppercase;
+			display: block;
+			padding: 0;
+			margin-right: 22px;
+			text-decoration: none;
+			text-align: center;
+			width: 226px;
+			margin: 0 auto;
+			text-shadow:0px 2px 1px rgba(0,0,0,0.3);
+			&.btn-call {
+				margin-top:18px;
+			}
+			&.btn-make {
+				margin-top:8px;
+			}
+		}
+	}
+	.health-wellness-topic {
+		padding: 31px 0 146px 6px;
+		h3 {
+			padding: 0 0 1px;
+		}
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style:none; 
+			li {
+				color: #ff2e37;
+				font-family: 'Impressum-LigIta';
+				font-size: 14px;
+				line-height: 21px;
+				a {
+					color: #ff2e37;
+					padding-right: 10px;
+					background:url('/web-resources/default/img/icon-link-related.png') no-repeat right 6px;
+					&:hover, &:focus{				
+						text-decoration: none;
+						border-bottom: 2px dotted #ff2e37;
+					}
+				}
+			}
+		}
+	}
+	.work-education {
+		border-bottom: 1px solid #bbbbbb;
+		padding: 1px 0 13px;
+		h3 {
+			padding: 0 0 23px;
+		}
+		h4 {
+			font: @bold 20px/20px 'BrandonTextBold';
+			color: #363636;
+			margin: 0;
+			padding: 0 0 1px;
+			span {
+				font: @regular 14px/20px 'BrandonGrotesque';
+			}
+		}
+		p{
+			font: @regular 14px/20px 'BrandonTextRegular';
+			margin: 0;
+			padding: 0 0 19px;
+		}
+		>ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			li {
+				font-family: 'Impressum-LigIta';
+				font-size: 12px;
+				line-height: 22px;
+				a {
+					background: url("/web-resources/default/img/icon-arrow-6x6.png") no-repeat scroll right 3px transparent;
+					color: #ff2e37;
+					padding-right: 10px;
+					&:hover, &:focus{				
+						text-decoration: none;
+						border-bottom: 2px dotted #ff2e37;
+					}
+				}
+			}
+		}
+	}
+	.specialties {
+		border-top: 1px solid #ffffff;
+		padding: 18px 0 0 0;
+		h3 {
+			padding: 0 0 27px;
+		}
+		h4 {
+			font: @bold 20px/20px 'BrandonTextBold';
+			color: #363636;
+			margin: 0;
+			padding: 0 0 7px;
+		}
+		p{
+			font: @regular 14px/20px 'BrandonTextRegular';
+			margin: 0;
+			padding: 0 0 29px;
+		}
+	}
+	/* Tablet next styles */
+	@media only print, only screen and (min-width: 720px) {
+	margin: 0 40/720*100%;
+	padding-top: 22px;
+	.doctor-detail-tab-nav {
+		display: block;
+		margin: 0px auto;
+		width: 100%;
+		border: none;
+		position: static;
+		.border-radius(0);
+		background: url(/web-resources/default/img/bg-doctor-detail-tab-phone.png) bottom left repeat-x;
+		padding-bottom: 3px;
+		li {
+			background: none;
+			border: none;
+			position: relative;
+			top: 2px;
+			padding: 0px;
+			height: 39px;
+			/*width: 320/644*100%;*/
+			padding-left: 3px;
+			
+			&:first-child {
+				padding-left: 0;
+			}
+		}
+		
+		li a {
+			background: none;
+			padding: 0px;
+			border: none !important;
+			margin: 0px;
+			border-radius: none;
+			position: relative;
+			text-transform: uppercase;
+			
+			&:hover {
+				color: #9f9a93;
+				background: none;
+			}
+		}
+
+		li a span {
+			
+			height: 39px;
+			top: 0px;
+			background-position: 0px 0px;
+			background-repeat: no-repeat;
+
+			&.left {
+				display: block;
+				position: absolute;
+				width: 4px;
+				left: 0px;
+				background-image: url(/web-resources/default/img/bg-nav-tab-left.png);
+			}
+			&.right {
+				display: block;
+				position: absolute;
+				right: 0px;
+				width: 4px;
+				background-image: url(/web-resources/default/img/nav-tab-right.png);
+			}
+			&.inner {
+				display: block;
+				text-indent: 0px;
+				font-weight: @bold;
+                padding-top:6px;
+				font-size: 14px;
+				line-height: 30px;
+				font-family: 'BrandonGrotesqueBold';
+				color: #9f9a93;
+				text-align: center;
+				margin: 0px 4px 0px 3px;
+				background: url(/web-resources/default/img/nav-tab-bg.png) 0px 0px repeat-x;
+			}
+		}
+		li.active {
+			top: 1px;			
+			height: 41px;
+			a {
+				//line-height: 41px;
+			}
+			a span {
+					height: 33px;
+	                padding-top:8px;
+					&.left {
+						width: 6px;
+						background-image: url(/web-resources/default/img/nav-tab-active-left.png);
+					}
+					&.right {
+						width: 6px;
+						background-image: url(/web-resources/default/img/nav-tab-active-right.png);
+					}
+					&.inner {
+						color: #ffffff;
+						text-shadow: 0 1px 1px rgba(0,0,0,0.4);
+						margin: 0px 5px 0px 5px;
+						background: url(/web-resources/default/img/nav-tab-active-bg.png) 0px 0px repeat-x;						
+					}
+				}
+			}
+		}
+		.tab-content {		
+			background: url(/web-resources/default/img/bg-search-result.png) top left repeat;
+			position: relative;
+			font-family: 'BrandonGrotesque';
+			.box-shadow(@shadow-tabcontent);
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			padding: 32px 22/640*100% 69px 20/640*100%;
+			.pull-left {
+				padding-right: 19px;
+				border-right: 1px solid #dfdddc;
+			}
+			.pull-right {
+				border-left: 1px solid #dfdddc;
+				padding-left: 15px;
+				margin-left: -1px;
+			}
+		}
+		.introduction {
+			border-bottom: none;
+			padding-bottom: 0px;
+			h3{
+				padding: 0 0 6px;
+			}
+			.introduction-sort {
+				display: none
+			}
+			.introduction-full {
+				display: block
+			}
+			p {
+				padding-bottom: 6px;
+				height: auto;
+				font: @regular 18px/24px 'BrandonTextRegular';
+				.read-more {
+					display: none
+				}
+			}
+		}
+		.specialty {
+			border: none;
+			padding: 0 0 28px;
+			overflow: hidden;
+			h3{
+				padding: 0 0 13px;
+			}
+			ul {
+				margin: -5px 0 0;
+				li {
+					font: @regular 14px/20px 'BrandonTextRegular';
+				}
+			}
+			.btn-service-name {
+				background: url(../img/btn-doctor-profile.png) repeat left -179px;
+				font: @black 10px/25px 'BrandonGrotesqueBlack';
+				height: 25px;
+				color: #ffffff;
+				.border-radius(4px);
+				display: block;
+				text-transform: uppercase;
+				display: block;
+				padding: 0;
+				text-decoration: none;
+				text-align: center;
+				padding: 0 29px;
+				float: left;
+				text-shadow:0px 2px 1px rgba(0,0,0,0.3);
+				&.btn-make {
+					margin-top:25px;
+				}
+			}
+		}
+		.service-name {
+			padding: 0;
+			border: none;
+			h3 {
+				padding: 0 0 8px;
+			}
+			p{
+				font: @regular 14px/20px 'BrandonTextRegular';
+				padding: 0;
+			}
+			.btn-service-name {
+				&.btn-call {
+					display: none
+				}
+				&.btn-make {
+					display: none
+				}
+			}
+		}
+		.health-wellness-topic {
+			padding: 0 0 22px;
+			h3 {
+				padding: 0 0 5px;
+			}
+			ul {
+				li {
+					line-height: 30px;
+				}
+			}
+		}
+		.work-education {
+			border-bottom: none;
+			margin-top: -3px;
+			margin-left: -2px;
+			h3 {
+				padding: 0 0 9px;
+			}
+			h4 {
+				padding: 0 0 5px;
+				font-size: 18px;
+				line-height: 24px;
+			}
+			p{
+				padding-bottom: 3px;
+			}
+			>ul {
+				margin-top: -5px;
+				li {
+					font-size: 14px;
+					line-height: 28px;
+					a {
+						background: url("/web-resources/default/img/icon-arrow-6x6.png") no-repeat scroll right 5px transparent;
+					}
+				}
+			}
+		}
+		.specialties {
+			border-top: none;
+			padding: 0;
+			margin-top: -2px;
+			h3 {
+				padding-bottom: 9px;
+			}
+			h4 {
+				padding: 0 0 5px;
+				font-size: 18px;
+				line-height: 24px;
+			}
+			p {
+				padding: 0 0 33px;
+			}
+		}
+	}
+	
+	/* Desktop last styles */
+	@media only print, only screen and (min-width: 980px) {
+		margin: 0 20px;
+		padding-top: 37px;
+		.doctor-detail-tab-nav {
+			li {
+				width: auto;
+				padding-left: 5px;
+				&:first-child {
+					padding-left: 0px;
+				}
+			}
+		}
+		.tab-content {		
+			padding: 39px 14px 48px 32px;
+			.pull-left {
+				padding-right: 30px;
+				border-right: 1px solid #dfdddc;
+			}
+			.pull-right {
+				border-left: 1px solid #dfdddc;
+				padding-left: 34px;
+			}
+		}
+		.service-name {
+			p{
+				font: @regular 14px/21px 'BrandonTextRegular';
+			}
+		}
+		.health-wellness-topic {
+			padding: 0 0 15px;
+			h3 {
+				padding: 0 0 6px;
+			}
+		}
+		.introduction {
+			h3{
+				padding: 0 0 7px;
+			}
+			p {
+				padding: 0 0 6px;
+			}
+		}
+		.specialty {
+			padding: 0 0 25px;
+			h3{
+				padding: 0 0 14px;
+			}
+			.btn-service-name {
+				&.btn-make {
+					margin-top:27px;
+				}
+			}
+		}
+		.work-education {
+			margin-top: -1px;
+			h3 {
+				padding: 0 0 23px;
+			}
+			h4 {
+				padding: 0 0 2px;
+				line-height: 20px;
+			}
+			p {
+				padding: 0 0 18px;
+			}
+			>ul {
+				margin-top: -1px;
+				li {
+					line-height: 22px;
+					a {
+						background: url("/web-resources/default/img/icon-arrow-6x6.png") no-repeat scroll right 7px transparent;
+					}
+				}
+			}
+		}
+		.specialties {
+			margin-top: 0px;
+			h3 {
+				padding-bottom: 21px;
+			}
+			h4 {
+				padding: 0 0 8px;
+			}
+			p {
+				padding: 0 0 20px;
+			}
+		}
+ 	}
+}

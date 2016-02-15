@@ -1,0 +1,262 @@
+/* Persistent Search Component */
+@pSearchClosedWidth:					40px;
+@pSearchClosedLeft:						380px;
+@pSearchActiveWidth:					260px;
+@pSearchActiveLeft:						160px;
+@pSearchOpenWidth:						420px;
+@pSearchOpenLeft:						0px;
+
+#persistent-search {
+	
+	/* Default mobile first styles */
+	display: none;
+	
+	/* Tablet next styles */
+	@media only screen and (min-width: 720px) {
+		display: block;
+		position: fixed;
+		width: 420px;
+		top: 0;
+		margin-left: 300px;
+		z-index: @zindexPopover;
+		
+		/**
+		 * iOS hack
+		 * DIV won't stay fixed once beyond the header area
+		 * Spacer keeps DIV overlapping header whilst
+		 * pushing search bar down
+		 */
+		.p-search-spacer {
+			width: 1px;
+			height: 122px;
+			margin-left: 419px;
+			&.emergency {
+				height: 172px;
+			}
+		}
+			
+		.p-search-mag { 
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			background: url(/web-resources/default/img/p-search-mag-glass.png) no-repeat top center;
+			cursor: pointer;
+			position: absolute;
+			width: 40px;
+			height: 38px;
+			right: 0;
+			z-index: @zindexDropdown;
+		}
+		
+		.p-search-bar,
+		.p-search-input {
+			.transition(all 0.2s ease-out);
+		}
+			
+		.p-search-bar {
+			#gradient .vertical(#ffcb05, #ffb902);
+			.border-top-left-radius(3px);
+			.border-bottom-left-radius(3px);
+			position: absolute;
+			.opacity(90);
+			left: @pSearchClosedLeft;
+			width: @pSearchClosedWidth;
+			height: 38px;
+			overflow: hidden;
+			.box-shadow(0px 2px 2px rgba(0, 0, 0, 0.2));
+			z-index: @zindexDropdown;
+		}
+		
+		.p-search-form {
+			margin: 0;
+		}
+		
+		.p-search-input {
+			font-family: "BrandonGrotesque";
+			width: 194px;
+			padding: 0px 6px;
+			margin: 8px 10px;
+			.opacity(0);
+			visibility: hidden;
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		}
+		
+		.p-search-results {
+			font-family: "BrandonGrotesque";
+			margin: 38px 0 0 0;
+			background: #fff;
+			width: @pSearchClosedWidth;
+			left: @pSearchClosedLeft;
+			list-style-type: none;
+			overflow: hidden;
+			max-height: 0;
+			visibility: hidden;
+			.opacity(0);
+			position: absolute;
+			.box-shadow(0px 0px 8px rgba(0, 0, 0, 0.4));
+			.transition(~"opacity 0.2s ease-out, left 0.2s ease-out, width 0.2s ease-out, max-height 0.2s ease-out");
+
+			/* ie8 shadows.. aw-yeah */
+			//-ms-filter: "progid:DXImageTransform.Microsoft.Glow(Strength=3,Color='#666666')";
+			-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Direction=90,Strength=5,Color='#999999')";
+			
+			.p-search-result-set {
+				.clearfix;
+				/* display: table; */
+				border-top: 2px solid #bebfc1;
+				
+				&.first {
+					border-top: none;
+				}
+				
+				.p-search-result-set-header {
+					background: url("/web-resources/default/img/p-search-result-set-bg.png") top left;
+					width: 100px;
+					margin: 0;
+					padding: 0 0 4px 0;
+					display:table-cell;
+					list-style-type: none;
+					text-align: right;
+					vertical-align: bottom;
+
+					a:hover {
+						text-decoration: none;
+					}
+					
+					.header {
+						color: white;
+						font-family: BrandonGrotesque;
+						font-size: 14px;
+						text-transform: uppercase;
+						margin-top: 3px;
+						padding-right: 10px;
+						text-shadow: rgba(0, 0, 0, 0.4);
+						//-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Directon=135, Strength=5, Color=#000000)";
+    					//-ms-filter: "progid:DXImageTransform.Microsoft.Blur(pixelradius=2)";
+    					//-ms-filter: "progid:DXImageTransform.Microsoft.Compositor(Function=2)";
+
+					}
+					
+					.icon {
+						padding-right: 10px;
+					}
+				}
+				
+				.p-search-result-set-list {
+					list-style-type: none;
+					margin: 0;
+					display:table-cell;
+					width: 320px;
+					
+					li {
+						
+						a {
+							border-top: 1px solid #e7e7e7;
+							font-weight: bold;
+							color: #333;
+							padding: 4px 20px;
+							display: block;
+/* 							.text-overflow(); */
+							&:hover {
+								border-top: 1px solid #333;
+								color: white;
+								background: #333;
+								text-decoration: none;
+							}
+						}
+					}
+				}
+			}
+		}
+			
+		
+		&.hover {
+			.p-search-bar {
+				.opacity(100);
+			}
+		}
+		
+		&.active {
+			.p-search-results,
+			.p-search-bar {
+				left: @pSearchActiveLeft;
+				width: @pSearchActiveWidth;
+			}
+			
+			.p-search-input {
+				.opacity(100);
+				visibility: visible;
+			}
+		}
+		
+		&.open {
+			
+			.p-search-bar {
+				left: @pSearchOpenLeft;
+				width: @pSearchOpenWidth;
+			}
+			
+			.p-search-results {
+				left: @pSearchOpenLeft;
+				width: @pSearchOpenWidth;
+			}
+			
+			.p-search-input {
+				width: 355px;
+			}
+			
+		}
+		
+		&.results {
+			.p-search-results {
+				max-height: 600px;
+				visibility: visible;
+				.opacity(100);
+/* 				.transition-delay(0.2s); */
+			}
+		}
+	}
+	
+	/* Desktop last styles */
+	@media only screen and (min-width: 980px) {
+		margin-left: 560px;
+		
+		/* iOS hack */
+		.p-search-spacer {
+			height: 84px;
+			&.emergency {
+				height: 134px;
+			}
+		}
+	}
+	
+}
+
+/* Persistent Search styles for mobile nav fly-out */
+.ls-canvas {
+ 	&.active {
+		#persistent-search {
+			&.android-browser {
+/* 				left: 274px; */
+				.translate3d(274px, 0, 0);
+				.backface-visibility(hidden);
+			}
+			@media only screen and (min-width: 720px) {
+				&.android-browser {
+/* 					left: 291px; */
+					.transition(all 0.2s ease-out);
+					.translate3d(291px, 0, 0);
+					.backface-visibility(hidden);
+				}
+			}
+			.nav-btn {
+				background: url(/web-resources/default/img/nav-btn-tablet.png) left -44px no-repeat;
+			}
+			@media only screen and (min-width: 980px) {
+				-webkit-transform: none;
+				-moz-transform: none;
+				-o-transform: none;
+				transform: none;
+				left: 0;
+			}
+		}
+	}
+}

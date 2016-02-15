@@ -1,0 +1,312 @@
+.locations-component {
+	margin: 0 20px 60px 20px;
+	h3 {
+		font: @regular 22px/24px 'BrandonGrotesque';
+		color: #8c1515;
+		padding: 17px 0 6px 0;
+	}
+	.locations-list {
+		list-style-type: none;
+		margin:0;
+		padding: 0;
+		> li {
+			margin: 10px 0px 0px 0px;
+			overflow: hidden;
+			> h4 {
+				font: @medium 20px/20px 'BrandonGrotesque';
+				margin: 0;
+				padding: 5px 0 7px 15px;
+				color: #8c1515;
+				position: relative;
+				display: block;
+				border-radius: 3px;
+				border: 1px solid #bdbdbd;
+				cursor: pointer;
+				.no-touch &:hover {
+					text-decoration: none;
+					background: #8c1515;
+					color: #fff;
+				}
+				&:focus, &:active {
+					text-decoration: none;
+					outline: none;
+					-moz-outline-style: none;
+					background: none;
+				}
+				.icon-collapse {
+					display: block;
+					position: absolute;
+					width: 10px;
+					height: 10px;
+					right: 10px;
+					top: 50%;
+					margin-top: -5px;
+					background: url('/web-resources/default/img/icon-expand-collapse.png') top left no-repeat;
+				}
+			}
+			&.expanded {
+				.locations-content {
+					display: block;
+				}
+				> h4 {
+					background: #8c1515;
+					color: #fff;
+					.icon-collapse {
+						background-position: 0px -11px;
+					}
+				}
+			}
+		}
+	}
+
+	.locations-content {
+		display: none;
+		.locations-content-inner {
+			.content-list {
+				list-style-type: none;
+				margin:0;
+				border: 1px solid #bdbdbd;
+				border-top: none;
+				.border-radius(0 0 3px 3px);
+				margin-top:-1px;
+				padding: 26px 30px 4px 30px;
+				li {
+					padding-bottom: 13px;
+					h5{
+						margin:0;
+						padding: 0;
+						color: #8c1515;
+						font: @medium 16px/22px 'BrandonTextMedium';
+						padding-bottom: 7px;
+						text-align: left;
+					}
+					p {
+						margin: 0;
+						padding: 0 0 6px 0;
+						color: #333333;
+						font: @regular 16px/22px 'BrandonTextRegular';
+						a {
+							color: #ff2e35;
+							font: @regular 16px/22px 'BrandonTextRegular';
+							&:hover{
+								border-bottom: 2px dotted #ff2e35;
+								text-decoration: none
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.search-result {
+		.nav-wrap {
+			width: 99.4%;
+			margin:0 0 10px 0;
+		}
+		.dropdown-nav {
+			p {
+				background: url(/web-resources/default/img/nav-tab-arrow-mobile.png) 262/280*100% 8px no-repeat;
+				text-indent: 14px;
+			}
+		}
+		.tab-content {
+			border-top: none;
+			background: none;	
+			box-shadow: none;
+		}
+	}
+
+	@media only print, only screen and (min-width: 720px) {
+		margin: 0 20px;
+		position: relative;
+		h3 {
+			font: @regular 24px/36px 'BrandonGrotesque';
+			padding: 9px 0 8px 0px;
+		}
+		.search-result {
+			.search-result-inner {
+				width: 100%;
+				max-width: 100%;
+			}
+			.nav-wrap {
+				width: 100%;
+				margin: 0;
+			}
+			.dropdown-nav {
+				display: none;
+			}
+			.search-result-tab {
+				width: 100%;
+				li {
+					box-sizing: border-box;
+					-moz-box-sizing: border-box;
+					margin: 0;
+					padding-left: 3px;
+					&.first-child{
+						padding-left: 0;
+					}
+					&.default-item {
+						display: none;
+					}
+					a {
+						display: table;
+						span {
+							&.left,
+							&.right {
+								position: relative;
+							}
+							&.inner {
+								height: 100%;
+								padding: 4px 0 0 0;
+								display: table-cell;
+								vertical-align: middle;
+								width: 100%;
+								line-height: 14px;
+							}
+						}
+					}
+				}
+				li.active {
+					a {
+						span {
+							&.inner {
+								padding:6px 0 0 0;
+							}
+							&.left,
+							&.right {
+								position: relative;
+							}
+						}
+					}
+				}
+			}
+			.tab-content {
+				border-top: 4px solid #990134;
+				box-shadow: none;
+				background: url(/web-resources/default/img/bg-search-result.png) top left repeat;
+				.tab-pane {
+					padding: 9px 33px 40px 33px;
+				}
+			}
+		}
+		.locations-list {
+			list-style-type: none;
+			margin:0;
+			padding: 0;
+			> li {
+				margin: 0;
+				padding-top: 31px;
+				padding-bottom: 5px;
+				overflow: hidden;
+				background: url(/web-resources/default/img/bg-line-location-list.png) left top repeat-x;
+				&:first-child {
+					background: none;
+				}
+				> h4 {
+					font: @medium 30px/32px 'BrandonGrotesqueMedium';
+					padding: 5px 0 19px 0;
+					margin-left: -1px;
+					color: #8c1515;
+					position: relative;
+					display: block;
+					border-radius: none;
+					border: none;
+					background: none;
+					&:hover {
+						color: #8c1515!important;
+						background: none!important;
+						cursor: default;
+					}
+					&:focus, &:active {
+						text-decoration: none;
+						outline: none;
+						-moz-outline-style: none;
+					}
+					.icon-collapse {
+						display: none;
+					}
+				}
+			}
+		}
+		.locations-content {
+			display: block;
+			.locations-content-inner {
+				.content-list {
+					border: none;
+					border-radius: none;
+					padding: none;
+					overflow: hidden;
+					margin-top: 0;
+					padding: 0;
+					li {
+						width: 33.3%;
+						float: left;
+						padding-right: 15px;
+						box-sizing: border-box;
+						-moz-box-sizing: border-box;
+						padding-bottom: 0px;
+						margin-bottom: 30px;
+						h5{
+							font: @medium 14px/20px 'BrandonTextMedium';
+							padding-bottom: 6px;
+						}
+						p {
+							font: @regular 14px/20px 'BrandonTextRegular';
+							padding: 0 0 5px 0;
+							a {
+								font-size: 14px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@media only print, only screen and (min-width: 980px) {
+		h3 {
+			font: @regular 24px/36px 'BrandonGrotesque';
+		}
+		.search-result {
+			.tab-content {
+				.tab-pane {
+					padding: 9px 33px 40px 51px;
+				}
+			}
+		}
+		.locations-list {
+			> li {
+				margin: 0;
+				padding: 36px 0 2px 0;
+				> h4 {
+					border: none;
+					border-radius: 0px;
+					padding: 0 0 19px 0;
+					&:hover {
+						color: #8c1515;
+						background: none;
+					}
+					.icon-collapse {
+						display: none;
+					}
+				}
+			}
+		}
+		.locations-content {
+			display: block;
+			.locations-content-inner {
+				.content-list {
+					border: none;
+					border-radius: 0px;				
+					margin: 0;
+					li {
+						width: 200px;
+						margin-right: 9px;
+						display: inline-block;
+					}
+				}
+			}
+		}
+	}
+	
+}

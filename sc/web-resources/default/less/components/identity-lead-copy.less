@@ -1,0 +1,39 @@
+ .identity-lead-copy{  
+ 	/* Mobile first styles */
+ 	margin: 0 20/320*100%;
+ 	padding-bottom: 14px;
+ 	overflow: hidden;
+
+	h2{
+		margin:9px 0 7px;
+		font:@regular 28px 'BrandonGrotesque';
+		color:#8c1515;
+	}
+	p{
+		font:@regular 16px/22px 'BrandonTextRegular';
+		color:#333;
+	}
+
+ 	/* Tablet next styles */
+	@media only print, only screen and (min-width: 720px) {
+		margin:0 11/688*100%;
+		padding-top:18px;
+
+		h2{
+			font-size: 45px;
+			line-height: 48px;
+			margin: 20px 0 8px -2px;
+		}
+		p{
+			font-size: 18px;
+			line-height: 25px;
+		}
+	}
+
+	/* Desktop last styles */
+	@media only print, only screen and (min-width: 980px) {
+		margin:0 11/940*100%;
+		padding-top:9px;
+		
+	}   
+ }   

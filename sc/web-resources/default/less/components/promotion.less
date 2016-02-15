@@ -1,0 +1,117 @@
+/* promotion component */
+.promotion {
+	/* Mobile first styles */
+	padding: 0px 0 15px 0;
+	&.promotion-extra {
+		display: none;
+	}
+	.promo-thumbnail {
+		width: 221px;
+		height: 230px;
+		position: relative;
+		margin: 0 auto;
+		img {
+			max-width:100%;
+		}
+		.promo-description {
+			background: transparent url(/web-resources/default/img/bg-overlay-promo-description.png) left top repeat ;
+			color: #ffffff;
+			display: block;
+			font: @medium 14px/20px 'BrandonTextMedium';
+			margin:0;
+			padding: 5px 22px 3px 20px;
+			text-align: left;
+			position: absolute;
+			bottom: 0;
+			overflow: hidden;
+		}
+	}
+	.topic-footer {
+		margin-top: 20px;
+		font: 14px 'BrandonGrotesqueBold';
+		color: #333;
+		a {
+			font-family: 'BrandonGrotesque';
+			color: #ff2e35;
+			&:hover, &:focus{					
+				text-decoration: none;
+				border-bottom: 2px dotted #ff2e35;
+			}
+		}
+	}
+	&.link-index {
+		padding: 0px 13px 60px 13px;
+	}
+	/* Tablet next styles */
+	@media only print, only screen and (min-width: 720px) {
+		margin: 0;
+		width: auto;
+		height: auto;
+		&.promotion-extra {
+			display: block;
+		}
+		.promo-thumbnail {
+			width: auto;
+			height: auto;
+			img {
+				max-width:100%;
+			}
+			.promo-description {
+				height: auto;
+				font: @medium 14px/16px 'BrandonTextMedium';
+				padding: 7px 10px 8px 14px;
+			}
+		}
+		.topic-footer {
+			display: none;
+		}
+		&.link-index {
+			padding: 0px;
+		}
+	}
+	/* Desktop last styles */
+	@media only print, only screen and (min-width: 980px) {
+		margin: 0;
+		padding: 0;
+		background: #fbf8f4;
+		.promo-thumbnail {
+			img {
+				max-width:100%;
+			}
+			.promo-description {
+				font: @medium 14px/20px 'BrandonTextMedium';
+				padding: 2px 13px 3px 16px;
+			}
+		}
+	}
+}	
+
+.chrome {
+	.promotion {
+		.promo-thumbnail {
+			.promo-description {
+				bottom: -1px;
+			}
+		}
+	}	
+}
+
+
+.service-template {
+	.promotion{
+		background:none;
+		padding-top: 30px;
+	}
+
+	@media only print, only screen and (min-width: 720px) {
+		.promotion{
+			padding: 0px;
+		}
+		
+	}
+	@media only print, only screen and (min-width: 980px) {
+		.promotion{
+			padding-top: 0px;
+		}
+	}
+}

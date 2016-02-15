@@ -1,0 +1,200 @@
+/*contact-form component*/
+/* salesforce-form component */
+.contact-form-component {
+	padding: 0 20px;
+	.red{
+		color: #ff2e35;
+	}
+	.contact-form-wrap{
+		background: url("/web-resources/default/img/bg-search-result.png") repeat scroll left top transparent;
+		.box-shadow(0 1px 2px rgba(0,0,0,.2));
+		.border-radius(6px);
+		padding: 15px 12px 36px;
+		margin-bottom: 60px;
+		form {
+			.field-group{
+				ul{
+					list-style-type: none;
+					margin: 0 0 30px;
+					width: 256px;
+					li{
+						margin-bottom: 5px;
+						label{
+							font:@medium 14px/32px 'BrandonTextMedium';
+							color: #333333;
+							width: 90%;
+							float: left;
+							margin-bottom: 0;
+						 	cursor: default;
+						}
+						.error-text-right {
+							font:@medium 14px/32px 'BrandonTextMedium';
+							color: #ff7033;
+							overflow: hidden;
+							float: right;
+							text-align: right;
+						}
+						select.selectpicker{
+							display: block!important;
+							visibility: hidden;
+							height: 24px;
+							margin-bottom: 0;
+							width: 0;
+						}
+						input[type=text], textarea {
+							font:@regular 14px/20px 'BrandonTextRegular';
+							color: #5f574f;
+							width: 242px;
+							margin-bottom: 0;				
+							background: url("/web-resources/default/img/bg-input-showdow.png") repeat-x scroll 0 0 transparent;
+							background-color:  #ffffff;
+						}
+						.bootstrap-select {
+							width: 256px;
+							margin: 0 0 12px;
+							.btn {
+								-moz-border-bottom-colors: none;
+								-moz-border-left-colors: none;
+								-moz-border-right-colors: none;
+								-moz-border-top-colors: none;
+								background-color: #F5F5F5;
+								background-image: linear-gradient(to bottom, #FFFFFF, #E6E6E6);
+								background-repeat: repeat-x;
+								border-color: #CCCCCC #CCCCCC #B3B3B3;
+								border-image: none;
+								border-radius: 4px 4px 4px 4px;
+								border-style: solid;
+								border-width: 1px;
+								box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+								color: #333333;
+								cursor: pointer;
+								display: inline-block;
+								font-size: 14px;
+								line-height: 20px;
+								margin-bottom: 0;
+								padding: 4px 12px;
+								text-align: center;
+								text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+								vertical-align: middle;
+							}							
+						}
+						textarea{
+							height: 158px;
+						}				
+					}
+					&.main-fields{
+
+					}
+					&.advance-fields{
+
+					}
+				}
+			}
+			input[type=submit]{
+				font: @regular 16px/32px 'BrandonGrotesqueBold';
+				color: #ffffff;
+				text-transform: uppercase;
+				width: 125px;
+				height: 33px;				
+				margin: 10px 0 17px;
+				background: url("/web-resources/default/img/bg-button-submit.png") repeat-x scroll 0 0 transparent;
+				border: 0px;
+				.border-radius(4px);
+				.box-shadow(0 1px 1px rgba(0,0,0,1));
+				text-shadow: 1px 1px 1px #000000;
+				&:hover{
+					background: #ff7033;
+				}
+			}
+			p {
+				font:@regular 16px/20px 'BrandonTextRegular';
+			}
+			.required {
+				font:@medium 16px/20px 'BrandonTextMedium';
+			}
+		}
+	}
+}
+/* Tablet next styles */
+@media only print, only screen and (min-width: 720px) {
+	.contact-form-component {
+		padding: 0 20px;
+		.contact-form-wrap{
+			margin-left: 100px;			
+			padding: 15px 12px 16px 32px;
+			margin-bottom: 40px;
+			form {
+				.field-group{
+					padding-right: 30px;
+					ul{
+						float: left;
+						width: 256px;						
+						li{							
+							textarea{
+								height: 148px;
+							}
+							.bootstrap-select {								
+								margin: 0 0 11px;
+							}
+						}						
+					}
+				}
+				input[type=submit]{
+					margin: 2px 0 17px;
+				}
+				p {
+					
+				}
+				.required {
+					
+				}
+			}
+		}
+	}
+}	
+/* Desktop last styles */
+@media only print, only screen and (min-width: 980px) {
+	.contact-form-component {
+		padding: 0 10px 0 0;
+		.contact-form-wrap{			
+			padding: 15px 12px 2px 42px;
+			margin-bottom: 60px;
+			margin-left: 0;
+			form {
+				.field-group{
+					padding-right: 0;
+					ul{
+						float: left;
+						width: 256px;
+						margin-bottom: 10px;
+						li{
+							margin-right: 0;
+							textarea{
+								height: 158px;
+							}
+							.bootstrap-select {								
+								margin: 0;								
+							}
+						}
+						&.main-fields{
+							margin-right: 76px;
+						}
+						&.advance-fields{
+							
+						}
+					}
+				}
+				input[type=submit]{
+					margin: 0 0 17px;
+				}
+				p {
+					font:@regular 14px/20px 'BrandonTextRegular';
+					margin-bottom: 3px;
+				}
+				.required {
+					font:@medium 14px/20px 'BrandonTextMedium';
+				}
+			}
+		}
+	}
+}

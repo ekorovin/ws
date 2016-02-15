@@ -1,0 +1,36 @@
+#emergency-banner {
+	/* Default mobile first styles */
+	.clearfix();
+	background: url(/web-resources/default/img/bg-emergency-banner.png);
+	padding: 15px 0;
+	width: 100%;
+	div {
+		display: table-cell;
+		vertical-align: middle;
+		padding-left: 15px;
+		img {
+			max-width: none;
+		}
+		p {
+			font: @regular 14px/20px 'BrandonTextRegular';
+			color: white;
+			margin: 0;
+		}
+		a {
+			color: white;
+			text-decoration: underline;
+		}
+	}
+	
+	@media only print {
+		position: absolute;
+		top: 0;
+		z-index: 9999;
+		div {
+			p, a {
+				color: white !important;
+			}
+		} 
+	}
+	
+}

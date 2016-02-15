@@ -1,0 +1,82 @@
+/* Mobile first styles */
+.social-template {
+	padding: 0 20px;
+	
+	&.social-related-locations{
+		display: block;
+	}
+	&.social-newletter{
+		&.social-newletter-mobile{
+			display: block;
+		}
+		&.social-newletter-desktop{
+			display: none;
+		}	
+	}
+	&.social-sharing {
+		&.social-sharing-mobile{
+			display: block;
+		}
+		&.social-sharing-desktop{
+			display: none;
+		}
+	}
+	.btn-right-bottom{
+		margin-top: 25px;
+		.clearfix;
+		.btn-back-to-top{
+			float: right;
+			padding-right: 20px;
+			display: block;    
+	  		position: relative;
+	  		color: #333333;
+	  		font:@regular 12px/18px 'BrandonGrotesque';
+			span{
+				background: url("/web-resources/default/img/ico-btn-back-to-top.png") no-repeat 0 0 transparent;
+				position: absolute;
+				bottom: 6px;
+				right: 0;
+				width: 13px;
+				height: 7px;
+				display: block;
+			}
+			&:hover{
+				text-decoration: none;
+				color: #ff2e35;
+			}
+		}	
+	}
+}
+
+/* Tablet next styles */
+@media only print, only screen and (min-width: 720px) {
+	.social-template {		
+		padding: 0;
+		&.social-related-locations{
+			display: none;
+		}
+		&.social-newletter{
+			&.social-newletter-mobile{
+				display: none;
+			}
+			&.social-newletter-desktop{
+				display: block;
+			}	
+		}
+		&.social-sharing {
+			&.social-sharing-mobile{
+				display: none;
+			}
+			&.social-sharing-desktop{
+				display: block;
+			}
+		}
+		.btn-right-bottom{
+			display: none;
+		}
+	}
+}
+/* Desktop last styles */
+@media only print, only screen and (min-width: 980px) {
+
+}

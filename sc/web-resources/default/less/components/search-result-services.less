@@ -1,0 +1,207 @@
+/* search-result-services component */
+
+/* Mobile first styles */	
+#services{
+	.services-panel {			
+		.results-header {			
+			position: relative;
+			margin-bottom: 18px;
+			padding-top: 6px;
+			padding-bottom: 0;
+			border-bottom: 1px solid #bbbbbb;
+			margin-left: 0;
+			width: 100%;
+			p {
+				color: #4d4d4f;
+				font-family: 'BrandonGrotesqueBold';
+				font-size: 16px;
+				line-height: 17px;					
+				margin-bottom: 0;
+				margin-left: 2.61%;
+				padding-left: 3px;
+			}
+		}
+		.results-body {			
+			#grid > .fluid > .row-fluid;
+			ul.services-list{
+				margin-left: 0;
+				width: 100%;				
+				li {
+					font-family: 'BrandonGrotesque';						
+					padding-top: 7px;
+					padding-bottom: 10px;
+					position: relative;
+					border-bottom: 1px solid #bbbbbb;
+					border-top: 1px solid #ffffff;
+					.layout-thumb-wrapper{
+						float: left;
+						width: 130px;
+						margin-left: 3.59%;
+						.mini-layout-thumb{
+							background: #ffffff;
+							float: left;
+							padding: 5px;
+							margin-left: -2px;
+							border: 1px solid #E9E0D9;
+							.box-shadow(0 1px 1px rgba(0,0,0,.6));
+							.border-radius(3px);						
+							width: 120px;
+							height: 120px;
+						}							
+					}
+					.desc {
+						float: none;
+						overflow: hidden;						
+						padding-left: 6.25%;
+						width: auto;
+						color: #666666;
+						p {							
+							font-size: 14px;
+							line-height: 18px;
+							.heading{
+								font-size: 18px;									
+								line-height: 19px;
+								font-family: 'BrandonGrotesqueBold';									
+								color: #ff2e35;
+							}
+						}
+						.content{
+							display: none;
+						}
+						.content-mobile{
+							display: block;
+						}
+						.located-at{
+							font-weight: @bold;
+							font-size: 14px;
+							line-height: 20px;
+							.italic{							
+								color: #ff2e35;
+								font-weight: @regular;
+							}
+							a{
+								&:hover, &:focus{
+									text-decoration: underline;
+									color: #ff2e35;
+								}
+							}							
+							span{							
+								font-weight: @regular;	
+							}
+						}
+					}						
+				}
+				li:first-child {
+					border-top: 0 solid #ffffff;					
+				}				
+				li.odd {
+					background: url("/web-resources/default/img/odd-doctor-bg.png") repeat;
+				}
+			}				
+		}			
+	}
+}
+
+/* Tablet next styles */
+@media only print, only screen and (min-width: 720px) {				
+	#services{
+		.services-panel {			
+			.results-header {			
+				margin-left: 6.18%;
+				width: 87.65%;
+				padding-bottom: 7px;
+				padding-top: 1px;
+				margin-bottom: 20px;
+				border-bottom: 1px solid #bbbbbb;
+				p {				
+					margin-left: 0;
+					padding: 14px 0 0;
+					font-size: 14px;
+				}
+			}
+			.results-body {					
+				ul.services-list{
+					margin-bottom: 10px;
+					margin-left: 6.28%;
+					width: 87.65%;
+					li {
+						font-family: 'BrandonGrotesque';						
+						padding-top: 7px;
+						padding-bottom: 7px;
+					 	margin-bottom: 0;
+						position: relative;
+						border-bottom: 1px solid #bbbbbb;
+						.layout-thumb-wrapper{
+							width: auto;
+							margin-left: 0;
+							.mini-layout-thumb{
+								width: 76px;
+								height: 76px;
+							}							
+						}
+						.desc {
+							overflow: visible;
+							float: left;
+							width: 69%;
+							margin-left: 4.128%;
+							padding-left: 0;
+							.located-at{								
+							}
+						}												
+					}
+					li:first-child {
+						padding-top: 5px;					
+					}						
+				}								
+			}								
+		}
+	}
+}
+
+/* Desktop last styles */
+@media only print, only screen and (min-width: 980px) {
+	#services{
+		.services-panel {			
+			.results-header {
+				margin-bottom: 18px;
+				padding-top: 1px;						
+				margin-left: 6.38%;
+				width: 87.65%;
+				padding-bottom: 16px;
+				p {
+					margin-left: 2.81%;
+					padding-left: 3px;				
+				}			
+			}
+			.results-body {					
+				ul.services-list{
+					margin-left: 6.58%;
+					width: 87.65%;
+					li {
+						font-family: 'BrandonGrotesque';						
+						padding-top: 7px;
+						padding-bottom: 9px;
+						position: relative;
+						margin-bottom: 0;
+						border-bottom: 1px solid #bbbbbb;
+						.layout-thumb-wrapper{
+							margin-left: 2.39%;								
+						}
+						.desc {
+							width: 69%;
+							margin-left: 6.128%;
+							p{
+								padding-bottom: 0;
+								margin-bottom: 6px;
+							}
+						}
+					}
+					li:first-child {
+						padding-top: 7px;					
+					}							
+				}					
+			}
+		}
+	}
+}
+

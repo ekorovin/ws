@@ -1,0 +1,439 @@
+<!-- #all item template -->
+<script type="text/template" id="allItemTemplate">
+	<div class="layout-thumb-wrapper">
+		<div class="mini-layout-thumb">
+			<% 	var imgSrc = "";
+				if (obj['content-type'] == 'caregiver') {
+					imgSrc = obj['image-thumb-url'][0];
+				} else if (obj['content-type'] == 'service') {
+					imgSrc = "/web-resources/default/img/thumb-2.jpg";
+				} else if (obj['content-type'] == 'location') {
+					imgSrc = "/web-resources/default/img/thumb-3.jpg";
+				} else if (obj['content-type'] == 'class') {
+					imgSrc = "/web-resources/default/img/thumb-5.jpg";
+				} else {
+					imgSrc = "/web-resources/default/img/thumb-6.jpg";
+				}	
+			%>
+			<a class="avatar" href="<%= obj['url'] %>" title="<%= name %>">
+				<img src="<%= imgSrc %>" alt="<%= name %>" />
+			</a>
+		</div>
+	</div>
+	<div class="span7 desc">
+		<p>
+			<a href="<%= obj['url'] %>" title="<% if (obj['content-type'] == 'location'){ %><%= name %><% }else{ %><%= title %><% } %>"><span class="heading"><% if (obj['content-type'] == 'location'){ %><%= name %><% }else{ %><%= title %><% } %></span></a>
+		</p>
+		<p class="content">
+			<% if (obj['description']){ %><%= obj['description'] %><% }else{ %><%= obj['content'] %><% } %>
+		</p>
+		<p class="content-mobile">
+			<% if (obj['description']){ %><%= obj['description'] %><% }else{ %><%= obj['content'] %><% } %>
+		</p>
+	</div>
+</script>
+<!-- #class item template -->
+<script type="text/template" id="classItemTemplate">
+	<div class="layout-thumb-wrapper">
+		<div class="mini-layout-thumb">
+			<a class="avatar" href="<%= obj['url'] %>" title="<%= name %>">
+				<img src="/web-resources/default/img/thumb-5.jpg" alt="<%= name %>" />
+			</a>
+		</div>
+	</div>
+	<div class="desc span7">
+		<p>
+			<a href="<%= obj['url'] %>" title="<% if (name){ %><%=name%><% }else{ %><%=title%><% } %>"><span class="heading"><% if (name){ %><%=name%><% }else{ %><%=title%><% } %></span></a>
+		</p>
+		<p class="content">
+			<% if (obj['description']){ %><%= obj['description']%><% }else{ %><%=obj['content']%><% } %>
+		</p>
+		<p class="content-mobile">
+			<% if (obj['description']){ %><%= obj['description']%><% }else{ %><%=obj['content']%><% } %>
+		</p>
+		<p class="class-time">
+			<span>Next Class:</span> <%= obj['event-start-date']%> | <a href="<%= obj['url'] %>">Register</a>
+		</p>
+	</div>
+</script>
+<!-- #service item template -->
+<script type="text/template" id="serviceItemTemplate">
+	<div class="layout-thumb-wrapper">
+		<div class="mini-layout-thumb">
+			<a class="avatar" href="<%= obj['url'] %>" title="<%= name %>">
+				<img src="/web-resources/default/img/thumb-2.jpg" alt="<%= name %>" />
+			</a>
+		</div>
+	</div>
+	<div class="desc span7">
+		<p>
+			<a href="<%= obj['url'] %>" title="<%= name %>"><span class="heading"><%= name %></span></a>
+		</p>
+		<p class="content">
+			<%= obj['description']%>
+		</p>
+		<p class="content-mobile">
+			<%= obj['description']%>
+		</p>
+		<p class="located-at">
+			Located at: <%
+				var len = obj['related-location'].length;
+				_.each(obj['related-location'], function(location, index) {
+			%>
+				<% if(index+1 < len) %>
+					<a class="italic" href="/en/location/<%= obj['related-location'][index] %>.page" title="<%= obj['related-location-label'][index] %>"><%= obj['related-location-label'][index] %></a> <span>|</span>
+				<% else %>
+					<a class="italic" href="/en/location/<%= obj['related-location'][index] %>.page" title="<%= obj['related-location-label'][index] %>"><%= obj['related-location-label'][index] %></a>
+			<% }); %>
+		</p>
+	</div>
+</script>
+<!-- #doctor item template -->
+<script type="text/template" id="doctorItemTemplate">
+	<div class="column1">
+		<div class="avatar-wrap">
+			<a href="<%= obj['url'] %>" title="<%= name %>">
+				<img src="<%= obj['image-thumb-url'][0] %>" alt="<%= name %>" class="avatar" />
+			</a>
+		</div>
+	</div>
+	<div class="column2">
+		<p class="name-row">
+			<a href="<%= obj['url'] %>" title="<%= name %>"><span class="name"><%= name %></span></a>
+		</p>
+		<p class="specialty-row">
+			Specialities:
+			<span class="specialities">
+			<%
+			var length = db_searchSpecialty.length;
+			_.each(db_searchSpecialty, function(spec, index) {
+				if(index+1 < length)
+						print(spec + ', ');
+					else
+						print(spec)
+			}); %>
+			</span>
+		</p>
+		<p class="location-row hidden-list">
+			Location:
+			<span class="location"><%= db_mailname %></span><br />
+			<%= db_location1city %>
+		</p>
+		<p class="hidden-grid download-row">
+			Download: (<a href="/en/caregiver/vcard.page?id=<%= id %>" class="vcard" title="<%= name %> Vcard">Vcard</a>)
+		</p>
+		<p class="visible-phone"><%= db_officephone %></p>
+		<% if (obj['video-asset-url']) { %>
+			<p>
+				<a href="<%= obj['video-asset-url'][0] %>" class="video" title="<%= name %> Video"></a>
+			</p>
+		<% } %>
+	</div>
+	<div class="column3 hidden-grid">
+		<p class="patient-row">
+			Sees Patients at:
+		</p>
+		<p class="address-row">
+			<span class="address1">
+				<%= db_mailname %><br />
+				<span class="reg-text">
+					<%= db_location1address1 %><br />
+					<%= db_location1city %>, <%= db_location1state %><br />
+					<%= db_location1zip %><br />
+				</span>
+			</span>
+		</p>
+		<p class="phone-row">
+			<span class="phone1 reg-text"><%= db_officephone %></span>
+		</p>
+		<p>(<a href="#" class="map1" title="<%= db_mailname %> Map">Map</a>)</p>
+	</div>
+	<% if(db_location2address1) { %>
+	<div class="column4 hidden-grid">
+		<p class="patient-row">
+			Also sees patients at:
+		</p>
+		<p class="address-row">
+			<span class="address1">
+				<%= db_location2office_name %><br />
+				<%= db_location2address1 %><br />
+				<%= db_location2address2 %><br />
+				<%= db_location2city, db_location2state %><br />
+				<%= db_location2zip %><br />
+			</span>
+		</p>
+		<% try { %>
+			<p class="phone-row">
+				<span class="phone1 reg-text"><%= db_location2clinicalphone %></span>
+			</p>
+		<% } catch(error) {} %>
+		<p>(<a href="#" class="map1" title="<%= db_location2office_name %> Map">Map</a>)</p>
+	</div>
+	<% } %>
+</script>
+<!-- #doctor item template -->
+<script type="text/tempalte" id="locationItemTemplate">
+	<div class="span2 offset1 mini-layout-thumb">
+		<a class="avatar" href="<%= obj['url'] %>" title="<%= name %>">
+			<img src="/web-resources/default/img/ico-point.png" alt="<%= name %>" />
+			<p></p>
+		</a>
+	</div>
+	<div class="address-detail offset3">
+		<p><a href="<%= obj['url'] %>" class="heading" title="<%= name %>"><%= name %></a></p>
+		<p class="address"><%= obj['address-a'] %><br/><%= city %>, <%= state %> <%= zip %></p>
+		<% 
+			var phone = obj['telecom'].replace('&lt;p&gt;', '').replace('&lt;/p&gt;', ''); 
+		%>
+		<p class="tel"><%= phone %></p>
+	</div>
+</script>
+<script type="text/template" id="doctorsListView">
+	<div class="results-header">
+		<p class="result-count">
+			Results found: <span class="result-caregiver-count">10</span>
+		</p>
+		<div class="type-switcher-wrap">
+			<a href="#" class="type-switcher list-switch active" data-view-type="list" title="List View">List</a>
+			<a href="#" class="type-switcher grid-switch" data-view-type="grid" title="Grid View">Grid</a>
+		</div>
+	</div>
+	<div class="results-body">
+		<div class="list-wrap">
+			<ul class="doctors-list unstyled clearfix"></ul>
+		</div>
+	</div>
+	<div class="pagination pagination-small pagination-centered">
+  		<ul>
+    		
+  		</ul>
+	</div>
+</script>
+<script type="text/template" id="allListView">
+	<div class="results-header row-fluid">
+		<p class="result-count">
+			Results found: <span class="result-all-count">100</span>
+		</p>
+	</div>
+	<div class="results-body row-fluid">
+		<ul class="all-list unstyled clearfix">
+
+		</ul>
+	</div>
+	<div class="pagination pagination-small pagination-centered">
+  		<ul>
+    		
+  		</ul>
+	</div>
+</script>
+<script type="text/template" id="servicesListView">
+	<div class="results-header row-fluid">
+		<p class="result-count">
+			Results found: <span class="result-service-count">100</span>
+		</p>
+	</div>
+	<div class="results-body row-fluid">
+		<ul class="services-list unstyled clearfix">
+
+		</ul>
+	</div>
+	<div class="pagination pagination-small pagination-centered">
+  		<ul>
+    		
+  		</ul>
+	</div>
+</script>
+<script type="text/template" id="classesListView">
+	<div class="results-header row-fluid">
+		<p class="result-count">
+			Results found: <span class="result-class-count">100</span>
+		</p>
+	</div>
+	<div class="results-body row-fluid">
+		<ul class="all-list unstyled clearfix">
+
+		</ul>
+	</div>
+	<div class="pagination pagination-small pagination-centered">
+  		<ul>
+    		
+  		</ul>
+	</div>
+</script>
+<script type="text/template" id="locationsListView">
+	<div class="results-header row-fluid">
+		<p class="result-count offset1">
+			Results found: <span class="result-location-count">100</span>
+		</p>
+	</div>
+	<div class="results-body row-fluid">
+		<div class="map-panel span6">
+			<div id="map-canvas" class="map">
+
+			</div>
+		</div>
+		<div class="list-panel span6">
+			<ul class="locations-list unstyled clearfix span12">
+
+			</ul>
+		</div>
+	</div>
+	<div class="pagination pagination-small pagination-centered">
+  		<ul>
+    		
+  		</ul>
+	</div>
+</script>
+
+<script type="text/template" id="openHourTemplate">
+	<i class="status-flag
+	<%
+		var now = new Date();
+
+		if(now > openTime && now < closeTime)
+			print('green');
+		else
+			print('red');
+	%>
+	"></i>
+	<span class="bold-text"><%= title %>: </span><br />
+	<span class="open-time">
+		<%
+		var openHour = openTime.getHours();
+		var openMinutes = openTime.getMinutes() == 0?
+								'00':
+								openTime.getMinutes() < 10?
+									'0' + openTime.getMinutes():
+									openTime.getMinutes();
+		var closeHour = closeTime.getHours();
+		var closeMinutes = closeTime.getMinutes() == 0?
+								'00':
+								closeTime.getMinutes() < 10?
+									'0' + closeTime.getMinutes():
+									closeTime.getMinutes();
+		 if(openHour > 12) {
+		 	print(openHour - 12 + ':' + openMinutes + 'pm');
+		 }
+		 else {
+		 	print(openHour + ':' + openMinutes + 'am');
+		 }
+		 %>-<%
+		 if(closeHour > 12) {
+		 	print(closeHour - 12 + ':' + closeMinutes + 'pm');
+		 }
+		 else {
+		 	print(closeHour + ':' + closeMinutes + 'am');
+		 }
+		%>
+	</span>
+</script>
+
+<script type="text/template" id="fb-activity">
+	<div class="fb-activity">
+		<a href="<%= url %>" title="<%= name %>"><img src="<%= pic %>" alt="<%= name %>" /></a>
+		<a href="<%= url %>" title="<%= name %>"><%= name %></a> shared <%= message %>
+	</div>
+</script>
+
+<script type="text/template" id="youtube-video-list">
+		<div class="thumb"><a class="youtube cboxElement" title="<%= title %>" href="<%= url %>"><img src="<%= thumb %>" alt="<%= title %>" /><img alt="" src="/web-resources/default/img/icon-play-320.png" class="video-play-img"></a></div>
+		<p class="title"><%= title %> <span class="duration">(<%= duration %>)</span></p>
+		<p class="desc"><%= desc %></p>
+</script>
+<script type="text/template" id="lightSidebarResultItem">
+	<li class="result-item clearfix <%= hiddenTabletClass %>">
+		<a href="<%= obj['url'] %>" class="item-link-wrap clearfix" title="<% if (name){ %><%= name %><% }else{ %><%= title %><% } %>">
+		<span class="left-pane">
+			<i class="icon result <% print(obj['content-type']) %>"></i>
+		</span>
+		<span class="right-pane">
+			<span class="title" href="<%= obj['url'] %>">
+				<% if (name){ %><%= name %><% }else{ %><%= title %><% } %>
+			</span>
+			<span class="type">
+				<%
+					var cate = obj['content-type'] == 'caregiver' ? 'doctor' : obj['content-type'];
+					print(cate);
+				%>
+			</span>
+		</span>
+		</a>
+	</li>
+</script>
+<script type="text/template" id="calendarTemplate">
+	<li class="event">
+		<div class="event-name"><a href="<%= txtEvtPrimaryFormURL %>" title="<%= txtEvtName %>"><%= txtEvtName %></a></div>
+		<div class="event-description"><%= txtEvtNotes %></div>
+		<div class="event-data">
+				<span class="frequency">Multiple Sessions</span>
+				<span class="time"><%= dteEvtStartTime %> - <%= dteEvtEndTime %></span>
+				<span class="price"></span>
+				<span class="details"><a href="<%= txtEvtPrimaryFormURL %>" title="<%= txtEvtName %> Details">Details</a></span>
+		</div>
+	</li>
+</script>
+<script type="text/template" id="pSearchServicesItemTemplate">
+<li class="p-search-result-set services">
+	<ul class="p-search-result-set-header">
+		<a href="/en/search/default.page?tab=services&search-term=" title="Services">
+			<li class="icon"><img src="/web-resources/default/img/p-search-icon-services.png" /></li>
+			<li class="header">Services</li>
+		</a>
+	</ul>
+	<ul class="p-search-result-set-list"></ul>
+</li>
+</script>
+<script type="text/template" id="pSearchDoctorsItemTemplate">
+<li class="p-search-result-set doctors">
+	<ul class="p-search-result-set-header">
+		<a href="/en/search/default.page?tab=doctors&search-term=" title="Doctors">
+			<li class="icon"><img src="/web-resources/default/img/p-search-icon-doctors.png" /></li>
+			<li class="header">Doctors</li>
+		</a>
+	</ul>
+	<ul class="p-search-result-set-list"></ul>
+</li>
+</script>
+<script type="text/template" id="pSearchLocationsItemTemplate">
+<li class="p-search-result-set locations">
+	<ul class="p-search-result-set-header">
+		<a href="/en/search/default.page?tab=locations&search-term=" title="Locations">
+			<li class="icon"><img src="/web-resources/default/img/p-search-icon-locations.png" /></li>
+			<li class="header">Locations</li>
+		</a>
+	</ul>
+	<ul class="p-search-result-set-list"></ul>
+</li>
+</script>
+<script type="text/template" id="pSearchEventsItemTemplate">
+<li class="p-search-result-set events">
+	<ul class="p-search-result-set-header">
+		<a href="/en/search/default.page?tab=classes&search-term=" title="Classes">
+			<li class="icon"><img src="/web-resources/default/img/p-search-icon-events.png" /></li>
+			<li class="header">Classes</li>
+		</a>
+	</ul>
+	<ul class="p-search-result-set-list"></ul>
+</li>
+</script>
+<script type="text/template" id="pSearchPagesItemTemplate">
+<li class="p-search-result-set pages">
+	<ul class="p-search-result-set-header">
+		<a href="/en/search/default.page?search-term=" title="Pages">
+			<li class="icon"><img src="/web-resources/default/img/p-search-icon-pages.png" /></li>
+			<li class="header">Pages</li>
+		</a>
+	</ul>
+	<ul class="p-search-result-set-list"></ul>
+</li>
+</script>
+<script type="text/template" id="pSearchAllItemTemplate">
+<li class="p-search-result-set all">
+	<ul class="p-search-result-set-header">
+		<li class="header"><div id="ie8EmptyLiFix" style="width:50px;height:auto;"></div></li>
+	</ul>
+	<ul class="p-search-result-set-list">
+		<li><a class="view-all-results" href="#" title="View All">View all search results</a></li>
+	</ul>
+</li>
+</script>

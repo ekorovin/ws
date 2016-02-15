@@ -1,0 +1,263 @@
+.topidx-component {
+	padding: 0px 13px;
+	.topic-headline {
+		font: 28px/28px 'BrandonGrotesque';
+		color: #990134;
+		margin: 20px 0px 10px 0px;
+	}
+	.tree-list {
+		list-style-type: none;
+		margin: 15px 0px 0px 0px;
+		li {//global style
+			margin: 6px 0px 0px 0px;
+			overflow: hidden;
+			a {
+				padding: 0px 25% 0px 10px;
+				font: 16px/25px 'BrandonGrotesque';
+				color: #8c1515;
+				position: relative;
+				display: block;
+				border-radius: 3px;
+				border: 1px solid #bdbdbd;
+				.no-touch &:hover {
+					text-decoration: none;
+					background: #8c1515;
+					color: #fff;
+					.icon.tree-item {
+						background-position: 0px -11px;
+					}
+				}
+				&:focus, &:active, &:hover {
+					text-decoration: none;
+					outline: none;
+					-moz-outline-style: none;
+				}
+				.icon.tree-item {
+					width: 10px;
+					height: 11px;
+					right: 17px;
+					top: 50%;
+					margin-top: -5px;
+					background: url('/web-resources/default/img/t19-icon-arrow-bold.png') top left no-repeat;
+				}
+			}
+			//children level 1 
+			ul {
+				display: none;
+				list-style-type: none;
+				margin: 0px 0px 0px 10px;
+				li {
+					a {
+						
+					}
+					&.has-child a .icon.tree-item {
+					
+					}
+					
+					//children level > 2
+					ul {
+						li {
+							border: none;
+							a {
+								color: #ff2e35;
+								padding: 0px 0px 0px 26px;
+								.icon.tree-item {
+									background-image: url('/web-resources/default/img/t19-icon-arrow.png');
+									width: 8px;
+									height: 9px;
+									margin-top: -4px;
+									right: auto;
+									left: 14px;
+								}
+							}
+							a:hover, &.expanded a {
+								.icon.tree-item {
+									background-position: 0px -9px;
+								}
+							}
+						}
+					}
+					
+				}
+			}
+			> a .icon.tree-item {
+				position: absolute;
+				display: block;
+			}
+									
+			&.expanded {
+				> ul {
+					display: block;
+				}
+				> a {
+					background: #8c1515;
+					color: #fff;
+					.icon.tree-item {
+						background-position: 0px -11px;
+					}
+				}
+				> a .icon.tree-item {
+					
+				}
+			}
+		}
+		> li {//first item level
+			> a {
+				font-size: 20px;
+				line-height: 28px;
+				font-family: 'BrandonGrotesqueBold';
+				padding: 0px 25% 0px 10px;
+			}
+		}
+	}
+	.stay-well {
+		h3 {
+			margin: 40px 0px 15px 0px;
+			font: 18px/24px 'BrandonTextBold';
+			color: #8c1515;
+		}
+		p {
+			font: 16px/22px 'BrandonGrotesque';
+			color: #333;
+		}
+		img {
+			display: block;
+			margin: 0px auto 10px auto;
+			width: auto !important; /*override the width below*/
+			width: 100%;
+			max-width: 100%;
+			box-shadow: 1px 2px 2px rgba(0,0,0,0.2);
+		}
+		margin: 0px 0px 40px 0px;
+	}
+	.topic-footer {
+		display: none;
+	}
+	@media only print, only screen and (min-width: 720px) {
+		padding: 0px 15px 0px 25px;
+		.topic-headline {
+			font-size: 36px;
+			line-height: 36px;
+			margin: 30px 0px 30px 0px;
+		}
+		.tree-list {
+			margin: 0px;
+			> li {
+				margin: 0px 0px 20px 0px;
+			}
+			li {//global style
+				overflow: visible;
+				a {
+					margin: 0px 0px 0px 13px;
+					padding: 0px 0px 0px 0px;
+					display: inline;
+					border-radius: 0px;
+					padding-left: 0px;
+					font: 18px/18px 'BrandonGrotesque';
+					color: #ff2e35 !important;
+					border: none;
+					.ie8 & {
+						border-bottom: 2px solid #fff;
+						border-left: none;
+						border-right: none;
+						border-top: none;
+					}
+					.no-touch &:hover,
+					.no-touch &:focus { 
+						border-bottom: 2px dotted #ff2e35 !important;
+						color: #ff2e35;
+						background: none;
+					}
+					.icon.tree-item {
+						display: none;
+					}
+				}
+				&.has-child {
+					> a .icon.tree-item {
+						display: block;
+						top: 12px;
+						left: -13px;
+						width: 8px;
+						height: 8px;
+						background: url(/web-resources/default/img/t19-icon-expand-collapse.png) top left no-repeat !important;
+					}
+					&.expanded > a .icon.tree-item {
+						background-position: 0px -8px !important;
+					}
+					&.expanded a {
+						background: none;
+					}
+				}
+				
+				ul {//children level 1
+					margin: 17px 0px 0px 24px;
+					li {
+						margin: 0px 0px 8px 0px;
+						a {
+							font-size: 14px;
+							line-height: 16px;
+						}
+						ul {//children level 2
+							margin-top: 10px;
+							margin-bottom: 7px;
+							li a {
+								padding: 0px;
+							}
+						}
+						&.last-child {
+							margin-bottom: 0px;
+						}
+						&.has-child a .icon.tree-item {
+							top: 6px;
+							margin-top: 0px;
+						}
+					}
+				}
+			}
+		}
+		.stay-well {
+			h3 {
+				margin: 6px 0px 10px 0px;
+			}
+			img {
+				width: 214px !important;
+				float: right;
+				margin: 6px 0px 10px 10px;
+			}
+			p {
+				font-size: 14px;
+				line-height: 20px;
+			}
+			margin: 0px 0px 70px 0px;
+		}
+		.topic-footer {
+			display: block;
+			font: 14px 'BrandonGrotesqueBold';
+			color: #333;
+			margin: 0px 0px 60px 0px;
+			width: 400px;
+			float: left;
+			a {
+				font-family: 'BrandonGrotesque';
+				color: #ff2e35;
+				&:hover, &:focus{					
+					text-decoration: none;
+					border-bottom: 2px dotted #ff2e35;
+				}
+			}
+		}
+	}
+	@media only print, only screen and (min-width: 980px) {
+		padding-right: 0px;
+		.stay-well {
+			p {
+				
+				width: 440px;
+				float: left;
+			}
+			img {
+				margin: 6px 0px 0px 0px;
+			}
+		}
+	}
+}

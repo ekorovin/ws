@@ -1,0 +1,545 @@
+#service_index {
+	position: relative;
+	z-index: 2;
+	.icon {
+		display: inline-block;
+		background-image: url(/web-resources/default/img/index-icons.png);
+		background-repeat: no-repeat;
+		text-indent: -999999px;
+		&.star {
+			width: 12px;
+			height: 12px;
+			background-position: 0px -28px;
+		}
+		&.info {
+			width: 14px;
+			height: 14px;
+			background-position: 0px -14px;
+			cursor: pointer;
+			&.active {
+				background-position: -14px -14px;
+			}
+		}
+		&.close-tooltip {
+			width: 14px;
+			height: 14px;
+		}
+		&.up {
+			width: 13px;
+			height: 8px;
+			background-position: 0px -40px;
+		}
+	}
+	.index-header {
+		padding: 20px 0px 0px 18px;
+		h2 {
+			font: 30px 'BrandonGrotesque';
+			color: #990134;
+			margin: 0px 0px 18px 0px;
+		}
+		.dec {
+			display: none
+		}
+		.explanation {
+			.icon {
+				position: absolute;
+				top: 1px;
+				left: 0px;
+			}
+			position: relative;
+			padding: 0px 0px 0px 19px;
+			margin: 0px 0px 20px 0px;
+			font: 14px/16px 'BrandonGrotesque';
+			color: #89827a;
+			width:66%;
+		}
+	}
+	.index-nav {
+		position: fixed;
+		z-index: 999;
+		top: 45px;
+		right: 0px;
+		background: #ffffff;
+		border-left: 2px solid #990134;
+		
+		.alphabet-list {
+			margin: 0px;
+			padding: 7px 0px 7px 0px;
+			&.on-touch {
+				background: #ffffff url(/web-resources/default/img/index-hover-nav-m.png) center 2px no-repeat;
+			}
+			li {
+				width: 40px;
+				text-align: center;
+				a {
+					&:hover {
+						text-decoration: none;
+					}
+					display: block;
+					width: 100%;
+					padding: 2px 0px;
+					font: 12px/12px 'BrandonGrotesque';
+					color: #363636;
+					text-shadow: 0px 1px 1px rgba(0,0,0,0.4);
+					&.empty {
+						color: #b7b1a9;
+						cursor: default;
+					}
+				}
+			}
+			&.dotted {
+				&.on-touch {
+					background-image: url(/web-resources/default/img/index-hover-nav-m-dotted.png);
+				}
+				li.dot {
+					a {
+						font-size: 11px;
+						height: 4px;
+						padding: 0px;
+						text-indent: 9999999999px;
+						background: url(/web-resources/default/img/nav-dot-seperator.png) no-repeat;
+					}
+					&.top a {
+						background-position: top center;
+					}
+					&.bottom a {
+						background-position: bottom center;
+					}
+				}
+			}
+		}
+
+	}
+	.index-content {
+		background: url(/web-resources/default/img/bg-search-result.png) top left repeat;
+		padding: 4px 0px 0px 0px;
+		.service-list {
+			margin: 0px;
+			li {
+
+				h3 {
+					margin: 0px;
+					background: #ffffff;
+					height: 36px;
+					color: #363636;
+					font: 18px/36px 'BrandonGrotesqueBold';
+					text-indent: 20px;
+				}
+				ul li {
+					&.hover {
+						background: url(/web-resources/default/img/index-list-hover.png) top left repeat;
+					}
+					&:hover {
+						background: url(/web-resources/default/img/index-list-hover.png) top left repeat;
+					}
+					border-top: 2px solid #ffffff;
+					position: relative;
+					padding: 6px 0px 6px 20px;
+					&:first-child {
+						border: none;
+					}
+					.list-item-inner {
+						display: inline-block;
+						max-width: 80.625%;
+					}
+					a {
+						&:hover {
+							text-decoration: none;
+						}
+						
+						color: #363636;
+						font: 18px/24px 'BrandonGrotesque';
+						margin-right: 8px;
+					}
+					.icon.star {
+						position: absolute;
+						left: 4px;
+						top: 10px;
+					}
+					.icon.info {
+						
+					}
+				}
+			}
+		}
+	}
+	.up-to-top {
+		display: none
+	}
+	.tooltip-wrap {
+		display: none;
+		width: 286px;
+		position: absolute;
+		z-index: 1001;
+		top: 300px;
+		left: 17px;
+		.tooltip-top, .tooltip-bottom {
+			background: url(/web-resources/default/img/tooltip-border-m.png) top left no-repeat;
+		}
+		.tooltip-top {
+			height: 9px;
+			position: absolute;
+			top: 0px;
+			width: 100%;
+			z-index: 1002;
+		}
+		.tooltip-bottom {
+			position: absolute;
+			top: auto;
+			bottom: 0px;
+			background-position: 0px -9px;
+			height: 10px;
+			width: 100%;
+			z-index: 1002;
+
+		}
+		.tooltip-body {
+			margin: 9px 0px 10px 0px;
+			background: url(/web-resources/default/img/tooltip-bg-m.png) top left repeat-y;
+			z-index: 1002;
+			p {
+				padding: 10px 20px;
+				margin: 0px;
+				font:16px/22px 'BrandonGrotesque';
+				color: #363636;
+			}
+		}
+		.close-tooltip {
+			position: absolute;
+			right: 13px;
+			bottom: 13px;
+			z-index: 1003;
+		}
+		.tooltip-arrow {
+			display: inline-block;
+			width: 44px;
+			height: 15px;
+			position: absolute;
+			top: -12px;
+			left: 30px;
+			background: url(/web-resources/default/img/tooltip-arrow.png) top left no-repeat;
+			z-index: 1003;
+			border: none;
+		}
+	}
+	.up-to-top-wrap {
+		display: none;
+	}
+	//tablet
+	@media only print, only screen and (min-width: 720px) {
+		.index-header {
+			padding: 30px 0px 0px 38px;
+			h2 {
+				font-size: 36px;
+				line-height: 36px;
+				margin-bottom: 9px;
+			}
+			.dec {
+				margin: 0px 0px 13px 0px;
+				padding: 0px;
+				font: 20px/24px 'BrandonGrotesque';
+				width: 500/720*100%;
+				color: #333333;
+				display: block;
+				a {
+					color: #ff2e35;
+					&:hover, &:focus{						
+						text-decoration: none;
+						border-bottom: 2px dotted #e44039;
+					}
+				}
+			}
+			.explanation {
+				padding: 0px 0px 0px 20px;
+				margin: 0px 0px 30px 0px;
+				font-size: 12px;
+			}
+		}
+		.index-nav {
+			top: 100px;
+			padding-top: 70px;
+			
+			.alphabet-list {
+				padding: 0px;
+				&.on-touch {
+					background: #ffffff url(/web-resources/default/img/index-hover-nav-t.png) center 16px no-repeat;
+				}
+				li {
+					width: 53px;
+					a {
+						font-size: 15px;
+						padding: 9px 0px 8px 0px;
+					}
+				}
+				&.dotted {
+					&.on-touch {
+						background: #ffffff url(/web-resources/default/img/index-hover-nav-t-dotted.png) center 7px no-repeat;
+					}
+					padding: 10px 0px;
+					li {
+						a {
+							padding: 7px 0px;
+						}
+					}
+				}
+			}
+		}
+		.index-content {
+			.service-list {
+				li {
+					h3 {
+							font-size: 16px;
+							text-indent: 38px;
+					}
+					ul {
+						li {
+							padding: 0px;
+							text-indent: 38px;
+						}
+						li a {
+							line-height: 35px;
+							font-size: 16px;
+						}
+						li .icon.star {
+							left: 18px;
+						}
+						li .icon.info {
+							margin-left: 10px;
+						}
+						li .list-item-inner {
+							display: block;
+							width: auto;
+						}
+					}
+				}
+			}
+		}
+		.up-to-top {
+			display: none
+		}
+		.tooltip-wrap {
+			width: 304px;
+			top: 500px;
+			left: 17px;
+			.tooltip-top, .tooltip-bottom {
+				background: url(/web-resources/default/img/tooltip-border-t.png) top left no-repeat;
+			}
+			.tooltip-top {
+			}
+			.tooltip-bottom {
+				background-position: 0px -11px;
+			}
+			.tooltip-body {
+				background-image: url(/web-resources/default/img/tooltip-bg-t.png);
+				p {
+					padding: 10px 35px 10px 23px;
+				}
+			}
+			.close-tooltip {
+				top: 13px;
+				right: 14px;
+			}
+			.tooltip-arrow {
+				width: 14px;
+				height: 39px;
+				top: 40px;
+				left: -11px;
+				background-position: 0px -15px;
+			}
+		}
+	}
+	//desktop
+	@media only print, only screen and (min-width: 980px) {
+		width: 880px;
+		margin: 0px auto;
+
+		.index-header {
+			.clearfix();
+			padding: 66px 0px 0px 0px;
+			h2 {
+				margin: 0px 0px 9px 0px;
+			}
+			.dec {
+				margin: 0px 0px 18px 0px;
+				width: 500px;
+				float: left;
+			}
+			.explanation {
+				margin: 30px 0px 0px 0px;
+				width: 250px;
+				float: right;
+				text-align: right;
+				.icon {
+					left: 21px;
+				}
+			}
+		}
+		.index-nav {
+			position: static;
+			height: 30px;
+			padding: 0px;
+			border-left: none;
+			border-bottom: 2px solid #990134;
+			text-align: center;
+			.alphabet-list {
+				height: 30px;
+				padding: 0px;
+				margin: 0px auto;
+				display: inline-block;
+				li {
+					display: inline;
+					width: auto;
+					a {
+						display: inline-block;
+						width: 30px;
+						padding: 0px;
+						line-height: 30px;
+						font-size: 18px;
+						&:hover {
+							font-family: 'BrandonGrotesqueBold';
+						}
+						&.empty:hover {
+							font-family: 'BrandonGrotesque';
+						}
+					}
+
+					&.first a {
+						text-align: left;
+						width: 21px;
+					}
+					&.last a {
+						text-align: right;
+						width: 21px;
+					}
+				}
+			}
+		}
+		.index-content {
+			border-left: 2px solid #fff;
+			border-right: 2px solid #fff;
+			box-shadow: 0px 1px 3px #d2d2d2; 
+			padding-bottom: 44px;
+			.index-content-inner{
+				width: 823px;
+				margin: 22px auto 0px auto;
+				position: relative;
+				.service-list { 
+					
+					li {
+
+						border-top: 1px solid #c4c4c4;
+						h3 {
+							background: none;
+							text-indent: 18px;
+							line-height: 25px;
+							height: 25px;
+							font-size: 14px;
+						}
+						ul {
+							padding: 0px 0px 18px 0px;
+							li {
+								border: none;
+								text-indent: 18px;
+								height: 25px;
+								a {
+									line-height: 25px;
+									font-size: 14px;
+								}
+								a:hover {
+									font-family: 'BrandonGrotesqueBold';
+									color: #ff2e37;
+
+								}
+								.icon.star {
+									top: 6px;
+									left: -3px;
+								}
+								&:hover {
+									background: none;
+								}
+							}
+						}
+					}
+				}
+				.icon.info {
+					display: none;
+				}
+			}
+		}
+		.tooltip-wrap {
+			width: 283px;
+			top: 500px;
+			left: 17px;
+			z-index: 2000;
+			.tooltip-top, .tooltip-bottom {
+				background: url(/web-resources/default/img/tooltip-border-d.png) top left no-repeat;
+				z-index: 2001;
+			}
+			.tooltip-top {
+			}
+			.tooltip-bottom {
+				background-position: 0px -10px;
+			}
+			.tooltip-body {
+				background-image: url(/web-resources/default/img/tooltip-bg-d.png);
+				p {
+					padding: 10px 23px 10px 23px;
+					font-size: 15px;
+					line-height: 20px;
+					color: #5f574f;
+				}
+				z-index: 2001;
+			}
+			.close-tooltip {
+				display: none;
+				z-index: 2002;
+			}
+			.tooltip-arrow {
+				width: 15px;
+				height: 44px;
+				left: -12px;
+				background-position: 0px -54px;
+				z-index: 2002;
+			}
+		}
+		.up-to-top-wrap {
+			width: 823px;
+			position: fixed;
+			bottom: 30px;
+			left: 50%;
+			margin-left: -411px;
+			z-index: 2000;
+			display: block;
+			&.absolute {
+				position: absolute;
+				bottom: 0px;
+			}
+		}
+		.up-to-top {
+			display: none;
+			width: 75px;
+			font: 12px 'BrandonGrotesque';
+			color: #333333;
+			float: right;
+			z-index: 2001;
+			&:hover {
+				text-decoration: none;
+			}
+			
+			.icon.up {
+				position: absolute;
+				right: 0px;
+				top: 4px;
+			}
+		}
+	}
+}
+.touch #service_index .index-content {
+	.service-list {
+		li {
+			ul li {
+				&:hover {  background: none; }
+			}
+		}
+	}
+}

@@ -1,0 +1,50 @@
+ 
+ .article-content-header{
+ 	/* Mobile first styles */
+ 	margin: 0px 20/320*100%;
+
+	.title{
+		font:@medium 24px/30px 'BrandonTextMedium';
+		color: #8c1515;
+		word-spacing:-1px;
+		margin: 0; 
+	}
+	.content{
+		font:@medium 16px/22px 'BrandonTextMedium';
+		color: #333;
+	}
+
+	.sharing.sharing-component-mobile{
+		padding:13px 0 20px;
+	}
+
+ 	/* Tablet next styles */
+	@media only print, only screen and (min-width: 720px) {
+		margin:56px 0 0;
+		
+		.title{
+			font-size:36px;
+			line-height:40px;
+			padding-bottom: 15px;
+		} 
+		.content{
+			font-size: 18px;
+			line-height: 22px;
+		}
+		
+	}
+
+	/* Desktop last styles */
+	@media only print, only screen and (min-width: 980px) {
+		
+	} 
+ }   
+
+ .ie8{
+ 	 .article-content-header{
+
+ 	 	@media only print, only screen and (min-width: 720px) {
+			.title{padding-bottom:21px;}
+ 	 	}
+ 	 }
+ }

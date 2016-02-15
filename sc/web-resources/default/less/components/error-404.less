@@ -1,0 +1,54 @@
+.error-404 {
+	margin: 30px 20px;
+	h1 {
+		font: @regular 28px/28px 'BrandonGrotesque';
+		color: #8c1515;
+	}
+	h2 {
+		font: @regular 22px/28px 'BrandonGrotesque';
+	}
+	h3 {
+		font: @bold 18px/20px 'BrandonGrotesqueBold';
+	}
+	p {
+		font: @regular 18px/20px 'BrandonGrotesque';
+	}
+	a {
+		font: @regular 18px/24px 'BrandonGrotesque';
+		color: #ff2e35;
+		&:hover, &:focus {
+			text-decoration: none;
+			border-bottom: 2px dotted #ff2e35;
+		}
+	}
+	ul {
+		color: #ff2e35;
+		border-top: 1px solid #d9d9d9;
+		border-bottom: 1px solid #d9d9d9;
+		padding: 20px 0;
+		margin: 0;
+		
+		li {
+			margin-left: 20px;
+		}
+	}
+	
+	.additional-links {
+		margin-top: 45px;
+		margin-bottom: 60px;
+	}
+	
+	/* Tablet next styles */
+	@media only print, only screen and (min-width: 720px) {
+		margin: 50px 20px;
+		width: 50%;
+		ul {
+			width: 240px;
+		}
+	}
+	
+	/* Desktop styles last */
+	@media only print, only screen and (min-width: 980px) {
+		width: 75%;
+	}
+}

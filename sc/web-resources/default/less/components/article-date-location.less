@@ -1,0 +1,46 @@
+
+ .article-date-location {
+ 	/* Mobile first styles */
+ 	margin: 0px 20/320*100%;
+ 	padding: 21px 0 20px;
+
+	p {
+		font:@bold 14px/20px 'BrandonTextBold';
+		color: #b7b1a9;
+		text-transform: uppercase;
+		float: left;
+		margin: 0px;
+		text-indent: 5px;
+	
+		&:first-child{
+			font:@bold 14px/20px 'BrandonTextBold';
+			color: #333;
+			text-transform: uppercase;
+			text-indent: 0;
+			margin: 0px;
+		}
+	}
+
+ 	/* Tablet next styles */
+	@media only print, only screen and (min-width: 720px) {
+		margin:0;
+		padding: 19px 0 18px;
+
+		p,
+		&:first-child {
+			font-size:11px;
+			line-height:20px;
+		}
+	}
+
+	/* Desktop last styles */
+	@media only print, only screen and (min-width: 980px) {
+		padding: 30px 0;
+
+		p,
+		&:first-child {
+			font-size:14px;
+			line-height:20px;
+		}
+	}  
+ }   

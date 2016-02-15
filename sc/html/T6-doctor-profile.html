@@ -1,0 +1,812 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Children's Hospital - Doctor Profile</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="vpath" content="" />
+<meta name="page-locale-name" content="" />
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="../web-resources/default/css/bootstrap.css" />
+<link rel="stylesheet" href="../web-resources/default/css/layout.css" />
+<link rel="stylesheet" href="../web-resources/default/css/main1.css" />
+<link rel="stylesheet" href="../web-resources/default/css/main2.css" />
+<script type="text/javascript" src="../web-resources/default/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+<script type="text/javascript" src="../web-resources/default/js/vendor/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../web-resources/default/js/vendor/underscore-min.js"></script>
+<script type="text/javascript" src="../web-resources/default/js/vendor/backbone-min.js"></script>
+<script type="text/javascript" src="../web-resources/default/js/vendor/bootstrap.min.js"></script>
+<script type="text/javascript" src="../web-resources/default/js/vendor/less-1.3.3.min.js"></script>
+<script type="text/javascript" src="../web-resources/default/js/plugins.js"></script>
+<script type="text/javascript" src="../web-resources/default/js/packages.js"></script>
+<script type="text/javascript" src="../web-resources/default/js/lpch/models/BaseModel.js"></script>
+<script type="text/javascript" src="../web-resources/default/js/lpch/models/DocumentModel.js"></script>
+<script type="text/javascript" src="../web-resources/default/js/lpch/models/Layout.js"></script>
+<script type="text/javascript" src="../web-resources/default/js/lpch/models/LayoutSmartphone.js"></script>
+<script type="text/javascript" src="../web-resources/default/js/lpch/models/LayoutTablet.js"></script>
+<script type="text/javascript" src="../web-resources/default/js/lpch/models/LayoutDesktop.js"></script>
+<script type="text/javascript" src="../web-resources/default/js/lpch/models/ZipCodeCollection.js"></script>
+<script type="text/javascript" src="../web-resources/default/js/lpch/views/BaseView.js"></script>
+<script type="text/javascript" src="../web-resources/default/js/lpch/views/Document.js"></script>
+<script type="text/javascript" src="../web-resources/default/js/lpch/components/Header.js"></script>
+<script type="text/javascript" src="../web-resources/default/js/lpch/components/MobileContentOverlay.js"></script>
+<script type="text/javascript" src="../web-resources/default/js/lpch/components/Navigation.js"></script>
+<script type="text/javascript" src="../web-resources/default/js/lpch/components/PersistentSearch.js"></script>
+<script type="text/javascript" src="../web-resources/default/js/lpch/components/LightSidebar.js"></script>
+<script type="text/javascript" src="../web-resources/default/js/lpch/components/DoctorPicture.js"></script>
+<script type="text/javascript" src="../web-resources/default/js/lpch/components/DoctorIntro.js"></script>
+<script type="text/javascript" src="../web-resources/default/js/lpch/components/DoctorDetailTab.js"></script>
+<script type="text/javascript" src="../web-resources/default/js/lpch/components/DoctorProfile.js"></script>
+<script type="text/javascript" src="../web-resources/default/js/lpch/components/RelatedLocations.js"></script> 
+<script type="text/javascript" src="../web-resources/default/js/lpch/Module.js"></script>
+<script type="text/javascript" src="../web-resources/default/js/main.js"></script>
+</head>
+<body>
+	<div class="ls-canvas">
+		<!--ls:begin[row] can add additional .ls-area containers -->
+		<div class="ls-row">
+			<div class="ls-lqr">
+				<!--ls:begin[area] can define number of columns to span with class name (ie .span4) -->
+				<div class="ls-area span12">
+					<div class="ls-area-body">
+						<div class="ls-cmp-wrap ls-1st">
+							<!--ls:begin[component] must have class of 'iw_component', no unique id or class names, nest component markup inside a child <div> classed appropriately -->
+							<div class="iw_component">
+								<!--ls:begin[mobile-content-overlay] -->
+								<div id="mobile-content-overlay"></div>
+								<!--ls:end[mobile-content-overlay]-->
+
+								<!--ls:begin[persistent-search] -->
+								<div id="persistent-search" class="active">
+									<div class="p-search-wrapper">
+										<div class="p-search-spacer"></div>
+										<div class="p-search-bar">
+											<form class="p-search-form" action="/en/search/default.page" autocomplete="off">
+												<input name="search-term" class="p-search-input" type="text" placeholder="Find Doctors, Services, and Topics"></input>
+											</form>
+										</div>
+										<div class="p-search-mag"></div>
+										<ul class="p-search-results"></ul>
+									</div>
+								</div>
+								<!--ls:end[persistent-search]-->
+
+								<!--ls:begin[header] -->
+								<div id="header-wrapper">
+									<div id="header">
+										<div class="header-inner">
+											<a class="nav-btn" href="#nav">Menu Button</a>
+											<div class="span3">
+												<div class="logo">
+													<h1>Lucile Packard Stanford Children&#39;s Health</h1>
+													<a href="#" class="hidden-phone"> <img src="../web-resources/default/img/logo.jpg" alt="" /></a> 
+													<a href="#" class="visible-phone"> <img src="../web-resources/default/img/logo-mobile.jpg" alt="" /></a>
+												</div>
+											</div>
+											<div class="find-doctor">
+												<a href="#" class="special-contact-link donate visible-tablet">Donate</a>
+												<a href="#" class="special-contact-link visible-tablet">Contact</a>
+												<a href="#" class="find-btn">find a doctor</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--ls:end[header]-->
+
+								<!--ls:begin[navigation] -->
+								<div id="navigation">
+									<div id="iscroll-navigation">
+										<div class="nav-item nav-item--search hidden-desktop">
+											<input class="search-nav" placeholder="Search for a doctor, location..." type="text" />
+										</div>
+										<ul class="nav">
+											<li class="nav-item current"><a class="dropdown-btn" href="#plan"> <span>Plan</span></a>
+												<div class="dropdown dropdown--plan">
+													<div class="dropdown-inner">
+														<ul class="dropdown-nav">
+															<li class="dropdown-nav-item"><a href="#">Your Child&rsquo;s Visit</a></li>
+															<li class="dropdown-nav-item"><a href="T1-role-landing-page.html">Your Pregnancy &amp; Delivery</a></li>
+															<li class="dropdown-nav-item"><a href="#">Locations &amp; Directions</a></li>
+															<li class="dropdown-nav-item"><a href="#">Find a Doctor</a></li>
+														</ul>
+														<div class="dropdown-thumbnail-wrap">
+															<div class="dropdown-thumbnail">
+																<ul>
+																	<li><!-- default -->
+																		<img src="../web-resources/default/img/avarta-vivamus.jpg" alt="" />
+																		<p class="dropdown-description">Prepare for your
+																			hospital stay or upcoming appointment, get maps &
+																			directions, and find out what to expect if you're
+																			expecting.</p>
+																	</li>
+																	<li>
+																		<img src="../web-resources/default/img/avarta-vivamus.jpg" alt="" />
+																		<p class="dropdown-description">Your Child&rsquo;s Visit Prepare for your
+																			hospital stay or upcoming appointment, get maps &
+																			directions, and find out what to expect if you're
+																			expecting.</p>
+																	</li>
+																	<li>
+																		<img src="../web-resources/default/img/avarta-vivamus.jpg" alt="" />
+																		<p class="dropdown-description">Your Pregnancy for your
+																			hospital stay or upcoming appointment, get maps &
+																			directions, and find out what to expect if you're
+																			expecting.</p>
+																	</li>
+																	<li>
+																		<img src="../web-resources/default/img/avarta-vivamus.jpg" alt="" />
+																		<p class="dropdown-description">Locations &amp; Directions Prepare for your
+																			hospital stay or upcoming appointment, get maps &
+																			directions, and find out what to expect if you're
+																			expecting.</p>
+																	</li>
+																	<li>
+																		<img src="../web-resources/default/img/avarta-vivamus.jpg" alt="" />
+																		<p class="dropdown-description">Find a Doctor Prepare for your
+																			hospital stay or upcoming appointment, get maps &
+																			directions, and find out what to expect if you're
+																			expecting.</p>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div></li>
+											<li class="nav-item"><a class="dropdown-btn" href="#services"> <span>Services</span></a>
+												<div class="dropdown dropdown--services">
+													<div class="dropdown-inner">
+														<ul class="dropdown-nav">
+															<li class="dropdown-nav-item"><a href="#">Pregnancy & Newborn</a></li>
+															<li class="dropdown-nav-item"><a href="#">Brain & Behavior</a></li>
+															<li class="dropdown-nav-item"><a href="#">Children's Heart Center</a></li>
+															<li class="dropdown-nav-item"><a href="#">Transplant</a></li>
+															<li class="dropdown-nav-item"><a href="#">Cystic Fibrosis & Pulmonary Diseases</a></li>
+															<li class="dropdown-nav-item"><a href="#">Cancer & Blood Diseases</a></li>
+														</ul>
+														<div class="dropdown-thumbnail-wrap">
+															<div class="dropdown-thumbnail">
+																<ul>
+																	<li><!-- default -->
+																		<img src="../web-resources/default/img/avarta-service.jpg" alt="" />
+																		<p class="dropdown-description">Browse our services
+																			and programs and find out more about our care teams,
+																			research, clinical trials and world-leading
+																			innovations.</p>
+																	</li>
+																	<li>
+																		<img src="../web-resources/default/img/avarta-service.jpg" alt="" />
+																		<p class="dropdown-description">Pregnancy & Newborn Browse our services
+																			and programs and find out more about our care teams,
+																			research, clinical trials and world-leading
+																			innovations.</p>
+																	</li>
+																	<li>
+																		<img src="../web-resources/default/img/avarta-service.jpg" alt="" />
+																		<p class="dropdown-description">Brain & Behavior Browse our services
+																			and programs and find out more about our care teams,
+																			research, clinical trials and world-leading
+																			innovations.</p>
+																	</li>
+																	<li>
+																		<img src="../web-resources/default/img/avarta-service.jpg" alt="" />
+																		<p class="dropdown-description">Children's Heart Center Browse our services
+																			and programs and find out more about our care teams,
+																			research, clinical trials and world-leading
+																			innovations.</p>
+																	</li>
+																	<li>
+																		<img src="../web-resources/default/img/avarta-service.jpg" alt="" />
+																		<p class="dropdown-description">Transplant Browse our services
+																			and programs and find out more about our care teams,
+																			research, clinical trials and world-leading
+																			innovations.</p>
+																	</li>
+																	<li>
+																		<img src="../web-resources/default/img/avarta-service.jpg" alt="" />
+																		<p class="dropdown-description">Cystic Fibrosis Browse our services
+																			and programs and find out more about our care teams,
+																			research, clinical trials and world-leading
+																			innovations.</p>
+																	</li>
+																	<li>
+																		<img src="../web-resources/default/img/avarta-service.jpg" alt="" />
+																		<p class="dropdown-description">Cancer & Blood Diseases Browse our services
+																			and programs and find out more about our care teams,
+																			research, clinical trials and world-leading
+																			innovations.</p>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div></li>
+											<li class="nav-item"><a class="dropdown-btn" href="#learn"> <span>Learn</span></a>
+												<div class="dropdown dropdown--learn">
+													<div class="dropdown-inner">
+														<ul class="dropdown-nav">
+															<li class="dropdown-nav-item"><a href="T4-marketing.html">About Us</a></li>
+															<li class="dropdown-nav-item"><a href="#">Classes &amp; Events</a></li>
+															<li class="dropdown-nav-item"><a href="#">Conditions &amp; Symptoms</a></li>
+															<li class="dropdown-nav-item"><a href="#">Wellness Tips</a></li>
+														</ul>
+														<div class="dropdown-thumbnail-wrap">
+															<div class="dropdown-thumbnail">
+																<ul>
+																	<li><!-- default -->
+																		<img src="../web-resources/default/img/avarta-ograne.jpg" alt="" />
+																		<p class="dropdown-description">View our library of
+																			health topics, and register for our classes and
+																			programs to enhance the lives of parents, grandparents
+																			and children.</p>
+																	</li>
+																	<li>
+																		<img src="../web-resources/default/img/avarta-ograne.jpg" alt="" />
+																		<p class="dropdown-description">About Us View our library of
+																			health topics, and register for our classes and
+																			programs to enhance the lives of parents, grandparents
+																			and children.</p>
+																	</li>
+																	<li>
+																		<img src="../web-resources/default/img/avarta-ograne.jpg" alt="" />
+																		<p class="dropdown-description">Classes &amp; Events View our library of
+																			health topics, and register for our classes and
+																			programs to enhance the lives of parents, grandparents
+																			and children.</p>
+																	</li>
+																	<li>
+																		<img src="../web-resources/default/img/avarta-ograne.jpg" alt="" />
+																		<p class="dropdown-description">Conditions &amp; Symptoms View our library of
+																			health topics, and register for our classes and
+																			programs to enhance the lives of parents, grandparents
+																			and children.</p>
+																	</li>
+																	<li>
+																		<img src="../web-resources/default/img/avarta-ograne.jpg" alt="" />
+																		<p class="dropdown-description">Wellness Tips View our library of
+																			health topics, and register for our classes and
+																			programs to enhance the lives of parents, grandparents
+																			and children.</p>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div></li>
+											<li class="nav-item"><a class="dropdown-btn" href="#participate"> <span>Participate</span></a>
+												<div class="dropdown dropdown--participate">
+													<div class="dropdown-inner">
+														<ul class="dropdown-nav">
+															<li class="dropdown-nav-item"><a href="#">Follow Us</a></li>
+															<li class="dropdown-nav-item"><a href="T7-jump-template.html">Donate</a></li>
+															<li class="dropdown-nav-item"><a href="#">Volunteer</a></li>
+															<li class="dropdown-nav-item"><a href="#">Careers</a></li>
+														</ul>
+														<div class="dropdown-thumbnail-wrap">
+															<div class="dropdown-thumbnail">
+																<ul>
+																	<li><!-- default -->
+																		<img src="../web-resources/default/img/avarta-vulputate.jpg" alt="" />
+																		<p class="dropdown-description">Get involved with
+																			Stanford Children's Health: Make a donation, join our
+																			team, volunteer, and follow us on social media.</p>
+																	</li>
+																	<li>
+																		<img src="../web-resources/default/img/avarta-vulputate.jpg" alt="" />
+																		<p class="dropdown-description">Sign Up for our Newsletter Get involved with
+																			Stanford Children's Health: Make a donation, join our
+																			team, volunteer, and follow us on social media.</p>
+																	</li>
+																	<li>
+																		<img src="../web-resources/default/img/avarta-vulputate.jpg" alt="" />
+																		<p class="dropdown-description">Follow Us Get involved with
+																			Stanford Children's Health: Make a donation, join our
+																			team, volunteer, and follow us on social media.</p>
+																	</li>
+																	<li>
+																		<img src="../web-resources/default/img/avarta-vulputate.jpg" alt="" />
+																		<p class="dropdown-description">Donate Get involved with
+																			Stanford Children's Health: Make a donation, join our
+																			team, volunteer, and follow us on social media.</p>
+																	</li>
+																	<li>
+																		<img src="../web-resources/default/img/avarta-vulputate.jpg" alt="" />
+																		<p class="dropdown-description">Volunteer Get involved with
+																			Stanford Children's Health: Make a donation, join our
+																			team, volunteer, and follow us on social media.</p>
+																	</li>
+																	<li>
+																		<img src="../web-resources/default/img/avarta-vulputate.jpg" alt="" />
+																		<p class="dropdown-description">Careers Get involved with
+																			Stanford Children's Health: Make a donation, join our
+																			team, volunteer, and follow us on social media.</p>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div></li>
+											<li class="nav-item nav-item--recently hidden-desktop">
+												<a class="dropdown-btn" href="#recent"><span>Recently Visited</span></a>
+												<div class="dropdown">
+													<div class="dropdown-inner">
+														<ul class="dropdown-nav"></ul>
+													</div>
+												</div>
+											</li>
+										</ul>
+										<div class="utinity-primary">
+											<ul>
+												<li class="visible-desktop"><a class="donate" href="#">Donate</a></li>
+												<li><a href="#">En Espa&ntilde;ol</a></li>
+												<li class="visible-desktop"><a href="#">Contact</a></li>
+												<li class="visible-desktop"><a href="#">Refer a patient</a></li>
+											</ul>
+										</div>
+									</div>
+
+								</div>
+								<!--ls:end[navigation]-->
+								<!--ls:begin[tablet-navigation] -->
+								<div id="navigation-tablet">
+									<ul class="tablet-nav">
+										<li class="tablet-item"><a class="tablet-btn" href="#">Plan</a></li>
+										<li class="tablet-item"><a class="tablet-btn" href="#">Services</a></li>
+										<li class="tablet-item"><a class="tablet-btn" href="#">Learn</a></li>
+										<li class="tablet-item"><a class="tablet-btn" href="#">Participate</a></li>
+									</ul>
+								</div>
+								<!--ls:end[tablet-navigation] -->
+								<!--ls:begin[light sidebar] -->
+								<div id="light-sidebar">
+									<!-- hidden by default, add class 'show' to show it -->
+									<div class="iscroll-light-sidebar">
+										<div class="light-sidebar-header">
+											<div class="input-wrap">
+												<i class="icon search"></i>
+												<form action="/en/search/default.page" autocomplete="off" id="lightSideBarForm">
+													<input name="search-term" type="text" id="lightSideBarSearch"
+														placeholder="Search for a doctor, location..." />
+												</form>
+												<i class="icon clear"></i>
+											</div>
+											<a href="#" class="button-cancel">CANCEL</a>
+										</div>
+										<div class="light-sidebar-results" id="light_sidebar_results">
+											<!-- add class 'loading' when loading, add class 'has-result' to when the loading is done -->
+											<ul class="results-list unstyled clearfix">
+												<li class="view-more-item"><a href="#"
+													class="view-more">View More Results</a></li>
+											</ul>
+											<p class="loading">Loading...</p>
+										</div>
+									</div>
+								</div>
+								<!--ls:end[light sidebar]-->
+							</div>
+							<!--ls:end[component]-->
+						</div>
+					</div>
+				</div>
+				<!--ls:end[area]-->
+				<div class="ls-row-clr"></div>
+			</div>
+		</div>
+		<!--ls:end[row]-->
+		
+		<!--ls:begin[row] can add additional .ls-area containers -->
+		<div class="ls-row doctor-profile">
+			<div class="ls-lqr">
+				<!--ls:begin[area] can define number of columns to span with class name (ie .span4) -->
+				<div class="ls-area span12">
+					<div class="ls-area-body">
+						<div class="ls-cmp-wrap ls-1st">
+							<!--ls:begin[component] can modifiy id and additional class names, must have class of 'iw-component' -->
+							<div class="iw_component">
+								<div class="doctor-profile-title-wrap">
+									<div class="doctor-profile-title">
+										<h2>Firstname Lastname MD</h2>
+										<ul class="list-link-top">
+											<li><a href="#">Official Title</a></li>
+											<li><a href="#">Official Title Number Two</a></li>
+											<li class="hide-phone"><a href="#">Official Title Number Three</a></li>
+											<li class="hide-phone"><a href="#">Offical Title Four</a></li>
+										</ul>
+										<div class="make-arrow-row">
+											<a class="btn-make" href="#" title="Make Appointment with Dr. Jones">Make an appointment</a>
+											<a class="arrow-add" href="#" title="Download vCard for Dr. Jones">Add to contacts (vCard)</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--ls:end[component]-->
+						</div>
+					</div>
+				</div><!--ls:end[area]-->
+				<div class="ls-row-clr" ></div>
+			</div>
+		</div>
+		<!--ls:end[row]-->
+
+		<!--ls:begin[row] can add additional .ls-area containers -->
+		<div class="ls-row doctor-profile">
+			<div class="ls-lqr">
+				<!--ls:begin[area] can define number of columns to span with class name (ie .span4) -->
+				<div class="ls-area span4">
+					<div class="ls-area-body">
+						<div class="ls-cmp-wrap ls-1st">
+
+							<!--ls:begin[component] can modifiy id and additional class names, must have class of 'iw-component' -->
+							<div class="iw_component">
+								<div class="doctor-picture">
+									<ul id="picture-profile" class="slider-picture-profile">
+										<li class="item" data-img="/web-resources/default/img/thumb-dotor-detail-1.jpg">
+											<img src="../web-resources/default/img/doctor-picture-profile.jpg" alt="Image" />
+										</li>
+										<li class="item" data-img="/web-resources/default/img/thumb-dotor-detail-2.jpg">
+											<img src="../web-resources/default/img/doctor-picture-profile-2.jpg" alt="Image" />
+										</li>
+										<li class="item" data-img="/web-resources/default/img/thumb-dotor-detail-3.jpg">
+											<img src="../web-resources/default/img/doctor-picture-profile-3.jpg" alt="Image" />
+										</li>
+									</ul>
+									<!--
+									<div class="thumb-picture-profile" id="bx-pager-custom">
+									  <a class="item-thumb" data-slide-index="0" href=""><img src="../web-resources/default/img/thumb-dotor-detail-1.jpg" alt="Image" /></a>
+									  <a class="item-thumb" data-slide-index="1" href=""><img src="../web-resources/default/img/thumb-dotor-detail-2.jpg" alt="Image" /></a>
+									  <a class="item-thumb" data-slide-index="2" href=""><img src="../web-resources/default/img/thumb-dotor-detail-3.jpg" alt="Image" /></a>
+									</div>
+									-->
+									<div class="doctor-intro-wrap">
+										
+									</div>
+									<div class="profile-video">
+										<a class="youtube cboxElement" title="Youtube Video" href="http://www.youtube.com/embed/03vWplsPNV4?rel=0&amp;wmode=transparent">
+											<img src="../web-resources/default/img/pic-profile-video.jpg" alt="" />
+											<img alt="Play" src="../web-resources/default/img/play-video-profile.png" class="play-button">
+											<p>Profile Video</p>
+										</a>
+									</div>
+								</div>
+							</div>
+							<!--ls:end[component]-->
+
+						</div>
+					</div>
+				</div><!--ls:end[area]-->
+				
+
+				<!--ls:begin[area] can define number of columns to span with class name (ie .span4) -->
+				<div class="ls-area span8">
+					<div class="ls-area-body">
+						<div class="ls-cmp-wrap ls-1st">
+							<!--ls:begin[component] can modifiy id and additional class names, must have class of 'iw-component' -->
+							<div class="iw_component">
+								<div class="doctor-profile-title-wrap">
+									
+								</div>
+								
+								<div class="doctor-intro-wrap">
+									<div class="doctor-intro">
+										<ul>
+											<li>&ldquo;A personal quote, a thought about their practice or any custom doctor statement.&rdquo;</li>
+											<li>&ldquo;A personal quote, a thought about their practice or any custom doctor statement.&rdquo;</li>
+										</ul>
+									</div>
+								</div>
+								
+								<div class="related-locations-wrap">
+									
+								</div>
+							</div>
+							<!--ls:end[component]-->
+						</div>
+					</div>
+				</div><!--ls:end[area]-->
+
+				<div class="ls-row-clr" ></div>
+			</div>
+		</div><!--ls:end[row]--> 
+
+		<!--ls:begin[row] can add additional .ls-area containers -->
+		<div class="ls-row doctor-profile">
+			<div class="ls-lqr">
+				<!--ls:begin[area] can define number of columns to span with class name (ie .span4) -->
+				<div class="ls-area span12">
+					<div class="ls-area-body">
+						<div class="ls-cmp-wrap ls-1st">
+							<!--ls:begin[component] can modifiy id and additional class names, must have class of 'iw-component' -->
+							<div class="iw_component">
+								<div class="related-locations-wrap">
+									<div class="related-locations">
+										<h2 class="title-related-locations">Locations and Hours</h2>
+										<div class="related-locations-content related-doctors"> 
+										<ul class="location-nav">
+											<li class="location-item">
+												<a class="location-btn active" href="#" data-rel="location-1"><span class="wrap-center-text"><span class="center-text">Castro Commons</span></span></a> 
+											</li>
+											<li class="location-item">
+												<a class="location-btn" href="#" data-rel="location-3"><span class="wrap-center-text"><span class="center-text">another location</span></span></a>
+											</li>
+											<li class="location-item">
+												<a class="location-btn" href="#" data-rel="location-2"><span class="wrap-center-text"><span class="center-text">san francisco<br /> mission center</span></span></a>
+											</li>											
+											<li class="location-item">
+												<a class="location-btn" href="#" data-rel="location-4"><span class="wrap-center-text"><span class="center-text">Location 4</span></span></a>
+											</li>
+											<li class="location-item location-item-last">
+												<a class="location-btn" href="#" data-rel="location-5"><span class="wrap-center-text"><span class="center-text">Location 5</span></span></a>
+											</li>
+										</ul>
+										<div class="location-content-container">
+											<div id="location-1" class="location-content open">
+												<h3 class="title">Castro Commons</h3>
+												<div class="content">
+													<address>
+														1174 Castro Street <br />
+														Suite 250<br />
+														Mountain View, CA 94040
+													</address>
+													<div class="hours">
+														Phone: (650)694-0600 <br />
+														Fax: (650)694-0610 <br />
+														Monday - Friday <br />
+														8:00 am - 5:00 pm
+													</div> 
+												</div>	 
+												<a href="#" class="btn-directions">Map, Directions & Parking</a> 
+											</div>
+											<div id="location-2" class="location-content">
+												<p class="copy">Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum lacus quis metus condimentum ac accumsan orci vulputate. Aenean fringilla massa vitae metus facilisis congue. Morbi placerat eros ac sapien semper pulvinar. Vestibulum facilisis, ligula a molestie venenatis, metus justo ullamcorper ipsum, congue aliquet dolor tortor eu neque. Sed imperdiet, nibh ut vestibulum tempor, nibh dui volutpat lacus, vel gravida magna justo sit amet quam. Quisque tincidunt ligula at nisl imperdiet sagittis. Morbi rutrum tempor arcu, non ultrices sem semper a. Aliquam quis sem mi.</p>
+												
+											</div>
+											<div id="location-3" class="location-content">
+												<p class="copy">Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris. Nulla facilisi. Vestibulum vel lectus ac purus tempus suscipit nec sit amet eros. Nullam fringilla, enim eu lobortis dapibus, quam magna tincidunt nibh, sit amet imperdiet dolor justo congue turpis.</p>
+												   
+											</div>
+											<div id="location-4" class="location-content">
+												<p class="copy no-img">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna, mollis vel suscipit in, pharetra at ligula. Pellentesque a est vel est fermentum pellentesque sed sit amet dolor. Nunc in dapibus nibh. Aliquam erat volutpat. Phasellus vel dui sed nibh iaculis convallis id sit amet urna. Proin nec tellus quis justo consequat accumsan. Vivamus turpis enim, auctor eget placerat eget, aliquam ut sapien.</p>
+											</div>
+											<div id="location-5" class="location-content">
+												<p class="copy no-img">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna, mollis vel suscipit in, pharetra at ligula. Pellentesque a est vel est fermentum pellentesque sed sit amet dolor. </p>
+											</div>
+										</div>
+										 </div>
+									</div>
+								</div>
+							</div>
+							<!--ls:end[component]-->
+						</div>
+					</div>
+				</div><!--ls:end[area]-->
+				<div class="ls-row-clr" ></div>
+			</div>
+		</div>
+		<!--ls:end[row]-->
+		
+		<!--ls:begin[row] can add additional .ls-area containers -->
+		<div class="ls-row">
+			<div class="ls-lqr">
+				<!--ls:begin[area] can define number of columns to span with class name (ie .span4) -->
+				<div class="ls-area span12">
+					<div class="ls-area-body">
+						<div class="ls-cmp-wrap ls-1st">
+							
+							<!--ls:begin[component] can modifiy id and additional class names, must have class of 'iw-component' -->
+							<div class="iw_component">
+								<div class="doctor-detail-tab">
+									<ul class="nav nav-tabs doctor-detail-tab-nav" id="doctor-detail-tab">
+										<li class="active">
+											<a href="#my_approach">
+												<span class="left"></span>
+												<span class="inner">My approach</span>
+												<span class="right"></span>
+											</a>
+										</li>
+										<li>
+											<a href="#credentials">
+												<span class="left"></span>
+												<span class="inner">credentials</span>
+												<span class="right"></span>
+											</a>
+										</li>
+									</ul>
+									<!-- #doctor-detail-tab -->
+									<div class="tab-content">
+										<div class="tab-pane active" id="my_approach">
+											<div class="span6 pull-left">
+												<div class="introduction">
+													<h3>Introduction</h3>
+													<p>I believe that dermatology should be thought of in this way...</p>
+													<p>Lorem ipsum dolor sit amet, lorem consectetur adipiscing elit. Nam nunc orci, cursus in rutrum vel, fringilla eu enim. Ut id tellus vitae mauris ultricies pharetra sed ut orci. Cras quis est et tellus euismod semper non in nunc. Sed sagittis, sapien eu pellentesque ullamcorper, massatellus condimentum sapien, eula faucibus arcu ipsum vitae turpis. Duis accumsan dolor nec mi sit et convallis, eget bibendum nulla  et varius. Nulla tempus elementum leo.</p>
+													<p>Aenean sit amet purus nec est porta bibendum quis sed magna. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec eu bibendum erat lorem es.</p>
+													<p>Praesent eget purus non odio mollis aliquet eget sed nectellus. Vestibulum convallis justo felis, in erat nam quis augue consectetur.</p>
+												</div>
+											</div>									
+											<div class="span6 pull-right">
+												<div class="specialty">
+													<h3>Specialty</h3>
+													<ul>
+														<li><a href=#>Specialty Title One</a></li>
+														<li><a href=#>Specialty Title Two</a></li>
+														<li><a href=#>Specialty Title Three</a></li>
+													</ul>
+													<a href="#" class="btn-service-name btn-make">Make an appointment</a>
+												</div>
+												<div class="health-wellness-topic-prepend">
+
+												</div>
+												<div class="service-name">
+														<h3>Service Name</h3>
+														<p>Intro copy of the service - Lorem ipsum dolor sit amet, consectetur adel elit. Nam nunc orci, cursus in rutrum vel, fringilla eu enim. Ut id tellus vitae mauris ultricies pharetra sed ut orci.enean sit amet purus nec est porta bibendum quis sed magna.</p>
+														<a href="#" class="btn-service-name btn-make">Make an appointment</a>
+												</div>
+												<div class="health-wellness-topic-append">
+													<div class="health-wellness-topic">
+														<h3>Manual Links Go Here</h3>
+														<ul>
+															<li><a href="#">Adolescent Growth and Development</a></li>
+															<li><a href="#">Cognitive Development</a></li>
+															<li><a href="#">Relationship Development</a></li>
+															<li><a href="#">Adolescent Health Problems and Injuries</a></li>
+															<li><a href="#">Adolescent Mental Health</a></li>
+															<li><a href="#">Healthy Lifestyles</a></li>
+															<li><a href="#">Safety and Injury Prevention</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>									
+										</div>
+										<!-- #my_approach -->
+										<div class="tab-pane" id="credentials">
+											<div class="span6 pull-left">
+												<div class="work-education">
+													<h3>Work and Education</h3>
+													<h4>Professional Education</h4>
+													<p>University of Anystate, Anytown, AS, 1993</p>
+													<h4>Internship</h4>
+													<p>Stanford University Medical Center, Stanford, CA, 1994</p>
+													<h4>Residency</h4>
+													<p>Stanford University School of Medicine, Stanford, CA, 1996</p>
+													<h4>Board Certification</h4>
+													<p>General Pediatrics, American Board ofPediatrics</p>
+													<h4>Years on Staff: <span>16</span></h4>
+													<ul>
+														<li><a href="#">My CAP Profile</a></li>
+													</ul>
+												</div>
+											</div>
+											<div class="span6 pull-right">
+												<div class="specialties">
+													<h3>Specialties</h3>
+													<h4>Specialty Name</h4>
+													<p>Lores sunt. Ignatur eperspictem untibus velitatur maios dolliti oriaest et aliberibeature porepedi sitemque num essit lab im alitiis velitas vaios sequatatur, Specialty Description - Sed nisi tellus, dignissim non tempus at, aliquet ]odio. Duis sodales urna necsapien tincidunt vel vestibulum nulla consequat. Fusce nisi neque, auctor eget feugiat sit amet, aliquet eu velit harciisciis ne quaepratiunt reruntur alit .</p>
+													<h4>Specialty Name</h4>
+													<p>Sed nisi tellus, dignissim non tempus at, aliquet in odio. Duis sodales urna nec sapien tincidunt vel vestibulum nulla consequat. Fusce nisi neque, auctor eget feugiat sit amet, aliquet eu velit  Lores sunt. Ignatur quid es eperspictem untibus velitatur maios dolliti oriaest iberibeature et al<br/>
+porepedi sitemque num essit lab im alitiis velitas sequatatur estibulum nulla con.</p>
+												</div>
+											</div>									
+										</div>
+										<!-- #credentials -->
+									</div>
+								</div>
+							</div>
+							<!--ls:end[component]-->
+
+						</div>
+					</div>
+				</div><!--ls:end[area]-->
+				<div class="ls-row-clr" ></div>
+			</div>
+		</div>
+		<!--ls:end[row]-->
+	
+		<!--ls:begin[row] can add additional .ls-area containers --> 
+		<div class="ls-row">
+			<div class="ls-lqr">
+				<!--ls:begin[area] can define number of columns to span with class name (ie .span4) -->
+				<div class="ls-area span12">
+					<div class="ls-area-body">
+						<div class="ls-cmp-wrap ls-1st">
+							<!--ls:begin[component] must have class of 'iw_component', no unique id or class names, nest component markup inside a child <div> classed appropriately -->
+							<div class="iw_component">
+								<div class="footer">
+									<div class="footer-mobile">
+										<div class="footer-left span6">
+											<ul>
+												<li><a href="#">About Us</a></li>
+												<li><a href="#">Contact</a></li>
+												<li><a href="#">Refer a Patient</a></li>
+											</ul>
+										</div>
+										<div class="footer-right span6">
+											<ul>
+												<li><a href="#">Terms of Use</a></li>
+												<li><a href="#"> Privacy Policy</a></li>
+												<li class="li--last"><a href="#">Code of Conduct</a></li>
+											</ul>
+											<p>&copy; 2013 Stanford Children's Health</p>
+										</div>
+									</div>
+
+									<div class="footer-desktop">
+										<div class="row-fluid">
+											<div class="about span4">
+												<h3>About</h3>
+												<ul class="span2 span2--first">
+													<li><a href="#">About Us</a></li>
+													<li><a href="#">Corporate Partners</a></li>
+													<li><a href="#">Quality &amp; Safety</a></li>
+													<li><a href="#">Facts &amp; Figures</a></li>
+													<li><a href="#">Careers</a></li>
+												</ul>
+												<ul class="span2">
+													<li><a class="outbound" href="#">Blog</a></li>
+													<li><a href="#">Leadership</a></li>
+													<li><a href="#">Newsroom</a></li>
+													<li><a href="#">Patient Stories</a></li>
+													<li><a href="#">Packard Kids Connection</a></li>
+												</ul>
+											</div>
+											<div class="connect span2">
+												<h3>Connect</h3>
+												<ul> 
+													<li><a href="#">Make a Donation</a></li>
+													<li><a href="#">Send a Greeting Card</a></li>
+												<li><a href="#">Refer a Patient</a></li>
+													<li><a href="#">Pay Your Bills</a></li>
+												</ul>
+											</div>
+											<div class="connect span2">
+												<h3>Find</h3>
+												<ul>
+													<li><a href="#">Locations</a></li>
+													<li><a href="#">Doctors</a></li>
+													<li><a href="#">Departments &amp; Services</a></li>
+													<li><a href="#">Classes &amp; Events</a></li>
+												</ul>
+											</div>
+											<div class="stanford span2">										
+												<ul>
+													<li><a class="outbound" href="#">Stanford Hospital &amp; Clinics</a></li>
+													<li><a class="outbound" href="#">Stanford University School of Medicine</a></li>
+													<li><a class="outbound" href="#">Lucile Packard Foundation for Children's Health</a></li>
+												</ul>
+											</div>
+											<div class="find-us-on span2">
+												<h3>Also Find Us on:</h3>
+												<ul class="find-us">
+													<li><a href="#" class="icon-rss">rss</a></li>
+													<li><a href="#" class="icon-facebook">facebook</a></li>
+													<li class="li--twitter"><a href="#" class="icon-twitter">twitter</a></li>
+													<li class="li--youtube"><a href="#" class="icon-youtube">youtube</a></li>
+												</ul>
+												<a href="#" class="contact-us">Contact Us</a>
+											</div>
+										</div>
+										<div class="row-fluid">
+											<ul class="term-policy">
+												<li><a href="#">Terms of Use</a></li>
+												<li><a href="#"> Privacy Policy</a></li>
+												<li><a href="#">Code of Conduct</a></li>
+												<li><span>&copy; 2013 Stanford Children's Health</span></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--ls:end[component]-->
+						</div>
+					</div>
+				</div>
+				<!--ls:end[area]-->
+				<div class="ls-row-clr" ></div>
+			</div>
+		</div>
+		<!--ls:end[row]-->
+			
+
+	</div>
+	
+	
+</body>
+</html>

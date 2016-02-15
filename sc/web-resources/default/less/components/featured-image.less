@@ -1,0 +1,22 @@
+.featured-image {
+	height: 136px;
+	overflow: hidden;
+	.featured {
+		width: 100%;
+	}
+	@media only print, only screen and (min-width: 720px) {
+		height: 487px;
+		.featured {
+			width: auto;
+			max-width: 825px;
+			height: 487px;
+		}
+	}
+	@media only print, only screen and (min-width: 980px) {
+		height: 561px;
+		.featured {
+			width: auto;
+			height: 561px;
+		}
+	}
+}

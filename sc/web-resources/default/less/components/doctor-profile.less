@@ -1,0 +1,65 @@
+/* doctor-profile page */
+.doctor-profile  {
+	@radius-btn-appointment: 4px;
+	@shadow-location-content-doctor: 0px 2px 4px rgba(0, 0, 0, 0.1);	
+	/* Mobile first styles */
+	.ls-lqr,
+	.ls-fxr {
+		margin: 0 20/320*100%;
+		padding-top: 13px;
+	}	
+	.span8 {
+		display: none!important;
+	}
+	.related-locations {
+		border-bottom: none;
+		margin-top: -25px;
+		padding-bottom: 5px;
+		div.related-locations-content {
+			/*.box-shadow(@shadow-location-content-doctor);*/
+		}
+	}
+	/* Tablet next styles */
+	@media only print, only screen and (min-width: 720px) {
+		.ls-lqr,
+		.ls-fxr {
+			margin: 0px 40/720*100%;
+			padding-top: 0;
+		}
+		.span4 {
+			padding: 29px 0 0 0;
+			border-bottom: none;
+		}
+		.span8 {
+			padding: 29px 0 0 0;
+			border-bottom: none;
+			display: block!important;
+		}
+		.related-locations {
+			margin-top: 0px;
+			margin-right: 20px;
+			.title-related-locations {
+				display: none	
+			}
+		}
+	}
+	
+	/* Desktop last styles */
+	@media only print, only screen and (min-width: 980px) {
+		.ls-lqr,
+		.ls-fxr {
+			margin: 0 20px;
+		}
+		.span4 {
+			padding: 0
+		}
+		.span8 {
+			padding: 0;
+			border-bottom: none;
+			display: block!important;
+		}
+		.related-locations {
+			margin-right: 0;
+		}
+ 	}
+}

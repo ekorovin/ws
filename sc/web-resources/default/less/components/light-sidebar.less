@@ -1,0 +1,311 @@
+#light-sidebar {
+	&.show {
+		position: absolute;
+		top: 0px;
+		left: -274px;
+		width: 100%;
+		z-index: 1400;
+		display: block;
+	}
+	@brandonReg: 'BrandonTextRegular';
+	@brandonMed: 'BrandonTextMedium';
+	@brandonBold: 'BrandonTextBold';
+	display: none;
+	.icon {
+		z-index: 1511;
+		display: block;
+	}
+	.light-sidebar-header {
+		height: 41px;
+		background: url(/web-resources/default/img/bg-search-tablet-phone.png) 0 0 repeat;
+		border-bottom: 5px solid #990134;
+		position: absolute;
+		z-index: 1500;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		min-width: 320px;
+		.input-wrap {
+			display: inline-block;
+			float: left;
+			margin: 10px 0px 0px 3.125%;
+			position: relative;
+			z-index: 1501;
+			.icon {
+				position: absolute;
+			}
+			.icon.search {
+				width: 28px;
+				height: 23px;
+				left: 0px;
+				top: 0px;
+				background: url(/web-resources/default/img/light-sidebar-icon-search.png) 0 0 no-repeat;
+			}
+			.icon.clear {
+				top: 50%;
+				margin: -8px 0px 0px 0px;
+				right: 6px;
+				width: 17px;
+				height: 17px;
+				cursor: pointer;
+				background: url(/web-resources/default/img/light-sidebar-icon-cancel.png) 0 0 no-repeat;
+			}
+			form {
+				margin: 0px;
+			}
+		}
+		.input-wrap input {
+			z-index: 1510;
+			border: 1px solid #c2c2c2;
+			width: 178px;
+			padding: 0px 25px 0px 28px;
+			background: #fff;
+			height: 26px;
+			font-family: @brandonMed;
+			font-size: 14px;
+			color: #333;
+			margin: 0px 0px 0px 0px;
+			box-shadow: none;
+			.border-radius(2px);
+			&::-ms-clear {
+			    display: none;
+			}
+		}
+		.button-cancel {
+			width: 53px;
+			height: 26px;
+			display: block;
+			background: url(/web-resources/default/img/light-sidebar-button-cancel.png) 0 0 no-repeat;
+			float: left;
+			margin: 10px 0px 0px 7px;
+			text-align: center;
+			font: 10px/26px @brandonMed;
+			color: #716e69;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		.button-cancel:active {
+			color: #fff;
+			background-position: 0px -26px;
+			text-decoration: none;
+		}
+	}
+	.light-sidebar-results {
+		position: relative;
+		z-index: 1499;
+		overflow: hidden;
+		margin: 46px 0px 0px 0px;
+		min-height: 900px;
+		background: url(/web-resources/default/img/light-sidebar-overlay.png) 0 0 repeat;
+		&.is-loading {
+			.loading {
+				display: block;
+				font: 16px @brandonReg;
+				color: #333;
+				padding: 14px 0px 0px 0px;
+				text-align: center;
+			}
+		}
+		&.has-result {
+			background: url(/web-resources/default/img/light-sidebar-background.png) 0 0 repeat;
+			.results-list {
+				display: block;
+			}
+		}
+		.results-list {
+			margin: 0px 0px 0px 0px;
+			display: none;
+		}
+		.result-item {
+			padding: 0px 0px 0px 0px;
+			border-bottom: 1px solid #cacaca;
+			position: relative;
+			.transition(all 0.2s ease);
+			.left-pane {
+				height: 21px;
+				width: 46px;
+				float: left;
+				position: relative;
+				display: block;
+				.icon.result {
+					width: 21px;
+					height: 21px;
+					left: 13px;
+					position: absolute;
+					background: url(/web-resources/default/img/light-sidebar-icon-results-type.png) 0 0 no-repeat;
+					&.services {
+						background-position: 0px -21px;
+					}
+					&.locations {
+						background-position: 0px -42px;
+					}
+					&.classes {
+						background-position: 0px -63px;
+					}
+				}
+			}
+			.right-pane {
+				float: left;
+				display: block;
+				.title {
+					display: block;
+					font: 16px/16px @brandonBold;
+					margin: 0px 0px 0px 0px;
+					color: #333;
+					&:hover {
+						text-decoration: none;
+					}
+				}
+				.type {
+					display: block;
+					font: 14px/14px @brandonReg;
+					margin: 4px 0px 0px 0px;
+					text-transform: uppercase;
+					color: #333;
+				}
+			}
+			.item-link-wrap {
+				text-decoration: none;
+				padding: 9px 0px 6px 0px;
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+			 .item-link-wrap:hover {
+			 	.no-touch & {
+					background: url(/web-resources/default/img/light-sidebar-background-highlight.png) 0 0 repeat;
+					.left-pane {
+						.icon.result {
+							&.caregiver {
+								background-position: -21px 0px;
+							}
+							&.service {
+								background-position: -21px -21px;
+							}
+							&.location {
+								background-position: -21px -42px;
+							}
+							&.class {
+								background-position: -21px -63px;
+							}
+						}
+					}
+					.right-pane {
+						.title {
+							color: #fff;
+						}
+						.type {
+							color: #fff;
+						}
+					}
+			 	}
+			}
+			.item-link-wrap:active {
+				.touch & {
+					background: url(/web-resources/default/img/light-sidebar-background-highlight.png) 0 0 repeat;
+					.left-pane {
+						.icon.result {
+							&.caregiver {
+								background-position: -21px 0px;
+							}
+							&.service {
+								background-position: -21px -21px;
+							}
+							&.location {
+								background-position: -21px -42px;
+							}
+							&.class {
+								background-position: -21px -63px;
+							}
+						}
+					}
+					.right-pane {
+						.title {
+							color: #fff;
+						}
+						.type {
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+		.view-more-item {
+			display: none;
+		}
+		.loading {
+			display: none;
+		}
+	}
+	
+	@media only print, only screen and (min-width: 720px) {
+		&.show {
+			left: -291px;
+			width: 291px;
+		}
+		.light-sidebar-header {
+			width: 291px;
+			min-width: 291px;
+			height: 63px;
+			text-align: center;
+			.button-cancel {
+				display: none;
+			}
+			.input-wrap {
+				margin: 20px 0px 0px -128px;
+				width: 256px;
+				display: block;
+				left: 50%;
+				.icon.search {
+					display: none;
+				}
+				.icon.clear {
+					right: 20px;
+				}
+			}
+			.input-wrap input {
+				width: 229px;
+				padding-left: 0px;
+				text-indent: 7px;
+			}
+		}
+		.light-sidebar-results {
+			margin: 68px 0px 0px 0px;
+			min-height: 258px;
+			.ie8 & {
+				overflow: auto;
+			}
+			.result-item {
+				padding: 0px 0px;
+				.item-link-wrap {
+					padding: 7px 0px;
+				}
+				.left-pane {
+					width: 40px;
+				}
+				&.hide-default-tablet {
+					display: none;
+				}
+			}
+			.view-more-item {
+				text-align: center;
+				display: block;
+				padding: 20px 0px 17px 0px;
+				a {
+					font: 16px @brandonReg;
+					color: #333;
+
+				}
+				a:hover {
+					font-size: 18px @brandonMed;
+					color: #ff2e35;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	@media only print, only screen and (min-width: 980px) {
+		display: none !important;
+	}
+}

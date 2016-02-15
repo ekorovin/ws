@@ -1,0 +1,138 @@
+/* related-navigation component */
+.related-navigation {
+	h2 {
+		font: 30px/30px 'BrandonGrotesqueMedium';
+		color: #8c1515;
+	}
+
+	.arrow-icon{
+		display: inline-block;
+		float: left;
+		margin-top: 10px;
+		margin-left: 0px;
+		width: 10px;
+		height: 10px;
+
+		&.expanded {
+			background: url("/web-resources/default/img/arrow-rel-nav-open.png") no-repeat;
+		}
+		&.collapsed{
+			background: url("/web-resources/default/img/arrow-rel-nav-closed.png") no-repeat;
+		}
+	}
+
+	.tree-list {
+		list-style-type: none;
+		margin: 15px 0px 0px 0px;
+
+		li.current > a{
+			text-decoration: none;
+			font: 14px/20px 'BrandonGrotesqueBold';
+			color: #8c1515;
+			background: url('/web-resources/default/img/bg-hover-accordion.png') repeat-y;
+		}
+
+		li {//global style
+			font: 14px/20px 'BrandonGrotesque';
+			margin: 0px;
+			overflow: hidden;
+			margin-bottom:2px;
+			margin-left:0;
+			box-sizing:border-box;
+			-moz-box-sizing:border-box;
+			border-right: 2px solid #ffffff;
+			display: block;
+			padding: 0px;
+
+			ul li a{
+				padding-left:14px; 
+				
+			}
+
+			a {
+				padding: 6px;
+				margin: 0px 0px 1px 10px;
+				font: 14px/20px 'BrandonGrotesque';
+				color: #333333;
+				position: relative;
+				display: block;
+				border: none;
+				.no-touch &:hover {
+					text-decoration: none;
+					font: 14px/20px 'BrandonGrotesqueBold';
+					color: #8c1515;
+					background: url('/web-resources/default/img/bg-hover-accordion.png') repeat-y;
+					.icon.tree-item {
+						background-position: 0px -11px;
+					}
+				}
+				&:focus, &:active, &:hover{
+					color: #8c1515;
+					text-decoration: none;
+					outline: none;
+					-moz-outline-style: none;
+				}
+				.icon.tree-item {
+					width: 10px;
+					height: 11px;
+					right: 17px;
+					top: 50%;
+					margin-top: -5px;
+					background: url('/web-resources/default/img/t19-icon-arrow-bold.png') top left no-repeat;
+				}
+			}
+			//children level 1 
+			ul {
+				list-style-type: none;
+				margin: 0;
+				li {
+					//children level > 2
+					ul {
+						li {
+							border: none;
+
+							a {
+								color: #ff2e35;
+								.icon.tree-item {
+									background-image: url('/web-resources/default/img/t19-icon-arrow.png');
+									width: 8px;
+									height: 9px;
+									margin-top: -4px;
+									right: auto;
+									left: 14px;
+								}
+							}
+							a:hover, &.expanded a {
+								.icon.tree-item {
+									background-position: 0px -9px;
+								}
+							}
+						}
+					}
+					
+				}
+			}
+			> a .icon.tree-item {
+				position: absolute;
+				display: block;
+			}
+
+			&.expanded {
+				> ul {
+					display: block;
+				}
+				> a {
+					.icon.tree-item {
+						background-position: 0px -11px;
+					}
+				}
+			}
+		}
+		> li {//first item level
+			background: url('/web-resources/default/img/bg-subtab-li.png') no-repeat left bottom;
+			> a {
+				font: 14px/20px 'BrandonGrotesque';
+			}
+		}
+	}
+}

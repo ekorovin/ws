@@ -1,0 +1,309 @@
+/* Global site footer */
+/* Mobile first styles */
+.footer {
+	padding: 0 20/320*100%;
+	background: #ece9e7;
+	border-top: 5px solid #a70532;
+	z-index: 1;
+		.footer-mobile{display: block;}
+		.footer-desktop{display:none;}
+		.footer-left{
+			ul{
+				list-style:none;
+				margin: 0;
+				padding: 11px 0 12px;
+				border-bottom: 1px solid #4d4d4f;
+
+				li{
+					width: 100%;
+					text-align: center;
+					padding:16px 0 14px;
+
+					a{
+						font:@regular 16px 'BrandonTextRegular';
+						color:#4d4d4f;
+						text-decoration: none;
+					}
+				}
+			}
+
+		}
+
+		.footer-right{
+			ul{
+				.clearfix;
+				width:280px;
+				list-style:none;
+				margin: 0 auto;
+				padding-top: 23px;
+				li{
+					font:@regular 13px/24px 'BrandonTextRegular';
+					float: left;
+					border-left: 1px solid #4d4d4f;
+					padding:0 6px;
+
+					&:first-child{
+						border-left: none; 
+						padding-left: 0;
+					}
+					&.li--last{padding-right:0;}
+					a{
+						color:#4d4d4f;
+						text-decoration: none;
+					}
+				}
+			}
+			p{
+				#grid > .fluid > .row-fluid;
+				font:@regular 11px/24px 'BrandonTextRegular';
+				color: #4d4d4f;
+				text-transform:uppercase;
+				text-align: center;
+				
+			}
+			padding-bottom: 18px;
+		}
+
+	/* Tablet next styles */
+	@media only screen and (min-width: 720px) {
+ 		padding: 0 40/720*100%;
+
+		.footer-mobile{
+			padding:9px 0 12px;
+			#grid > .fluid > .row-fluid;
+		}
+
+ 		.footer-left{
+ 			float: left;
+ 			ul{
+ 				#grid > .fluid > .row-fluid;
+				padding: 11px 0 12px;
+				border-bottom: none;
+
+				li{
+					float: left;
+					width: auto;
+					text-align: left;
+					padding:0 23px 0 20px;
+					border-left: 1px solid #4d4d4f;
+
+					&:first-child{
+						border-left: none;
+						padding-left: 0;
+					}
+
+					a{
+						font-size: 14px;
+						line-height: 29px;
+					}
+				}
+			}
+ 		}
+ 		.footer-right{
+ 			&.span6{ float: right}
+			padding: 0px;
+ 			ul{
+				width:auto;
+				margin: 0 3px 0 0;
+				padding-top: 8px;
+				float: right;
+
+				li{
+					font:@regular 11px/18px 'BrandonTextRegular';
+					background-position:left 2px;
+					padding:0 9px;
+				}
+			}
+			p{
+				clear: both;
+				width: auto;
+				margin: -2px 50px 0 0;
+				font:@regular 11px/18px 'BrandonTextRegular';
+				text-align: right;
+			}
+ 		}
+
+	}
+
+	/* Desktop last styles */
+	@media only screen and (min-width: 980px) {
+		padding: 0 20/980*100%;
+		background: #ece9e7 url("/web-resources/default/img/logo-stanford-medicine.png") no-repeat bottom left;
+		
+		.footer-mobile{
+			display: none;
+		}
+
+		.footer-desktop{
+			#grid > .fluid > .row-fluid;
+			display: block;
+			padding: 12px 0 9px 0;
+
+			h3{
+				margin:0 0 2px;
+				font:@bold 11px/18px 'BrandonTextBold';
+				color:#4d4d4f;
+				text-transform:uppercase;
+				/* background: url("/web-resources/default/img/line-loop-footer.png") repeat-x left bottom; */
+				border-bottom: 1px solid #bdbab9;
+
+			}
+
+			ul{
+				margin:0;
+				padding:0;
+				list-style:none;
+
+				li{
+					padding: 2px 0 1px;
+					a{
+						font:12px/16px 'BrandonTextRegular';
+						color: #4d4d4f;
+						text-decoration: none;
+						padding-right: 15px;
+
+
+						&:hover{
+							color: #000;
+							/*padding-right: 15px;*/
+						}
+						
+						&.outbound {
+							&:hover {
+								background:url("/web-resources/default/img/icon-footer-hover.png") no-repeat right 4px;
+							}
+						}
+					}
+
+					.ie8 & {
+						padding: 6px 0px 0px;
+					}
+				}
+
+				&.find-us{
+					#grid > .fluid > .row-fluid;
+					padding: 7px 0 22px;
+					li{
+						border-left: 1px solid #4d4d4f;
+						float: left;
+						padding: 0 3px;
+
+						&:first-child{
+							border-left: none;
+							padding-left: 0;
+						}
+
+						&.li--twitter{
+							padding: 0 6px 0 8px;
+						}
+						&.li--youtube{
+							padding: 0 0 0 5px;
+						}
+
+						a{
+							width: 27px;
+							height: 27px;
+							padding:0;
+							display: block;
+							background:url("/web-resources/default/img/icons-social.png") no-repeat;
+
+							font: 0/0 a;
+						    color: transparent;
+						    text-shadow: none;
+						    background-color: transparent;
+						    border: 0;
+
+							&.icon-rss{
+								background-position:0 0;
+								&:hover{background-position:0 -108px;}
+							}
+							&.icon-facebook{
+								background-position:0 -27px;
+								&:hover{background-position:0 -135px;}
+							}
+							&.icon-twitter{
+								background-position:0 -54px;
+								&:hover{background-position:0 -162px;}
+							}
+							&.icon-youtube{
+								background-position:0 -81px;
+								&:hover{background-position:0 -189px;}
+							}
+
+						}
+					}
+				}
+
+				&.term-policy{
+					padding-top: 20px;
+					margin-left:245/940*100%;
+					width:480/940*100%;
+
+					li{
+						float: left;
+						padding:0 8px 0 8px;
+						border-left: 1px solid #4d4d4f;
+
+						&:first-child{
+							border-left: none;
+							padding-left: 0;
+						}
+
+						a{
+							font-size: 11px;
+							line-height: 18px;
+							color: #4d4d4f;
+							text-decoration: none;
+							padding: 0;
+
+							&:hover{
+								color: #000;
+								background:none;
+								padding-right: 0;
+							}
+
+						}
+						span{
+							font:@regular 11px/18px 'BrandonTextRegular';
+							color: #4d4d4f;
+							text-transform: uppercase;
+						}
+					}
+
+				}
+			}
+
+			.about{
+				&.span4{
+					width: 280/940*100%;
+					.span2{
+						width: 140/280*100%;
+						margin-left:0;
+					}
+				}
+			}
+			.stanford{
+				padding-top: 20px;
+				&.span2{ width: 160/940*100%}
+			}
+			.find-us-on{
+				.contact-us{
+					font: 14px/16px 'BrandonTextRegular';
+					color: #4d4d4f;
+					text-decoration: none;
+					padding-right: 15px;
+
+
+					&:hover{
+						background:url("/web-resources/default/img/icon-footer-hover.png") no-repeat right 4px;
+						color: #000;
+					}
+				}
+			}
+		}
+ 	}
+
+ 	@media print {
+ 		display: none;
+ 	}
+}

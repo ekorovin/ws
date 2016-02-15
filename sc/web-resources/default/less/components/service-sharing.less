@@ -1,0 +1,56 @@
+.service-template { 
+	/* Mobile first styles */	
+	
+	
+	.sharing-component{
+		padding:19px 0 10px;
+		
+		&.sharing-component-mobile{display:block;}
+		&.sharing-component-desktop{display:none}
+
+		ul{
+			margin: 0;
+			padding:0;
+			.clearfix;
+        	list-style-type: none;
+
+        	li{
+				float:left;
+				margin-right: 27/280*100%;
+				
+				a{
+					background:url('/web-resources/default/img/icons-share.png') no-repeat;
+					width:24px;
+					height:20px;
+					display:block;			
+
+					&.icon-share{background-position: 0 0;}
+					&.icon-email{background-position: 0 -20px;}
+					&.icon-print{background-position: 0 -40px;}
+				}			
+			}
+		}
+		
+	}
+	
+
+	
+	/* Tablet next styles */
+	@media only print, only screen and (min-width: 720px) {
+		.sharing-component{
+			padding:4px 0 21px;
+			&.sharing-component-mobile{ display:none}
+			&.sharing-component-desktop{display:block;}
+		}
+	}	
+	
+	/* Desktop last styles */
+	@media only print, only screen and (min-width: 980px) {
+		.sharing-component{
+			&.sharing-component-mobile{ display:none}
+			&.sharing-component-desktop{display:block;}
+		}
+		
+	}
+	
+} 

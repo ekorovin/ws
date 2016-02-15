@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Location detail</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name="vpath" content="" />
+	<meta name="page-locale-name" content="" />
+	<meta name="viewport"
+		content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../web-resources/default/css/bootstrap.css" />
+	<link rel="stylesheet" href="../web-resources/default/css/layout.css" />
+	<link rel="stylesheet" href="../web-resources/default/css/main1.css" />
+	<link rel="stylesheet" href="../web-resources/default/css/main2.css" />
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+		<script type="text/javascript" src="../web-resources/default/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+	<script type="text/javascript" src="../web-resources/default/js/vendor/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="../web-resources/default/js/vendor/underscore-min.js"></script>
+	<script type="text/javascript" src="../web-resources/default/js/vendor/backbone-min.js"></script>
+	<script type="text/javascript" src="../web-resources/default/js/vendor/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../web-resources/default/js/vendor/less-1.3.3.min.js"></script>
+	<script type="text/javascript" src="../web-resources/default/js/plugins.js"></script>
+	<script type="text/javascript" src="../web-resources/default/js/packages.js"></script>
+	<script type="text/javascript" src="../web-resources/default/js/lpch/models/BaseModel.js"></script>
+	<script type="text/javascript" src="../web-resources/default/js/lpch/models/DocumentModel.js"></script>
+	<script type="text/javascript" src="../web-resources/default/js/lpch/models/Layout.js"></script>
+	<script type="text/javascript" src="../web-resources/default/js/lpch/models/LayoutSmartphone.js"></script>
+	<script type="text/javascript" src="../web-resources/default/js/lpch/models/LayoutTablet.js"></script>
+	<script type="text/javascript" src="../web-resources/default/js/lpch/models/LayoutDesktop.js"></script>
+	<script type="text/javascript" src="../web-resources/default/js/lpch/models/ZipCodeCollection.js"></script>
+	<script type="text/javascript" src="../web-resources/default/js/lpch/views/BaseView.js"></script>
+	<script type="text/javascript" src="../web-resources/default/js/lpch/views/Document.js"></script>
+	<script type="text/javascript" src="../web-resources/default/js/lpch/components/LocationDetail.js"></script>
+	<script type="text/javascript" src="../web-resources/default/js/lpch/Module.js"></script>
+	<script type="text/javascript" src="../web-resources/default/js/main.js"></script>
+</head>
+<body>
+	<div class="ls-canvas">
+		<!--ls:begin[row] can add additional .ls-area containers -->
+		<div class="ls-row ls-row-extra">
+			<div class="ls-lqr">
+				<!--ls:begin[area] can define number of columns to span with class name (ie .span4) -->
+				<div class="ls-area span12">
+					<div class="ls-area-body">
+						<div class="ls-cmp-wrap ls-1st">
+							<!--ls:begin[component] must have class of 'iw_component', no unique id or class names, nest component markup inside a child <div> classed appropriately -->
+							<div class="iw_component">
+								<div class="location-detail">
+									<h2 class="location-heading">Locations &amp; Directions</h2>
+									<div class="locations clearfix">
+										<div class="building-name span4">
+											<h3>Lucile Packard Children's Hospital's main facility </h3>
+										</div>
+										<div class="address span3">
+											<p>
+												725 Welch Road<br />
+												Palo Alto, CA  94304<br />
+												(650) 497-8000<br />
+											</p>
+											<a href="#" class="button-location">View Map &amp; Directions</a>
+										</div>
+										<div class="map span5">
+											<div class="location-detail-map" id="map-canvas">
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--ls:end[area]-->
+			</div>
+		</div>
+		<!--ls:end[row]-->
+	</div>
+</body>
+</html>

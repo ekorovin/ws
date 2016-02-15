@@ -1,0 +1,118 @@
+.image-text-extra-component {
+	background: #f9f9f9;
+	.border-radius(8px);
+	margin: 0 10/320*100% 20px 10/320*100%;
+	padding: 20px 0 19px 0;
+	overflow: hidden;
+	.image-text-first {
+		margin: 0 20/320*100% 25px 20/320*100%;
+		overflow: hidden;
+		text-align: center;
+		.image-text-img {
+			img {
+				max-width: 100%;
+			}
+		}
+	}
+
+	.image-text-second {
+		margin: 0 30/320*100%;
+		overflow: hidden;
+		.image-text-content {
+			overflow: hidden;
+			h2 {
+				color: #8c1515;
+				font: @regular 24px/30px "BrandonGrotesque";
+				margin: 0;
+				padding: 0 0 8px 0;
+				letter-spacing: -1px;
+			}
+			p{
+				font: @regular 16px/22px "BrandonTextRegular";
+				color: #333333;
+				margin: 0;
+				padding: 0 0 6px 0;
+				a {
+					color: #ff2e35;
+					&:hover, &:focus{						
+						text-decoration: none;
+						border-bottom: 2px dotted #ff2e35;
+						padding-bottom: 0;
+					}
+				}	
+			}
+		}
+	}
+	/* Tablet next styles */
+	@media only print, only screen and (min-width: 720px) {
+		margin: 0 0 16px;
+		padding: 21px 0 9px 20/337*100%;
+		/*min-height: 246px;*/
+		.image-text-first {
+			width: 118/317*100%;
+			margin: 0 18/317*100% 0 0;
+			float: left;
+		}
+		.image-text-second {
+			margin: 0;
+			width: 155/317*100%;	
+			float: left;
+			.image-text-content {
+				h2 {
+					margin-top: -4px;
+				}
+				p{
+					font: @regular 14px/20px "BrandonTextRegular";
+				}
+			}
+		}
+		&.text-left-image-right {
+			.image-text-first {
+				float: right;
+				margin: 0 20/317*100% 0 0;
+			}
+			.image-text-second {
+				float: left;
+				width: 150/317*100%;	
+			}
+		}
+	}
+	
+	/* Desktop last styles */
+	@media only print, only screen and (min-width: 980px) {
+		margin: 0 0 20px;
+		padding: 21px 0 20px 20px;
+		/*min-height: 184px;*/
+		.image-text-first {
+			width: 159px;
+			margin: 0 30px 0 0;
+		}
+		.image-text-second {
+			width: 210px;
+			.image-text-content {
+				h2 {
+					/*margin-top: 0px;*/
+					/*padding-top: 6px;*/
+				}
+				p {
+					margin-top: -1px;
+					padding-left: 1px;	
+					a {
+						display: block;
+						padding-top: 1px;
+						float: left;
+					}
+				}
+			}
+		}
+		&.text-left-image-right {
+			.image-text-first {
+				margin: 0 20px;
+			}
+			.image-text-second {
+				width: 230px;
+				padding-left: 9px;
+			}
+		}
+	}
+}

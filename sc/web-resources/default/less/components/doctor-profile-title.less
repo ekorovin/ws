@@ -1,0 +1,138 @@
+/* doctor-profile-title component */
+.doctor-profile-title  {
+	/* Mobile first styles */
+	overflow: hidden;	
+	h2 {
+		font: @regular 24px/24px 'BrandonGrotesque';
+		color: #990134;
+		margin:0;
+		padding: 0;
+	}
+	.list-link-top {
+		margin:0;
+		padding: 1px 0 0 2px;
+		width:100%;
+		list-type: none;
+		overflow: hidden;
+		li {
+			font: @regular 18px/24px 'BrandonGrotesque';
+			background: url(../img/bg-line-top-doctor-profile.png) no-repeat left 4px;
+			display: block;
+			float: left;
+			padding: 0 6px 0 7px;
+			&:first-child {
+				background: none;
+				padding-left: 0
+			}
+			a {
+				color: #89827a;
+				&:hover {
+					color: #89827a;
+				}
+			}
+			&.hide-phone {
+				display: none;
+			}
+		}
+	}
+	.make-arrow-row {
+		overflow: hidden;
+		padding: 8px 0 0 2px;
+		width: 101%;
+		.btn-make {
+			background: url(../img/btn-doctor-profile.png) repeat left top;
+			font: @black 10px/12px 'BrandonGrotesqueBlack';
+			height: 31px;
+			color: #ffffff;
+			border-radius: 4px;
+			display: block;
+			text-transform: uppercase;
+			float: left;
+			width: 84px;
+			padding: 4px 6px 0 6px;
+			margin-right: 22px;
+			text-decoration: none;
+			text-align: center;
+			text-shadow:0px 2px 1px rgba(0,0,0,0.3);
+		}
+		a.arrow-add {
+			font: @medium 14px/20px 'BrandonTextMedium';
+			color: #ff2e37;
+			margin-top:17px;
+			display: inline-block;
+			padding-right: 10px;
+			background:url('/web-resources/default/img/icon-arrow-7x7.png') no-repeat right 7px;
+			border-bottom: 2px dotted white;
+			&:hover, &:focus{				
+				text-decoration: none;
+				border-bottom: 2px dotted #ff2e37;
+			}
+		}
+	}
+	/* Tablet next styles */
+	@media only print, only screen and (min-width: 720px) {
+		overflow: hidden;
+		padding: 3px 0 0 7px;
+		h2 {
+			font: @regular 30px/31px 'BrandonGrotesque';
+		}
+		.list-link-top {
+			padding: 0px 0 0 4px;
+			width: auto;
+			li {
+				background: url(../img/bg-line-top-doctor-profile-tablet.png) no-repeat left 4px;
+				letter-spacing: normal;
+				&.hide-phone {
+					display: block;
+				}
+			}
+		}
+		.make-arrow-row {
+			padding: 15px 0 0 4px;
+			.btn-make {
+				background: url(../img/btn-doctor-profile.png) repeat left -204px;
+				font: @black 9px/10px 'BrandonGrotesqueBlack';
+				height: 25px;
+				padding: 4px 6px 0 5px;
+				float: left;
+				margin-right: 20px;
+			}
+			.arrow-add {
+				margin-top:7px
+			}
+		}
+	}
+	
+	/* Desktop last styles */
+	@media only print, only screen and (min-width: 980px) {
+		margin-top: 0px;
+		padding: 45px 0 15px 0;
+		h2 {
+			font: @regular 30px/46px 'BrandonGrotesque';
+			color: #8c1515;
+			margin-left:-2px;
+		}
+		.list-link-top {
+			margin-top: -3px;
+			padding-left: 2px;
+			li {
+				font: @regular 20px/25px 'BrandonGrotesque';
+				background: url(../img/bg-line-top-doctor-profile-desktop.png) no-repeat left 4px;
+			}
+		}
+		.make-arrow-row {
+			padding: 18px 0 0 2px;
+			.btn-make {
+				background: url(../img/btn-doctor-profile.png) repeat left top;
+				font: @black 10px/12px 'BrandonGrotesqueBlack';
+				height: 31px;
+				padding: 4px 5px 0 5px;
+				margin-right: 21px;
+				margin-left:-2px;
+			}
+			.arrow-add {
+				margin-top:13px
+			}
+		}
+ 	}
+}

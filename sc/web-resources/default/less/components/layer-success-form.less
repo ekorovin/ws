@@ -1,0 +1,104 @@
+/*layer success*/
+.layer-success-form-template {
+	.border-radius(6px);
+	#cboxWrapper{
+		#cboxContent{
+			margin-top: 0;
+			.border-radius(4px);
+			#cboxLoadedContent{				
+				.layout-success-container{
+					padding: 36px 0 0 32px;					
+					.content{
+						border-top: 1px solid #bbbbbb;
+						padding-right: 16px;    				
+					margin-bottom: 20px;
+					width: 87%;
+						.heading{
+							color: #8c1515;
+							font-size: 30px;
+							line-height: 30px;
+							font-family: 'BrandonGrotesqueMedium';
+							font-weight: @regular;
+						}
+						.description{							
+							color: #333333;
+							font-size: 14px;
+							line-height: 20px;
+							font-family: 'BrandonGrotesque';
+							font-weight: @regular;
+						}	
+					}					
+					.controls{
+						.btn {
+							color: #ffffff;
+							font-size: 16px;
+							line-height: 32px;
+							font-family: 'BrandonGrotesqueBold';							
+							font-weight: @regular;
+							width: 195px;
+							height: 37px;
+							text-transform: uppercase;
+							padding: 3px 12px 4px 11px;
+							.box-shadow(0 1px 1px rgba(0,0,0,1));
+							background: url("/web-resources/default/img/bg-button-return.png") repeat-x scroll 0 0 transparent;
+							border: 0px;
+							.border-radius(4px);
+							text-shadow: 1px 1px 1px #000000;
+							&:hover{
+								background: #be2648;
+							}
+						}
+					}
+				}				
+			}
+			#cboxClose {
+				background: url("/web-resources/default/img/icon-colorbox-close.png") no-repeat 0 0 transparent;
+				top: 13px;
+			}
+		}
+	}
+
+}
+/* Tablet next styles */
+@media only print, only screen and (min-width: 720px) {
+	.layer-success-form-template {		
+		#cboxWrapper{
+			#cboxContent{				
+				#cboxLoadedContent{				
+					.layout-success-container{						
+						.content{							
+						width: 440px;	    				    				
+						}
+					}				
+				}			
+			}
+		}
+	}
+}	
+/* Desktop last styles */
+@media only print, only screen and (min-width: 980px) {
+	.layer-success-form-template {		
+		#cboxWrapper{
+			#cboxContent{				
+				#cboxLoadedContent{				
+					.layout-success-container{
+						padding: 32px 0 0 28px;						
+						.content{							
+							padding-right: 20px;
+						width: 498px;
+						margin-bottom: 20px;
+						.heading{								
+								font-size: 24px;								
+							}	
+						}
+					}				
+				}
+				#cboxClose {					
+					top: 10px;
+					right: -2px;
+				}
+			}
+		}
+
+	}
+}

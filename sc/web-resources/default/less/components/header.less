@@ -1,0 +1,307 @@
+/* Global site header */
+@zindexDropdown:          1020;
+
+#header-wrapper{
+	/* Mobile first styles */
+	height: 45px;
+	position: relative;
+	z-index: @zindexDropdown;
+	#header {
+		.transition(all 0.3s ease-out);
+		/* Mobile first styles */
+		width: 100%;
+		height: 41px;
+		border-bottom: 4px solid #990134;
+		position: fixed;
+		min-width: 320px;
+		z-index: @zindexDropdown;
+		top: 0;
+		left: 0;
+		background: #fff;
+		.header-inner {
+			background: url(/web-resources/default/img/bg-nav-shadow.png) left bottom repeat-x;
+			padding-bottom: 6px;
+			overflow: hidden;
+			float: left;
+			width: 100%;
+		}
+		.span3 {margin: 0; min-height: 41px; background: none}
+		.nav-btn {
+			background: url(/web-resources/default/img/nav-btn.png) top center no-repeat;
+			display: inline-block;
+			float: left;
+			height: 31px;
+			margin: 5px 7px 0 7px;
+			text-indent: -9999px;
+			width: 31px;
+		}
+		
+		.logo {
+			background: #fff;
+			float: left;
+			padding: 0 0 0 8px;
+			margin:0;
+			width: 82%;
+			height: 41px;
+			h1 {
+				display: none;
+			}
+			img {
+				margin-top: 5px;
+			}
+		}
+
+		.find-doctor {
+			right: 5px;
+			margin-right:0;
+			z-index:9999;
+			top: 6px;
+			position: absolute;
+			.find-btn {
+				font-family: 'BrandonGrotesqueBlack';
+				font-weight: @black;
+				background: url(/web-resources/default/img/bg-find-doctor.png) left -82px repeat-x;
+				height: auto;
+				display:block;
+				padding: 4px 6px 6px 6px;
+				line-height: 10px;
+				font-size: 8px;
+				text-transform: uppercase;
+				text-decoration: none;
+				color: #fff;
+				.border-radius(4px);
+				text-shadow: 1px 1px 1px #610019;
+				width: 35px;
+				text-align: center;
+				&:hover {
+					background-position: 0 -82px;
+				}
+				&:active {
+					background-position: 0 -82px;
+				}
+			}
+		} 
+		.find-doctor.find-doctor--device {
+			height: 41px;
+			background: url(/web-resources/default/img/bg-search-tablet-phone.png) 0 0 repeat;
+			border-bottom: 5px solid #990134;
+			position: fixed;
+			top:0;
+			left:-274px;
+			z-index: 100;
+			width: 274px;
+			.find-btn {
+				float: left!important;
+				margin: 6px 0 0 19px;
+				background: url(/web-resources/default/img/bg-find-doctor.png) left -114px repeat-x;
+				height: 30px;
+				display:block;
+				padding: 0 10px;
+				font-size: 10px;
+				line-height: 30px;
+				width: 118px;
+				&:hover {
+					background-position: url(/web-resources/default/img/bg-find-doctor.png) left -114px repeat-x;
+					height: 30px!important;
+				}
+				&:active {
+					background-position: url(/web-resources/default/img/bg-find-doctor.png) left -114px repeat-x;
+					height: 30px!important;
+				}
+			}
+			.visible-tablet {
+				display:none!important;
+			}
+		}
+	}
+	/* Tablet next styles */
+	@media only screen and (min-width: 720px){
+		height: 63px;
+		#header {
+			height: 63px;
+	 		border-bottom: 4px solid #990134;
+	 		.header-inner {
+				padding-bottom: 7px;
+			}
+	 		.nav-btn {
+	 			background: url(/web-resources/default/img/nav-btn-tablet.png) top left no-repeat;
+				display: inline-block;
+				float: left;
+				height: 44px;
+				margin: 10px 15px 0 14px;
+				text-indent: -9999px;
+				width: 46px;
+	 		}
+	 		.logo { 
+	 			background: #fff;
+	 			padding: 0 0 1px 14px;
+	 			height: 61px;
+	 			img {
+	 				max-width:none;
+	 				margin-top: 0;
+	 				height: 61px;
+	 			}
+	 			.hidden-phone {
+	 				display: block!important
+	 			}
+	 			.visible-phone {
+	 				display: none!important
+	 			}
+	 		}
+	 		.find-doctor {
+	 			top: 23px;
+	 			right: 29px;
+	 			.find-btn {
+	 				height: 26px;
+					display:block;
+					padding: 0 10px;
+					font-size: 10px;
+					line-height: 26px;
+					width: auto;
+					float:left;
+					margin-left: 9px;
+					&:hover {
+						background-position: 0 -27px;
+					}
+					&:active {
+						background-position: 0 -54px;
+						height: 26px!important;
+					}
+	 			}
+	 			.special-contact-link {
+					color: #89827A;
+					font-family: 'BrandonGrotesqueBlack';
+					font-weight: @black;
+					font-size: 10px;
+					text-transform: uppercase;
+					float:left;
+					line-height: 22px;
+					padding-right: 4px;
+					padding-left: 4px;
+					margin-top: 3px;
+					&:hover {
+						text-decoration: none;
+						color: #ff2e35;
+						cursor: pointer;
+					}
+					&:first-child {
+						background: none;
+					}
+					&.donate {
+						background: url(/web-resources/default/img/bg-donate-btn.jpg) repeat-x;
+						height: 19px;
+						color: white;
+						.border-radius(5px);
+						&:hover, &:focus {
+							text-decoration: none;
+							color: #ff2e35;
+							cursor: pointer;
+						}
+					}
+				}
+	 		}
+	 		.find-doctor.find-doctor--device {
+				height: 63px;
+				border-bottom: 4px solid #990134;
+				width: 291px;
+				top:0;
+				left:-291px;
+				.find-btn {
+					margin: 17px 0 0 30px;
+					display: block;
+					background: url(/web-resources/default/img/bg-find-doctor.png) left -114px repeat-x;
+					&:hover {
+						background-position: url(/web-resources/default/img/bg-find-doctor.png) left -114px repeat-x;
+					}
+					&:active {
+						background-position: url(/web-resources/default/img/bg-find-doctor.png) left -114px repeat-x;
+					}
+				}
+				.visible-tablet {
+					display:none!important;
+				}
+			}
+		}
+	}
+	
+	/* Desktop last styles */
+	@media only screen and (min-width: 980px) {
+		height: 73px;
+		#header{
+/* 			background: url(/web-resources/default/img/bg-header-loop.png) left top repeat; */
+			height: 69px;
+			border-bottom: 4px solid #990134;
+			width: @fixedDesktopWidth;
+			z-index: @zindexDropdown;
+	 		left: 50%;
+	 		margin-left: -490px;
+	 		.header-inner {
+				padding-bottom: 6px;
+				float: none;
+			}
+	 		.nav-btn {
+	 			display: none;
+	 		}
+	 		.logo {
+				float: left;
+				margin: 0;
+				background: #fff;
+/* 				border-left:1px solid #f0f0f0; */
+/* 				border-right:2px solid #f1f1f1;			 */
+				padding: 0 0 0 22px;
+				margin-left: 0;
+				height: 69px;
+				width: 86%;
+				img {
+					margin-top: 0;
+					height: auto;
+				}
+				.logo-phone {
+	 				display: none!important
+	 			}
+			}
+			.find-doctor {
+				top: 34px;
+				right: 19px;
+			}
+		}
+ 	}
+ 	
+ 	@media print {
+ 		display: none;
+ 	}
+}
+/* Header styles for mobile nav fly-out */
+.ls-canvas {
+ 	&.active {
+ 	#header-wrapper {
+		#header {
+			&.android-browser {
+/* 				left: 274px; */
+				.translate3d(274px, 0, 0);
+				.backface-visibility(hidden);
+			}
+			.nav-btn {
+				background: url(/web-resources/default/img/nav-btn.png) left -31px no-repeat!important;
+			}
+			@media only screen and (min-width: 720px) {
+				&.android-browser {
+/* 					left: 291px; */
+					.translate3d(291px, 0, 0);
+					.backface-visibility(hidden);
+				}
+				.nav-btn {
+					background: url(/web-resources/default/img/nav-btn-tablet.png) left -44px no-repeat!important;
+				}
+			}
+			@media only screen and (min-width: 980px) {
+				-webkit-transform: none;
+				-moz-transform: none;
+				-o-transform: none;
+				transform: none;
+				left: 0;
+			}
+		}
+	 }
+	}
+}

@@ -1,0 +1,132 @@
+html, body {
+	background: #f9f9f9 url(/web-resources/default/img/page-bg.jpg) repeat;
+}
+.touch input {
+	-webkit-transform: translate3d(0,0,0);
+}
+.touch body {
+	-webkit-text-size-adjust: 100%;
+}
+.wrapper {
+	width: 100%;
+}
+
+.placeholder { color: #aaa; }
+
+.ls-canvas {
+	background: #fff;
+	margin: 0 auto;
+	padding: 0 0;
+	position: relative;
+	width: 100%;
+	min-width: 320px;
+	.transition(all 0.3s ease-out);
+
+	&.active {
+/* 		left: 274px; */
+		.translate3d(274px, 0, 0);
+		.backface-visibility(hidden);
+	}
+	
+	.ls-cmp-wrap {
+		padding: 0;
+	}
+	
+	.ls-area,
+	.ls-area-body {
+		overflow: visible;
+	}
+	
+	.ls-row {
+		#grid > .fluid > .row-fluid;
+	}
+	
+	.shadow-bottom {
+		background: url(/web-resources/default/img/shadow-bottom.png) bottom center no-repeat;
+		position: absolute;
+		bottom:-14px;
+		height: 27px;
+		width: 100%;
+	}
+}
+
+/* Ajax loading indicator */
+.ajax-loader {
+	background: url("/web-resources/default/img/ajax-loader.gif") no-repeat top center;
+	background-size: @ajaxLoaderSize @ajaxLoaderSize;
+	margin: 0 auto;
+	width: @ajaxLoaderSize;
+	height: @ajaxLoaderSize;
+}
+
+/* Content overlay for mobile fly out nav */
+#mobile-content-overlay {
+	background: url("/web-resources/default/img/bg-overlay.png") repeat top center;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: none;
+	z-index: @zindexModalBackdrop;
+	top: 0;
+	&.active {
+		visibility: visible;
+	}
+}
+ 
+/** 
+	TODO: Get rid of this, default style should be mobile first
+	Add styles to the .span classes for fluid-phone only 
+*/
+@media only screen and (max-width: 719px) {
+	.ls-canvas {
+		.ls-row {
+			[class*="span"] {
+				float: none;
+				margin-left: 0;
+				width: 100%;
+			}
+		}
+	}
+	.ls-row-extra-3 .ls-lqr,
+	.ls-row-extra-3 .ls-fxr {
+		padding: 14px 0 0;
+		overflow: hidden;
+	}
+}
+@media only print, only screen and (min-width: 720px) {
+	.ls-canvas .ls-row .span5-no-gutter {
+		width: 42.5531914894%;
+		margin-left: 0px;
+	}
+	.ls-row-extra-2 .ls-lqr,
+	.ls-row-extra-2 .ls-fxr {
+		margin: 0px 40px;
+	}
+	.ls-row-extra-3 .ls-lqr,
+	.ls-row-extra-3 .ls-fxr {
+		margin: 0px 16px;
+		padding: 18px 0 26px;
+		overflow: hidden;
+	}
+}
+@media only print, only screen and (min-width: 980px) {
+	.ls-row-extra .ls-lqr,
+	.ls-row-extra .ls-fxr {
+		margin: 0px 20px;
+	}
+	.ls-row-extra-2 .ls-lqr,
+	.ls-row-extra-2 .ls-fxr {
+		margin: 0px 20px;
+	}
+	.ls-row-extra-3 .ls-lqr,
+	.ls-row-extra-3 .ls-fxr {
+		margin: 0px 20px;
+		padding: 21px 0 40px;
+	}
+}
+
+@media print {
+	a[href]:after {
+    	content: "";
+  	}
+}

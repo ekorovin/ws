@@ -1,0 +1,574 @@
+.service-template { 
+	/* Mobile first styles */	
+	.clearfix;
+	@radius-btn-appointment: 4px;
+	@shadow-location-content: 0px 2px 1px rgba(0, 0, 0, 0.1);	
+	@shadow-related-locations: 1px 2px 5px rgba(0, 0, 0, 0.1);	
+	@radius-related-locations:6px;
+	@radius-bottom:6px;
+	/*padding: 0 20/320*100%; */
+	
+	/*img{width:100%}	*/
+	
+	&.service-template-content{
+		.related-articles {
+			padding: 20px 0 0 0;
+			
+			.title-topic {
+				font:@medium 18px/24px 'BrandonGrotesqueMedium';
+				color: #8c1515;
+				margin: 10px 0;
+			}
+			.list-topic {
+				margin:-7px 0 0 0;
+				padding:0;
+				list-style: none;
+				li {
+					font: @regular 15px/20px 'Impressum-LigIta';
+					padding-bottom: 6px;
+					color: #ff2e37;
+					a {
+						color: #ff2e37;
+						padding-right: 10px;
+						background:url("/web-resources/default/img/icon-arrow-7x7.png") no-repeat right center;
+						&:hover, &:focus{					
+							text-decoration: none;
+							border-bottom: 2px dotted #ff2e37;
+						}
+					}
+				}
+			}
+		}
+	}
+	.ls-fxr,
+	.ls-lqr {
+		margin: 0 20/320*100%;	
+	}
+
+	.fifty-fifty-text-component{
+		border-bottom:1px solid #d6d6d6;
+		padding:6px 0 31px;
+		
+		.intro{
+			font:@regular 18px/24px 'BrandonGrotesque';
+			color:#333;
+		}
+		.title-subnav{
+			font:@bold 18px/24px 'BrandonGrotesqueBold';
+			color:#333;
+			margin:20px 0 12px;
+		}
+		
+		.subnav{
+			position:relative;
+
+			.choose-a-section{
+				background:url('/web-resources/default/img/choose-a-section.png') no-repeat;
+				font:@regular 18px 'BrandonGrotesque';
+				color:#444;
+				text-transform:uppercase;
+				width:263px;
+				height:28px;
+				display:block;
+				padding:5px 0 0 17px;				
+				margin:0; 
+			}
+
+			.list-subnav{
+				display: none;				
+				width: 280px; 
+				z-index: 999;
+				top: 0px;
+				left: 0px;
+				position: absolute;
+				border-radius: 0 0 5px 5px;
+				overflow: hidden;
+				border: 1px solid #b3b3b3;
+
+				ul{
+
+					list-style-type: none;
+					margin:0;
+					padding:0;
+ 
+					li{
+						position: static;
+						font: @regular 18px/29px 'BrandonGrotesque';
+						padding: 0 7px;
+						background: #e6e6e6;
+						margin: 0px;
+						border-top: 1px solid #f7f7f7;
+						border-bottom: 1px solid #d5d5d5;
+						a{					
+							height: 100%;
+							line-height: 29px;
+							padding: 0px;
+							border: none;
+							color:#444;
+							text-decoration: none;
+							display: block;
+							-webkit-tap-highlight-color: rgba(0,0,0,0);							
+						}
+
+						.line-extra{
+							a,p{display: inline;} 
+						}
+
+					}
+
+				}
+
+				
+			}
+
+		}
+
+		
+		.patient-story{
+			.clearfix;
+			border-bottom:1px solid #d6d6d6;
+			padding:20px 0 25px;
+			
+			.title-patient-story{
+				font:@medium 24px/28px 'BrandonGrotesqueMedium';
+				color:#8c1515;
+				margin:5px 0 9px;
+			}
+			.patient-story-wrap{
+				
+				.item-story{
+
+					.link{
+						font:@medium 18px/24px 'BrandonGrotesqueMedium';
+						background:url("/web-resources/default/img/icon-arrow-7x7.png") no-repeat right 10px;
+						padding-right:10px;
+						color:#ff2e35;
+						&:hover, &:focus{								
+							text-decoration: none;
+							border-bottom: 2px dotted #ff2e35;
+						}
+					}
+					.content-story{
+						font: @regular 16px/22px 'BrandonGrotesque';
+						color:#7d7d7d;
+						padding: 7px 0 20px;
+
+						&.content-story--no-padbot{padding-bottom: 0}
+
+						.time{ 						
+							margin: 10px 0 0;
+							color:#333;
+						}
+					}
+				}
+
+			}
+		} 
+
+	}
+	
+	
+	
+	/* Tablet next styles */
+	@media only print, only screen and (min-width: 720px) {
+		&.service-template-content{
+			.related-articles {
+				padding: 0;
+				
+				.title-topic {
+					font:@medium 18px/24px 'BrandonGrotesqueMedium';
+				}
+				.list-topic {
+					li {
+						font: @regular 13px/20px 'Impressum-LigIta';
+						padding-bottom: 6px;
+					}
+				}
+			}
+		}
+		.ls-fxr,
+		.ls-lqr {
+			margin: 0 40/720*100%;
+			padding:0;	
+		}
+
+		.fifty-fifty-text-component{
+			padding:0px 0 31px;
+			margin-right: 7/477*100%;
+
+			.title-subnav{				
+				margin:29px 0 19px;
+			}
+			
+			.subnav{
+				position:relative;
+
+				.choose-a-section{
+					display: none;
+				}
+
+				.list-subnav{
+					display: block;	
+					position: static;
+					width:100%;
+					.border-radius(none);
+					overflow: hidden;
+					border:none;
+					
+					.span4{ 
+						width:100%;
+						margin-left:0;
+					}
+					
+					ul{
+	 
+						li{
+							position: static;
+							font: @regular 13px/20px 'Impressum-LigIta';
+							padding: 0px 0 6px;
+							background:none;
+							border:none;
+
+							a{	
+								
+								background:url("/web-resources/default/img/icon-arrow-6x6.png") no-repeat right 6px;
+								text-decoration: none;
+								padding-right:10px;
+								color:#ff2e35;
+								display:inline;
+								line-height:normal;
+								&:hover, &:focus{								
+									text-decoration: none;
+									border-bottom: 2px dotted #ff2e35;
+								}
+
+							}
+
+							.line-extra{
+								span{
+									display:block;
+									font-family: 'BrandonGrotesque';
+									font-weight: @regular;
+									color:#333;
+								}
+								p{margin:0; padding: 0; display: block;}
+							}
+
+						}
+
+					}
+
+					
+				}
+
+			}
+
+			.patient-story{
+				border-bottom:none; 
+				padding:26px 0 55px;
+				margin-right: 7/477*100%;
+				
+				.title-patient-story{
+					font-size:30px;
+					line-height:normal;
+					margin:5px 0 15px;
+				}
+				.span4{ 
+					width:100%;
+					margin-left:0;
+				}
+				.patient-story-wrap{				
+					.item-story{
+
+						.link{
+							font-size: 18px;
+							padding-right:10px;
+							color:#ff2e35;
+							&:hover, &:focus{								
+								text-decoration: none;
+								border-bottom: 2px dotted #ff2e35;
+							}
+						}
+						.content-story{
+							font-size: 14px;
+							line-height: 20px;
+							padding: 7px 0 20px;
+
+							&.content-story--no-padbot{padding-bottom: 0}
+
+							.time{ 						
+								margin: 10px 0 0;
+								color:#333;
+							}
+						}
+					}
+
+				}
+			}
+		}
+
+		
+		
+	}	
+	
+	/* Desktop last styles */
+	@media only print, only screen and (min-width: 980px) {
+		&.service-template-content{
+			.related-articles {
+				.title-topic {
+					padding-bottom: 5px;
+					margin:0;
+				}
+				.list-topic {
+					margin-top: -3px;
+					padding-bottom: 4px;
+					li {
+						font: @regular 13px/20px 'Impressum-LigIta';
+						padding-bottom: 6px;
+					}
+				}
+			}
+		}
+		.ls-fxr,
+		.ls-lqr {
+			margin: 0 20/980*100%;
+			padding:0;
+
+			.span9{ 
+				width:700/940*100%;
+				.ls-area-body{
+					margin-right: 40/700*100%;
+				}
+			}
+			.span3{ width:220/940*100%;}	
+		}
+
+		.fifty-fifty-text-component{
+			padding:0px 0 31px;
+			margin-right:0;
+
+			.intro{
+				font-size: 18px;
+				line-height: 24px;
+			}
+
+			.title-subnav{				
+				margin:29px 0 19px;
+			}
+			
+			.subnav{
+
+				.list-subnav{
+					
+					.span4{ 										
+						width:300/660*100%;
+						margin-left:20/660*100%;
+
+						&:first-child{
+							margin-left:0;
+						}
+					}
+					
+					ul{
+	 
+						li{
+							font: @regular 13px/20px 'Impressum-LigIta';
+							padding-bottom:6px;
+						}
+
+					}
+
+					
+				}
+
+			}
+
+			.patient-story{
+				border-bottom:none; 
+				padding:26px 0 58px;
+				margin-right:0;
+				
+				.title-patient-story{
+					margin:5px 0 15px;
+				}
+
+				.span4{
+					width:300/660*100%;
+					margin-left:40/660*100%;
+
+					&.span4-first{ margin-left:0;}
+				}
+
+				.patient-story-wrap{
+					
+					.item-story{
+
+						.link{
+							background-position:right 12px;
+						}
+						.content-story{
+							padding: 7px 0 20px;
+
+							&.content-story--no-padbot{padding-bottom: 0}
+
+							.time{ 						
+								margin: 11px 0 0;
+							}
+						}
+					}
+				}
+			}
+		}		
+	}	
+}  
+
+/*mobile first*/
+.mktgfftxt-component{
+	.clearfix;
+	border-bottom: 1px solid #D6D6D6;
+	padding: 0 0 31px;
+	h2{
+		font:@medium 24px/28px 'BrandonGrotesqueMedium';
+		color:#8c1515;				
+	}
+	h3{
+		color: #333333;
+		font: @bold 18px/24px 'BrandonGrotesqueBold';
+		margin-bottom: 19px;
+		a{
+			background: url("/web-resources/default/img/icon-arrow-7x7.png") no-repeat scroll right 10px;
+			color: #ff2e35;
+			font: @medium 18px/24px 'BrandonGrotesqueMedium';
+			padding-right: 10px;
+			&:hover, &:focus{								
+				text-decoration: none;
+				border-bottom: 2px dotted #ff2e35;
+			}	
+		}
+	}
+	p{						
+		color: #333333;
+		font: @regular 16px/22px 'BrandonGrotesque';
+		strong{
+			font: @medium 16px/22px 'BrandonGrotesque';
+		}
+	}
+	a {
+		color: #ff2e37;
+	}
+	br{
+		line-height: 10px;
+	}
+	ul{
+		&.unstyled {
+			list-style-type: none;
+		}
+		li{
+			font: @regular 16px/22px 'BrandonGrotesque';
+			padding-bottom: 6px;
+			margin: 0;
+			a{
+				font: @regular 15px/22px 'Impressum-LigIta';
+				background:url("/web-resources/default/img/icon-arrow-7x7.png") no-repeat right 2px;
+				text-decoration: none;
+				padding-right:10px;
+				color:#ff2e35;
+				display:inline;
+				line-height:normal;
+				&:hover, &:focus{								
+					text-decoration: none;
+					border-bottom: 2px dotted #ff2e35;
+				}
+			}
+			h3 {
+				a {
+					background: url("/web-resources/default/img/icon-arrow-7x7.png") no-repeat scroll right 10px;
+				}
+			}
+		}
+	}
+	.video {
+		text-align: center;
+		.youtube {
+			display: inline-block;
+			position: relative;
+			img {
+				float: none;
+				padding: 0;
+			}
+			.video-play-img {
+				position: absolute;
+				z-index: 6;
+				top:50%;
+				left:50%;
+				margin-top: -12px;
+				margin-left: -12px;
+				width: 28px;
+				height: 28px;
+			}
+		}
+	}
+	.mktgfftxt-intro{
+		width: 100%;
+		.mktgimgtxt-content{
+			p {
+				margin-bottom: 19px;
+			}
+					
+		}
+	}
+}
+/* Tablet next styles */
+@media only print, only screen and (min-width: 720px) {	
+	.mktgfftxt-component{		
+		h2{
+			font:@medium 30px/28px 'BrandonGrotesqueMedium';							
+		}
+		h3{
+			color: #333333;
+			font: @bold 18px/24px 'BrandonGrotesqueBold';
+			margin-bottom: 19px;
+			a{
+				background: url("/web-resources/default/img/icon-arrow-7x7.png") no-repeat scroll right 10px;
+				color: #ff2e35;
+				font: @medium 18px/24px 'BrandonGrotesqueMedium';
+				padding-right: 10px;	
+			}
+		}
+		.mktgfftxt-intro{
+			width: 100%;
+		}
+		.mktgfftxt-left{
+			width: 100%;
+		}
+		.mktgfftxt-right{
+			width: 100%;	
+		}
+		
+	}
+}
+
+/* Desktop last styles */
+@media only print, only screen and (min-width: 980px) {	
+	.mktgfftxt-component{		
+		.mktgfftxt-intro{
+			width: 100%;			
+		}
+		.mktgfftxt-left{
+			float: left;
+			display: block;
+			width: 50%;
+			.mktgimgtxt-content{
+				padding-right: 25px;				
+			}
+		}
+		.mktgfftxt-right{
+			float: left;
+			display: block;
+			width: 50%;
+			.mktgimgtxt-content{
+				padding-right: 25px;				
+			}
+		}
+	}
+}

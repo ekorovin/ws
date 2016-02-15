@@ -1,0 +1,109 @@
+/* authors component */
+.authors  {
+	/* Mobile first styles */
+	margin: 0 20/320*100%;
+	padding-top: 25px;
+	border-bottom: 1px solid #d6d6d6;
+	h3 {
+		margin:0;
+		padding: 0;
+		color: #333333;
+		font: @medium 24px/30px 'BrandonTextMedium';
+	}
+	.list-authors {
+		margin:0;
+		padding: 23px 0 0 0;
+		list-style: none;
+		overflow: hidden;
+		li {
+			display: block;
+			overflow: hidden;
+			padding-bottom: 29px;
+			.avarta {
+				width: 60px;
+				height: 60px;
+				float: left;
+				margin-right: 20px;
+				a {
+					text-decoration: none;
+					img {
+						.border-radius(8px);
+						max-width: 100%;
+					}
+				}   
+			}
+			.authors-information {
+				float: left;
+				overflow: hidden;
+				p {
+					margin:0;
+					padding: 0;
+					font-size: 16px;
+					line-height: 22px;
+					color: #333333;
+					font-family: 'BrandonTextRegular';
+					&.name {
+						font-family: 'BrandonTextMedium';
+						margin-top: -5px;
+						a {
+							color: #333333;
+						}
+					}
+					&.email,
+					a {
+						font-family: 'BrandonTextMedium';
+						color: #ff2e35;	
+						a {
+							color: #ff2e35;	
+						}
+					}
+					a{
+						&:hover, &:focus{						
+							text-decoration: none;
+							border-bottom: 2px dotted #e44039;
+						}
+					}
+				}
+			}
+		}
+	}
+	/* Tablet next styles */
+	@media only print, only screen and (min-width: 720px) {
+		margin: 0;
+		padding-top: 35px;
+		.list-authors {
+			width: 100%;
+			overflow: hidden;
+			li{
+				box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				width: 230/480*100%;
+				float: left;
+				padding-bottom: 40px;
+				padding-right: 10px;
+				.authors-information {
+					p {
+						font-size: 14px;
+						line-height: 20px;
+						&.name {
+							margin-top: -4px;
+						}
+						a{
+							line-height: 22px;
+						}
+					}
+				}
+			}
+		}
+	}
+	/* Desktop last styles */
+	@media only print, only screen and (min-width: 980px) {
+		.list-authors {
+			width: 480px;
+			li{
+				width: 230px;
+				margin-right: 10px;
+			}
+		}
+	}
+}	

@@ -1,0 +1,442 @@
+.service-template {
+	@radius-btn-appointment: 4px;
+	@shadow-location-content: 0px 2px 1px rgba(0, 0, 0, 0.1);
+	@radius-bottom:6px;
+	/* Mobile first styles */
+
+	/*img{width:100%}*/
+	
+	.service-doctors-list {
+		.title-doctors {
+			color: #8c1515;
+			font: 500 30px/28px 'BrandonGrotesqueMedium';
+		}
+		&.unstyled {
+			list-style-type: none;
+		}
+		li{
+			font: @regular 16px/22px 'BrandonGrotesque';
+			padding-bottom: 6px;
+			margin: 0;
+			p {
+				margin: 0;
+			}
+			a {
+				font: @regular 15px/22px 'Impressum-LigIta';
+				background:url("/web-resources/default/img/icon-arrow-7x7.png") no-repeat right 2px;
+				text-decoration: none;
+				padding-right:10px;
+				color:#ff2e35;
+				display:inline;
+				line-height:normal;
+				&:hover, &:focus{								
+					text-decoration: none;
+					border-bottom: 2px dotted #ff2e35;
+				}
+			}
+			h3 {
+				a {
+					background: url("/web-resources/default/img/icon-arrow-7x7.png") no-repeat scroll right 10px;
+				}
+			}
+		}
+	}
+
+	.service-doctors{
+		.clearfix;
+		border-bottom:1px solid #d6d6d6;
+		padding:20px 0 31px;
+		margin-bottom: 26px;
+
+
+		.title-doctors{
+			font:@medium 24px/28px 'BrandonGrotesqueMedium';
+			color:#8c1515;
+			margin:5px 0 14px;
+		}
+
+		ul.service-doctors-nav {
+			.clearfix;
+			padding: 15px 0 0;
+			margin: 0;
+
+			li{
+				list-style: none;
+				/*float: left;*/
+				display:inline;
+				background:url("/web-resources/default/img/bg-break-2x15.png") no-repeat;
+				padding:0 7px 0 12px;
+
+				&:first-child{
+					background:none;
+				}
+
+				a{
+					font:@medium 16px 'BrandonGrotesqueMedium';
+					background:url("/web-resources/default/img/icon-arrow-7x7.png") no-repeat right 9px;
+					color:#ff2e35;
+					padding-right:10px;
+
+					&:hover, &:focus{					
+						text-decoration: none;
+						border-bottom: 2px dotted #ff2e37;
+					}
+				}
+			}
+		}
+
+		div.service-doctors-content-container {
+
+			.service-doctors-content {
+				display: none;
+				.clearfix;
+
+				&.open {
+					display: block;
+				}
+
+				ul.our-care-team{
+					.clearfix;
+					padding: 0;
+					margin: 0;
+					font-size:0;
+
+					li{
+						list-style:none;
+						display:block;
+						*display:inline;
+						*zoom:1;
+						vertical-align:top;
+						position:relative;
+						padding:0 0 10px;
+						width: 280px;
+						margin: 0 auto;
+
+						.title-featured-doctor{
+								font:@bold 16px/34px 'BrandonGrotesqueBold';
+								background:#ffb800;
+								height:34px;
+								text-transform:uppercase;
+								color:#fff;
+								position:absolute;
+								left:0;
+								top:0;
+								margin:0;
+								width:100%;
+								text-align:center;
+								display: none;
+						}
+						.img-extra{
+							background:url("/web-resources/default/img/bg-right-extra-20x16.png") no-repeat;
+							width:20px;
+							height:16px;
+							position:absolute;
+							right:0;
+							top:34px;
+							display: none;
+
+						}
+
+						&.doctor{
+							padding-top:34px;
+
+							&.doctor--no-padtop{padding-top:0;}
+							&.featured{
+								.title-featured-doctor,
+							    .img-extra{ display: block;}
+							}
+
+
+							.information-doctor{
+								position: relative;
+								z-index: 9;
+								margin:0 10/280*100%;
+								p {
+									padding: 15px 0 5px;
+									margin:0;
+									.name-doctor {
+										a {
+											font:@medium 16px/22px 'BrandonGrotesqueMedium';
+											color:#ff2e35;
+											display:block;
+											border-bottom: 2px dotted white;
+											&:hover, &:focus{					
+												text-decoration: none;
+												border-bottom: 2px dotted #ff2e37;
+												display:inline-block;
+											}
+										}
+									}
+									.featured-doctor{
+										font:@regular 16px/22px 'BrandonGrotesque';
+										color:#333;
+										display:block;
+									}
+								}
+							}
+						}
+
+						.wrap-item{
+							.item{
+								background: #fffbf2;
+								/*min-height:77px;*/
+								height:77px;
+								text-align:center;
+								display:table;
+								padding:0 44/280*100%;
+
+								.center-text{
+									display: table-cell;
+	  								vertical-align: middle;
+								}
+
+								a{
+									font:@medium 18px/24px 'BrandonGrotesqueMedium';
+									text-decoration: none;
+									color:#ff2e35;
+									background:url("/web-resources/default/img/icon-arrow-7x7.png") no-repeat right 10px;
+									padding-right:10px;
+
+								}
+
+								&:hover,
+								&:active{
+									background:#ffb800;
+									a{
+										background:url("/web-resources/default/img/icon-white-arrow-7x7.png") no-repeat right 10px;
+										color:#fff;}
+
+								}
+							}
+
+						}
+
+
+					}
+
+
+				}
+
+			}
+		}
+	}
+
+
+
+	/* Tablet next styles */
+	@media only print, only screen and (min-width: 720px) {
+		.service-doctors-list {
+			padding: 26px 0 0 0;
+		}
+		.service-doctors{
+			padding:31px 0 35px;
+			margin-right: 7/477*100%;
+
+			.title-doctors{
+				font-size:30px;
+				line-height:30px;
+				/*font:@medium 24px/28px 'BrandonGrotesqueMedium';*/
+				margin:5px 0 25px;
+			}
+
+			ul.service-doctors-nav {
+				padding: 24px 0 0;
+				text-align: right;
+
+				li{
+
+					padding:0 6px 0 9px;
+
+					&:first-child{
+					}
+
+					a{
+						/*font:@medium 18px 'BrandonGrotesqueMedium';*/
+						font-size:14px;
+						line-height:20px;
+						background-position:right 7px;
+						padding-right:10px;
+
+						&:hover,
+						&.active {
+
+						}
+					}
+				}
+			}
+
+			div.service-doctors-content-container {
+
+				.service-doctors-content {
+
+						ul.our-care-team{
+							li{
+								display:inline-block;
+								width: 200/470*100%;
+								margin-left:10/470*100%;
+								padding:24px 0 0px;
+
+								&.doctor{
+									padding-top:24px;
+									&.doctor--no-padtop{padding-top:24px;}
+
+									.title-featured-doctor{
+										font-size: 11px;
+										line-height: 24px;/*psd:20*/
+										/*font:@bold 16px/34px 'BrandonGrotesqueBold';*/
+										height:24px;
+									}
+									.img-extra{
+										top:24px;
+									}
+									.information-doctor{
+										margin:0 10/200*100%;
+
+										p {
+											padding: 5px 0 1px;
+											margin:0;
+											.name-doctor{
+												a {
+													font-size:14px;
+													line-height:20px;
+													/*font:@medium 18px/22px 'BrandonGrotesqueMedium';*/
+													color:#ff2e35;
+													display:block;
+												}
+											}
+											.featured-doctor {
+												font-size:14px;
+												line-height:20px;
+												/*font:@regular 18px/22px 'BrandonGrotesque';*/
+												color:#333;
+												display:block;
+											}
+										}
+									}
+								}
+
+								.wrap-item{
+									margin:0 10/200*100%;
+									.item{
+										background: #fffbf2;
+										height:180px;
+										text-align:center;
+										display:table;
+										padding:0 14/200*100%;
+
+										.center-text{
+											display: table-cell;
+			  								vertical-align: middle;
+										}
+
+										a{
+											font:@medium 18px/24px 'BrandonGrotesqueMedium';
+											text-decoration: none;
+											color:#ff2e35;
+											background:url("/web-resources/default/img/icon-arrow-7x7.png") no-repeat right 10px;
+											padding-right:10px;
+
+										}
+
+										&:hover,
+										&:active{
+											background:#ffb800;
+											a{
+												background:url("/web-resources/default/img/icon-white-arrow-7x7.png") no-repeat right 10px;
+												color:#fff;}
+
+										}
+									}
+								}
+
+							}
+
+
+						}
+
+					}
+				}
+			}
+	}
+
+	/* Desktop last styles */
+	@media only print, only screen and (min-width: 980px) {
+		.service-doctors{
+			padding:31px 0 34px;
+			margin-right:0;
+
+			.title-doctors{
+				font-size:30px;
+				line-height:30px;
+				/*font:@medium 24px/28px 'BrandonGrotesqueMedium';*/
+				margin:5px 0 24px;
+			}
+
+			ul.service-doctors-nav {
+				padding: 6px 0 0;
+				text-align: right;
+
+				li{
+
+					padding:0 6px 0 10px;
+					background-position:left 1px;
+
+					a{
+						/*font:@medium 18px 'BrandonGrotesqueMedium';*/
+						&:hover,
+						&.active {
+
+						}
+					}
+				}
+			}
+
+			div.service-doctors-content-container {
+
+				.service-doctors-content {
+
+						ul.our-care-team{
+							li{
+
+								width: 160/660*100%;
+								margin-left:6/660*100%;
+								padding:24px 0 10px;
+
+								&.doctor{
+									margin-left: 0;
+									&.doctor--no-padtop{margin-left:6/660*100%;}
+
+									.information-doctor{
+										margin:0 10/160*100%;
+
+										p{
+											padding: 5px 0 1px;
+											margin:0;
+
+										}
+									}
+								}
+
+								.wrap-item{
+									margin:0 10/160*100%;
+									.item{
+										height:140px;
+										padding:0 14/160*100%;
+
+									}
+
+								}
+
+
+							}
+
+
+						}
+
+					}
+				}
+			}
+
+	}
+
+}

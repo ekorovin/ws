@@ -1,0 +1,54 @@
+.home-slider-indicators {
+	display: none;
+	
+	@media only print, only screen and (min-width: 720px) {
+		display: block;
+		position: fixed;
+		top: 295px;
+		margin-left: 95%;
+		z-index: 1000;
+		
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			
+			li {
+				margin: 0 0 5px 0;
+				padding: 0;
+				width: 15px;
+				height: 15px;
+				
+				a {
+					display: block;
+					width: inherit;
+					height: inherit;
+					background: url(/web-resources/default/img/ico-home-slider-indicator.png) no-repeat 0 0;
+					-webkit-tap-highlight-color:rgba(0,0,0,0);
+					
+					&:hover, &:focus {
+						background-color: transparent;
+						border-bottom: none;
+					}
+					
+					&.no-touch {
+						&:hover, &:focus {
+							background: url(/web-resources/default/img/ico-home-slider-indicator.png) no-repeat 0 -37px;
+						}
+					}
+				}
+				
+				&.active {
+					a {
+						background-position: 0 -19px;
+					}
+				}
+				
+			}
+		}
+	}
+	
+	@media only print, only screen and (min-width: 980px) {
+		margin-left: 940px;
+	}
+}

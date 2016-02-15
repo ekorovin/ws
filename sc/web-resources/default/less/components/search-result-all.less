@@ -1,0 +1,215 @@
+@color: #ff2e37;
+@colorGrey: #666666;
+@colorResultsCount: #4d4d4f;
+
+@colorType1: #363636;
+
+@colorWhite: #ffffff;
+
+@colorLineBorderTop: #ffffff;
+@colorLineBorderBottom: #bbbbbb;
+
+@fontNormal: 'BrandonGrotesque';
+@fontBold: 'BrandonGrotesqueBold';
+
+.tab-content {
+	background: url(/web-resources/default/img/bg-search-result.png) top left repeat;	
+	position: relative;
+	font-family: @fontNormal;
+	.box-shadow(0 1px 6px rgba(0,0,0,.2));	
+	.tab-pane {
+		.list-component-wrap {			
+			.results-header {			
+				position: relative;			
+				margin-bottom: 0;
+				padding-top: 6px;
+				padding-bottom: 0;
+				border-bottom: 1px solid @colorLineBorderBottom;				
+				margin-left: 0;
+				width: 100%;
+				p {
+					color: @colorResultsCount;
+					font-family: @fontBold;
+					font-size: 16px;
+					line-height: 17px;					
+					margin-bottom: 0;					
+					margin-left: 4.51%;
+					padding-left: 3px;				
+				}
+			}
+			.results-body {
+				#grid > .fluid > .row-fluid;
+				ul {
+					margin-left: 0;
+					width: 100%;					    			
+					li {
+						font-family: @fontNormal;						
+						padding-top: 15px;
+						padding-bottom: 10px;
+						position: relative;
+						border-bottom: 1px solid @colorLineBorderBottom;
+						border-top: 1px solid @colorLineBorderTop;
+						.layout-thumb-wrapper{
+							margin-bottom: 6px;
+							float: left;
+							width: 130px;
+							margin-left: 4.59%;
+							.mini-layout-thumb{
+								background: @colorWhite;
+								float: left;
+								padding: 5px;
+								margin-left: -2px;
+								border: 1px solid #E9E0D9;
+								.box-shadow(0 1px 1px rgba(0,0,0,.6));
+								.border-radius(3px);
+								width: 120px;
+								height: 120px;
+							}							
+						}
+						.desc {
+							float: none;
+							overflow: hidden;
+							width: auto;
+							padding-left: 6.25%;							
+							color: @colorGrey;
+							p {							
+								font-size: 14px;
+								line-height: 18px;
+								.heading{
+									font-size: 18px;									
+									line-height: 19px;
+									font-family: @fontBold;									
+									color: @color;
+								}
+							}
+							.content{
+								display: none;
+							}
+							.content-mobile{
+								display: block;
+							}
+							p.class-time {							
+								color: @colorType1;								
+								span{
+									font-family: 'BrandonGrotesqueMedium';
+								}
+								margin-bottom: 0;
+							}
+							a{
+								color: @color;
+								&:hover, &:focus {									
+									text-decoration: none;
+									border-bottom: 2px dotted @color;								
+								}
+							}							
+							.located-at{
+								font-weight: @bold;
+								font-size: 14px;
+								line-height: 20px;
+								margin-bottom: 0;								
+								.italic{							
+									color: @color;
+									font-weight: @regular;
+								}															
+								span{							
+									font-weight: @regular;	
+								}
+							}
+						}						
+					}
+					li:first-child {
+/* 						padding-top: 15px; */
+					}
+					li.odd {
+						background: url("/web-resources/default/img/odd-doctor-bg.png") repeat;
+					}
+				}				
+			}			
+		}
+		/* Tablet next styles */
+		@media only print, only screen and (min-width: 720px) {				
+			.list-component-wrap {			
+				.results-header {			
+					margin-left: 4.28%;					
+					padding-bottom: 7px;    
+					padding-top: 1px;
+					width: 658/720*100%;
+					p {						
+						font-size: 14px;
+						padding-top: 6px;
+						margin-left: 2.41%;
+					}
+				}
+				.results-body {					
+					ul{
+						margin-left: 4.68%;
+						width: 658/720*100%;
+						li {
+							font-family: @font;						
+							padding-top: 7px;
+							padding-bottom: 9px;
+							position: relative;
+							border-bottom: 1px solid @colorLineBorderBottom;
+							.layout-thumb-wrapper{
+								margin-bottom: 0;
+								margin-left: 2.39%;
+								width: auto;
+								.mini-layout-thumb{
+									width: 76px;
+									height: 76px;
+								}							
+							}
+							.desc {
+								overflow: visible;
+								float: left;
+								width: 69%;
+								padding-left: 0;
+								margin-left: 6.128%;
+								.found-at{
+									display: none;
+								}
+							}												
+						}
+						li:first-child {
+/* 							padding-top: 24px; */
+						}						
+					}								
+				}								
+			}
+		}
+		
+		/* Desktop last styles */
+		@media only print, only screen and (min-width: 980px) {
+			.list-component-wrap {
+				.results-header {			
+					margin-left: 6.38%;
+					padding-bottom: 12px;
+					width: 87.65%;
+					p{
+						padding-top: 10px;
+					}
+				}
+				.results-body {
+					ul{
+						margin-left: 6.38%;
+						width: 87.65%;
+						li {
+							font-family: @font;						
+							padding-top: 7px;
+							padding-bottom: 9px;
+							position: relative;
+							border-bottom: 1px solid @colorLineBorderBottom;
+							.layout-thumb-wrapper{
+								margin-left: 2.39%;								
+							}
+							.desc {
+								width: 69%;
+								margin-left: 6.128%;
+							}
+						}						
+					}					
+				}
+			}
+		}
+	}
+}

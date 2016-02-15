@@ -1,0 +1,139 @@
+.engagement {
+	background: url(/web-resources/default/img/bg-content-global-carousel.jpg) 0 0 repeat-x;
+	font-family: 'BrandonGrotesqueMedium';
+	font-weight: @medium;
+	height: 78px;
+	
+	.span4.item {
+		float: left;
+		width: 50%;
+		
+		&:first-child {
+			background: url(/web-resources/default/img/bg-line-global-carousel.jpg) right top no-repeat;
+		}
+		
+		&.last {
+			display: none;
+		}
+	}
+	
+	.engagement-item {
+		text-align: center;
+		
+		.img-block {
+			padding-top: 9px;
+  		img {
+  			height: 60px;
+  			margin: 0 auto;
+  		}
+  		.bg-video {
+    		position: relative;
+  		}
+			img.play-button {
+				left: 50%;
+				height: auto;
+				margin-left: -12px;
+				margin-top: -12px;
+				position: absolute;
+				top: 50%;
+				z-index: 6;
+				width: inherit;
+			}
+		}
+		.text-block {
+			display: none;
+		}
+	}
+	
+	@media only print, only screen and (min-width: 720px) {
+		background: none;
+		height: auto;
+		.span4.item {
+		  width: 31.914893617021278%;
+			&:first-child {
+				background: none;
+				.engagement-item {
+					background: none;
+				}
+			}
+			&.last {
+				display: block;
+			}
+		}
+    .engagement-item {
+			padding: 26px 0px 27px 0;
+			background: url(/web-resources/default/img/slide-seperator.png) 0px 20px no-repeat;
+			background-size: auto 160px;
+  		.img-block {
+				img {
+					height: auto;
+				}
+				.bg-video{
+					position: relative;
+					zoom:1;
+					.youtube {
+						display: block;
+						img {
+							max-width: 100%;
+							margin: 0 auto;
+						}
+						img.play-button {
+							margin-left: -12px;
+							margin-top: -12px;
+						}
+					}
+				}
+  		}
+  		.text-block {
+    		display: block;
+    		margin: 9px 20px 0;
+  			font-size: 17px;
+  			line-height: 21px;
+    		h3 {
+      		margin: 0;
+      		color: #8c1515;
+      		font-size: 18px;
+      		line-height: 24px;
+    		}
+    		p {
+    			color: #817061;
+    			font-size: 12px;
+    			line-height: 14px;
+      		strong, b {
+      			color: #e44039;
+      		}
+    		}
+    		a { 
+    			font-family: 'Impressum-Lig' !important;
+    			font-weight: @regular !important;
+    			font-style: italic;
+    			color: #ff2e37;
+    			&:hover, &:focus{
+    				text-decoration: none;
+    				border-bottom: 2px dotted #ff2e37;
+    			}
+    		}
+  		}
+    }
+	}
+	
+	@media only print, only screen and (min-width: 980px) {
+		.engagement-item {
+  		padding: 34px 0px 27px 0px;
+  		.text-block {
+  			font-size: 14px;
+  			line-height: 18px;
+  		}
+		}
+	}
+}
+
+.ie8 {
+	@media only print, only screen and (min-width: 980px) {
+		.engagement {
+			.engagement-item {
+				
+			}
+		}
+	} 
+} 

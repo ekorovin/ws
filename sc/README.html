@@ -1,0 +1,248 @@
+<html>
+<head>
+	<title>README</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="/web-resources/default/css/bootstrap.css">
+	<style type="text/css">
+		body {
+			margin: 10px;
+		}
+		a {
+			text-decoration: underline;
+			color: blue;
+		}
+	</style>
+	<script src="/web-resources/default/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<body>
+	<a name="summary"></a>
+	<h1>Summary</h1>
+	<p>This document describes the process for creating a responsive TeamSite/LiveSite Display Services theme (aka. TS) complete with functional widgets (aka. components).
+	The theme is created with HTML markup for content, LESS-compiled CSS for styles, and BackboneJS views for behavior.  
+	The theme is built on top of the <a href="http://twitter.github.io/bootstrap/" target="_blank">Twitter Bootstrap</a> front-end framework and leverages Bootstrap's <a href="http://twitter.github.io/bootstrap/scaffolding.html#fluidGridSystem" target="_blank">12-column fluid grid</a> for layout.  
+	It does NOT rely on Responsive Bootstrap features but instead implements custom media queries to ensure that the most recent and widely used devices are supported.</p>
+	
+	<h1>Rules</h1>
+	<p>TS generates pages based on an XML descriptions. The descriptions dictate the markup for the page.
+	It describes how many TS sections to include and which TS components are included in each section.
+	In order to render these descriptions as HTML, TS generates a series of <code>&lt;div&gt;</code> containers containing TS specific class names.
+	Very little control is given to the developer in regards to modifying the <code>&lt;div&gt;</code> parent/child relationship.
+	TS does give control over modifying the ID attribute as well as class names for specific <code>&lt;div&gt;</code> containers.
+	The sample HTML included in this frame work specifically calls out which <code>&lt;div&gt;</code> containers are configurable with custom ID attributes and class names.
+	</p>
+	<p>A TeamSite/LiveSite Display Services website is comprised of the following:</p>
+	<ol>
+		<li>Pages</li>
+		<li>Sections</li>
+		<li>Components</li>
+	</ol>
+	
+	<h4>Pages</h4>
+	<p>Pages are defined by the master <code>&lt;div class="ls-canvas"&gt;</code> container.
+	This container should not have any custom class names or unique IDs.  It is the master wrapper for all TS content.</p>
+	
+	<h4>Sections</h4>
+	<p>Sections are defined by the <code>&lt;div class="ls-row"&gt;</code> container.
+	The developer should not add any custom class names or unique IDs to this container.  
+	It should remain generic as it relates to layout of the page and should not have any children bound to it by class names or ID.
+	This container is also marked as a row in the Twitter Bootstrap 12-column grid.</p>
+	<p>Within the TS Sections are child containers that the developer has little control over.
+	However, the developer does have some control over the <code>&lt;div class="ls-area"&gt;</code> container.
+	The developer should not add any custom class names or unique IDs to this container.  
+	It should remain generic as it relates to layout of the page and should not have any children bound to it by class names or ID.
+	This container is also marked as a column/span in the Twitter Bootstrap 12-column grid.  In addition to the default TS class name,
+	the developer should add a span class to dictate the number of columns that the area spans.</p>
+	<p>Example</p>
+<pre>
+&lt;div class="ls-canvas"&gt;
+	&lt;div class="ls-row"&gt;
+		&lt;div class="ls-lqr"&gt;
+			&lt;div class="ls-area span4"&gt;...&lt;/div&gt;
+			&lt;div class="ls-area span8"&gt;...&lt;/div&gt;
+</pre>
+	<div class="alert">
+		<h4 class="alert-heading">Note</h4>
+		<p>NOTE: Some code has been removed to maintain brevity.</p>
+	</div>
+	<p>The example above describes a TS page, containing 1 section comprised of 2 spans.  The first span spanning 4 columns of the grid. The second spanning 8 columns of the grid.
+	Note the extra <code>&lt;div class="ls-lqr"&gt;</code> container added by TS.</p>
+	<p>See <a href="#layouts">Layouts</a> for more info about the Twitter Bootstrap 12-column grid</p>
+	
+	<h4>Components</h4>
+	<p>Components are defined by the <code>&lt;div class="iw_component"&gt;</code> container.
+	The developer should NOT modify the ID attribute for this container NOR add additional class names for style purposes.
+	A container DIV should be inserted within the <code>&lt;div class="iw_component"&gt;</code> container that contains the custom markup for the component.
+	It is here that TeamSite/LiveSite Display Services components are created.  Components should follow the following business rules:</p>
+	<ol>
+		<li>Any component can live within any page and section</li>
+		<li>Multiple components can live within the same section</li>
+	</ol>
+	<p>Components are NOT reliant on the page or section containers that they reside within.
+	There should be NO binding or coupling via CSS or JavaScript to the parent containers that the <code>&lt;div class="iw_component"&gt;</code> container lives within.
+	This will ensure that any component can be removed and replaced by any other component.  
+	There will be Information Architecture rules about where certain components live on a page, but the fundamental idea behind TS components is that they are truly modular and self-contained.
+	For example, the header component would never live within the content area of a page, but technically it could because it is not coupled our bound by any parent page or section container.</p>
+	
+	<p>Multiple components can live within the same section.  This allows components to share the same span in the page should the design call for such a layout.</p>
+	<p>Example:</p>
+<pre>
+&lt;div class="ls-canvas"&gt;
+	&lt;div class="ls-row"&gt;
+		&lt;div class="ls-lqr"&gt;
+			&lt;div class="ls-area span12"&gt;
+				&lt;div class="ls-area-body"&gt;
+					&lt;div class="ls-cmp-wrap ls-1st"&gt;
+						&lt;div class="iw_component"&gt;
+							&lt;div class="component-class-name"&gt;...&lt;/div&gt;
+						&lt;/div&gt;
+						&lt;div class="iw_component"&gt;
+							&lt;div class="another-component-class-name"&gt;...&lt;/div&gt;
+						&lt;/div&gt;
+			&lt;/div&gt;
+</pre>
+	<div class="alert">
+		<h4 class="alert-heading">Note</h4>
+		<p>NOTE: Some code has been removed to maintain brevity.</p>
+	</div>
+	<p>The example above describes a TS page, containing 1 section comprised of 1 span.  The span spans all 12 columns of the grid and contains 2 components.
+	Note the extra <code>&lt;div class="ls-area-body"&gt;</code> and <code>&lt;div class="ls-cmp-wrap ls-1st"&gt;</code> containers added by TS.</p>
+	
+	<a name="layouts"></a>
+	<h1>Layouts</h1>
+	<p>As stated in the <a href="#summary">Summary</a> the TeamSite/LiveSite Display Services theme is built on top of <a href="http://twitter.github.io/bootstrap/scaffolding.html#fluidGridSystem" target="_blank">Twitter Bootstrap's 12-column fluid grid</a>.
+	The grid is comprised of rows and columns to make up the page.  The TS theme is based on a grid that is 940px wide with 12 columns at 60px wide and 11 gutters at 20px wide.
+	The grid has 20px right/left margins for a total of 980px for the desktop layout.</p>
+	<p>For tablet and smartphone sizes, the grid adopts a fluid style that allows the rows and spans to stretch based on the device's screen width.
+	The TS theme uses LESS mixins to allow TS generated containers to inherit Bootstrap's grid styles.
+	See <a href="#stylesheets">Components > StyleSheets</a> section for more information on how LESS is used in this framework.</p>
+	<p>A <code>&lt;div class="ls-row"&gt;</code> container can support any number of <code>&lt;div class="ls-area"&gt;</code> containers so long as the span total equals 12.</p>
+<pre>
+&lt;div class="ls-canvas"&gt;
+	&lt;div class="ls-row"&gt;
+		&lt;div class="ls-lqr"&gt;
+			&lt;div class="ls-area span4"&gt;...&lt;/div&gt;
+			&lt;div class="ls-area span4"&gt;...&lt;/div&gt;
+			&lt;div class="ls-area span4"&gt;...&lt;/div&gt;
+</pre>
+	<div class="alert">
+		<h4 class="alert-heading">Note</h4>
+		<p>NOTE: Some code has been removed to maintain brevity.</p>
+	</div>
+	<p>In the example above there are 3 <code>&lt;div class="ls-area"&gt;</code> containers each spanning 4 columns for a total of 12 columns.
+	A single column layout may only have one <code>&lt;div class="ls-area span12"&gt;</code> container that spans all 12 columns.</p>
+	
+	<h1>Components</h1>
+	<h4>HTML</h4>
+	<p>As stated in the Components section of the <a href="#summary">Summary</a>, <code>&lt;div class="iw_component"&gt;...&lt;/div&gt;</code> is a component.
+	Developers should nest a container <code>&lt;div&gt;</code> within the <code>&lt;div class="iw_component"&gt;...&lt;/div&gt;</code> container for custom markup.
+<pre>
+&lt;div class="iw_component"&gt;
+	&lt;div class="component-class-name"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+	All valid HTML markup is allowed within the <code>&lt;div class="iw_component"&gt;...&lt;/div&gt;</code> container.
+	The component container may leverage <a href="http://twitter.github.io/bootstrap/scaffolding.html#fluidGridSystem" target="_blank">Bootstrap's nested fluid rows and columns</a> if needed, or can implement its own responsive architecture.</p>
+	<a name="stylesheets"></a>
+	
+	<h4>StyleSheets</h4>
+	<p>The TeamSite/LiveSite Display Services theme utilizes the <a href="http://www.lesscss.org/" target="_blank">LESS</a> dynamic stylesheet language.  
+	Individual LESS files are imported into the <code>/web-resources/default/less/main1.less</code> and <code>/web-resources/default/less/main2.less</code> files which are then compiled into individual <code>/web-resources/default/css/main1.css</code> and <code>/web-resources/default/css/main2.css</code> files that are included in the head of the document.
+	<p>Each TS component should receive its own LESS stylesheet.  In order for the LESS files to leverage Bootstrap's mixin features, several Bootstrap LESS files are imported at the top of <code>/web-resources/default/less/layout.less</code>, <code>/web-resources/default/less/main1.less</code> and <code>/web-resources/default/less/main2.less</code>.
+	This allows the imported LESS files to leverage convenience functions, variables and mixins that are provided as part of the Twitter Bootstrap framework.
+	TS component LESS stylesheets should be stored in:</p>
+	<code>/web-resources/default/less/components/</code>
+	<p>Each TS component's LESS stylesheet should include the requisite CSS media queries to enable it as a responsive component.
+	As a rule, the default styles are mobile first, tablet second and desktop last.  The media queries being used for tablet and desktop are:</p>
+<pre>
+@media only screen and (min-width: 720px)
+@media only screen and (min-width: 980px)
+</pre>
+	<div class="alert alert-error">
+		<h4 class="alert-heading">Alert!</h4>
+		<p>Do not edit the <code>/web-resources/default/css/main.css</code> file directly.  It will be overwritten when LESS compiles <code>/less/main.less</code>.
+		All stylesheet edits should be made in a corresponding LESS stylesheet and imported into <code>/less/main.less</code>.
+	</div>
+	<p>Several sample components have already been created as part of this framework for reference.  They include:</p>
+<pre>
+/less/components/accordion.less
+/less/components/navigation.less
+/less/components/header.less
+</pre>
+	
+	<h4>JavaScript</h4>
+	<p>In addtion to each TS component having a corresponsing LESS stylesheet, some TS components may require custom behavior.
+	For components that require custom behavior, the TeamSite/LiveSite Display Services theme integrates BackboneJS and leverages the View class for this purpose.
+	TS component JS files are stored in <code>/web-resources/default/js/lpch/components/</code>.  </p>
+	<div class="alert">
+		<h4 class="alert-heading">Note</h4>
+		<p>Some components may not have any custom behavior so a BackboneJS View is not necessary for all components.</p>
+	</div>
+	<p>TS component view objects are defined in their own JavaScript file that extends the Backbone.View object:</p>
+<pre>
+lpch.CustomComponentClassName = lpch.BaseView.extend({
+	initialize: function() {...},
+	handleLayoutChange: function(layout) {...},
+	handleViewportChange: function(width, height) {...}
+});
+</pre>
+	<p>The <code>initialize()</code> function is called as soon as the component is instantiated.  Custom interactivity can be defined wihtin this function.
+	Additional variables and functions can also be added to a component view.  The <code>lpch.BaseView</code> object (that all component objects extend) provide several
+	convenience handlers for different events, specifically for changes in the viewport's size and orientation.  This allows the developer to integrate any custom behaviors
+	that need to accommodate orientation or screen size changes.</p>
+	<p>See <a href="http://backbonejs.org/" target="_blank">BackboneJS</a> documentation for more information about the <a href="http://backbonejs.org/#View" target="_blank">View</a> object</p>
+	<p>In addtion to the component's implementation, the component's initialization is also defined in its JS file:</p>
+<pre>
+$(window).bind('initializeComponents', function() {
+	$('.iw_component.custom-class-name').each(function(index) {
+		new lpch.CustomComponentClassName({
+	        el: this
+	    });
+	});
+});
+</pre>
+	<p>The inialization code above executes once the <code>lpch.Document</code> view triggers the <code>'initializeComponents'</code> event.
+	JQuery is used to parse the document and initialize any specified custom component class with its corresponding BackboneJS View object.
+	A single parameter <code>el</code> is passed to the view object providing scope for the HTML element that the view is being intialized on.</p>
+	<p>The JavaScript framework allows components to be completely isolated and independent of one another.  It also allows multiple components
+	of the same type to live in the same page at the same time independently.</p>
+		<p>Several sample components have already been created as part of this framework.  They include:</p>
+<pre>
+/web-resources/default/js/lpch/components/Accordion.js
+/web-resources/default/js/lpch/components/Header.js
+/web-resources/default/js/lpch/components/Navigation.js
+</pre>
+
+	<h4>StandAlone HTML</h4>
+	<p>As a test to a component's modularity, each component should be capable of standing in its own HTML file void of any other markup other than the page, section and component
+	containers generated by TeamSite/LiveSite Display Services.  The component should be capable of existing in a container spanning any number of columns, in any row,
+	without having to rely on any page or section ID or class name to function.  A sample standalone component has been provided illustrating this capability:</p>
+<pre>
+/accordion.html
+</pre>
+
+	<h1>Code Reviews</h1>
+	<p>Code will be reviewed and accepted or rejected based on the following criteria:</p>
+	<ol>
+		<li>Pages, sections, components do not depend on each other for function</li>
+		<li>Components can be placed in any page and in any section</li>
+		<li>Multiple components of the same type can co-exist in the same page and/or same section</li>
+		<li>Pages, sections, components are responsive</li>
+		<li>Components have individual LESS files</li>
+		<li>Components have individual JavaScript files</li>
+		<li>Pages are styled for print</li>
+		<li>HTML markup is well formatted for accessibility purposes (ie. alt tags, tab-enabled, aria tags)</li>
+		<li>Separate HTML page per PSD comp</li>
+		<li>Stand-alone HTML page per Component</li>
+	</ol>
+	
+	<h1>Build</h1>
+	<p>The QA and production environments do not rely on the individual LESS and JS files but rather on several compiled and minified CSS files as well as a single concatenated and minified JS file.
+	A build script is included in the /build directory to provide a convenient method to precompile LESS into CSS as well as concatendate and minify JS into a single file.
+	For more information on how to build the project, please refer to the ReadMe file included in the /build directory that accompanies this template framework.
+	</p>
+	<div class="alert alert-error">
+		<h4 class="alert-heading">Alert!</h4>
+		<p>If any LESS or JavaScript files are modified, the code must be compiled using the build script to ensure that the latest edits are included in the concatenated CSS and JS files.
+		Only the concatenated CSS and JS files are included in the &lt;head&gt; of the documents in the QA and Production environments.
+</body>
+</html>

@@ -1,0 +1,95 @@
+.jumpsite-description {
+	@brandonReg: 'BrandonGrotesque';
+	@brandonMedium: 'BrandonGrotesqueMedium';
+	@impressumIta: 'Impressum-LigIta';
+	@brandonTextReg: 'BrandonTextRegular';
+	padding: 0 6.25% 0 6.25%;
+	position: relative;
+	background: url(/web-resources/default/img/t7-background.png);
+	box-shadow: 0px 1px 7px rgba(0,0,0,0.8);
+	.clearfix();
+	.lead-heading {
+		color: #8c1515;
+		font: 28px/32px @brandonMedium;
+		margin: 0px 0px 17px 0px;
+		padding: 117px 0px 15px 0px;
+		border-bottom: 1px solid #bbb;
+	}
+	.jumpsite-content {
+		font: 18px/24px @brandonTextReg;
+		color: #333333;
+		margin: 0px 0px 40px 0px;
+	}
+	.cta-button {
+		height: 59px;
+		width: 227px;
+		margin-left: -113px;
+		position: absolute;
+		background: url(/web-resources/default/img/t7-button-bg.png) repeat-x;
+		top: 32px;
+		left: 50%;
+		overflow: hidden;
+		display: table;
+		&:hover {
+			text-decoration: none;
+		}
+		.border-radius(4px);
+		.cta-image {
+			width: 62px;
+			float: left;
+		}
+		.cta-content {
+			display: table-cell;
+			vertical-align: middle;
+			font: 14px/16px @impressumIta;
+			padding: 0px 30px 0px 13px;
+			color: #ffffff;
+			width: 165px;
+			height: 59px;
+		}
+		i.cta-arrow {
+			width: 8px;
+			height: 15px;
+			display: block;
+			background: url(/web-resources/default/img/t7-button-cta-arrow) no-repeat;
+			position: absolute;
+			right: 10px;
+			top: 50%;
+			margin-top: -7px;
+		}
+	}
+	@media only print, only screen and (min-width: 720px){
+		padding: 0px 13.0718954248% 0px 11.4379084967%;
+		width: auto;
+		height: 487px;
+		box-shadow: -3px 0px 7px rgba(0,0,0,0.2);
+		.lead-heading {
+			padding: 55px 0px 11px 0px;
+			font: 36px/46px @brandonReg;
+		}
+		.cta-button {
+			position: relative;
+			margin: 0px 0px 43px 0px;
+			left: 0;
+			top: 0;
+		}
+		.jumpsite-content {
+			font-size: 18px;
+			line-height: 24px;
+		}
+	}
+	@media only print, only screen and (min-width: 980px) {
+		height: 561px;
+		padding: 0px 10px 0px 35px;
+		.lead-heading {
+			padding: 76px 0px 14px 0px;
+			font-size: 45px;
+			line-height: 50px;
+		}
+		.jumpsite-content {
+			font-size: 24px;
+			line-height: 32px;
+			margin: 0px 0px 37px 0px;
+		}
+	}
+}

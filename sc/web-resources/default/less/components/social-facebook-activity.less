@@ -1,0 +1,65 @@
+/* sharing component */
+.social-facebook-activity {
+	/* Mobile first styles */
+	.clearfix;
+	.social-facebook-activity-wrap{
+		padding-top: 2px;		
+		.facebook-heading{
+			font:@regular 18px/25px 'BrandonGrotesqueMedium';			
+			color: #8c1515;
+			margin-bottom: 20px;
+			margin: 25px 0 13px;
+		}
+		.fb-like-box>span{
+			width: auto !important;
+			height: auto !important;
+		}
+		.fb_iframe_widget iframe{
+			position: relative;
+		}
+	}
+
+	/* Tablet next styles */
+	@media only print, only screen and (min-width: 720px) {
+		padding-top: 10px;
+
+		.social-facebook-activity-wrap{
+			padding-top: 0;
+			.facebook-heading{
+				font:@medium 25px/25px 'BrandonGrotesqueMedium';
+				margin-bottom: 20px;
+			}
+			.facebook-body {				
+				margin-right: 26px;
+			}	
+		}
+	}
+	
+	/* Desktop last styles */
+	@media only print, only screen and (min-width: 980px) {
+		padding-top: 25px;
+
+		.social-facebook-activity-wrap{
+			padding-top: 30px;
+			.facebook-heading{
+				font:@regular 30px/30px 'BrandonGrotesqueMedium';			
+				color: #8c1515;
+				margin-bottom: 35px;
+				margin-top: 0;
+			}
+			.facebook-body {
+				
+			}	
+		}
+	}
+}
+/* Desktop last styles */
+@media only print, only screen and (min-width: 980px) {
+	.ie8{
+		.social-facebook-activity{
+			.social-facebook-activity-wrap{
+				padding-top: 20px;
+			}
+		}
+	}	
+}	

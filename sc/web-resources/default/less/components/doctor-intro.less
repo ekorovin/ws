@@ -1,0 +1,62 @@
+/* doctor-intro component */
+.doctor-intro  {
+	ul {
+		/* Mobile first styles */	
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		li {
+			div {
+				padding: 10px 20px;
+				font: @regular 28px/28px 'BrandonGrotesque';
+				color: #5bc2c7;
+				text-align: center; 
+			}
+		}
+	}
+	/* Tablet next styles */
+	@media only print, only screen and (min-width: 720px) {
+		ul {
+			li {
+				div {
+					font: @regular 45px/50px 'BrandonGrotesque';
+				}
+			}
+		}
+	}
+	
+	
+	/* Desktop last styles */
+	@media only print, only screen and (min-width: 980px) {
+		
+ 	}
+}
+.doctor-intro-wrap {
+	/* custom bx styles */
+	.bx-wrapper .bx-prev,
+	.bx-wrapper .bx-prev:hover {
+		left: 6px;
+		background: url(/web-resources/default/img/sprite-arrow.png) left -577px no-repeat !important;
+	}
+	.bx-wrapper .bx-prev:hover {
+		background-position: left -616px;
+	}
+	.bx-wrapper .bx-next,
+	.bx-wrapper .bx-next:hover {
+		right: 7px;
+		background: url(/web-resources/default/img/sprite-arrow.png) right -655px no-repeat !important;
+	}
+	.bx-wrapper .bx-next:hover {
+		background-position: right -694px;
+	}
+	.bx-wrapper .bx-controls-direction a {
+		position: absolute;
+		top: 50%;
+		outline: 0;
+		width: 20px;
+		height: 39px;
+		text-indent: -9999px;
+		z-index: 99;
+		cursor:pointer
+	}
+}

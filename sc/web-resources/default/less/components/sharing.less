@@ -1,0 +1,115 @@
+/* sharing component */
+.sharing  {
+	/* Mobile first styles */
+/* 	overflow: hidden; */
+	padding:5px 0 20px 0;
+	display: none;
+	ul.share-list {
+		margin: 0;
+		padding:0;
+    	list-style-type: none;
+/* 		overflow: hidden; */
+    	&>li {
+			float:left;
+			margin-right: 27px;
+			padding-left: 0;
+			position: relative;
+			a.icon {
+				background:url('/web-resources/default/img/icons-share.png') no-repeat;
+				width:24px;
+				height:20px;
+				display:block;
+				text-indent: 9999px;
+    			white-space: nowrap;
+    			overflow: hidden;
+    			&:hover, &:focus{								
+					border-bottom: none;
+				}		
+
+				&.icon-share{background-position: 0 0;}
+				&.icon-email{background-position: 0 -20px;}
+				&.icon-print{background-position: 0 -40px;}
+			}			
+		}
+	}
+	
+	ul.dropdown-menu {
+		li {
+			a {
+				background: none;
+				font: @regular 16px/20px 'BrandonGrotesque';
+				color: #363636;
+				&:hover, &:focus{								
+					border-bottom: none;
+					#gradient .vertical(#0088cc, #0077b3);
+					color: #fff;
+				}
+			}
+		}
+	}
+	
+	.addthis_toolbox {
+		span {
+			float: left;
+			margin-right: 5px;
+		}
+	}
+	
+	.icon-email, .icon-print {
+		span {
+			background: none;
+		}
+	}
+	
+	&.sharing-component-mobile {
+		display: block;
+		padding:19px 0 40px;
+	}
+	&.sharing-component-desktop {
+		display: none;
+	}
+	&.sharing-topic-index {
+		padding: 0px;
+	}
+	/* Tablet next styles */
+	@media only print, only screen and (min-width: 720px) {
+		/*padding: 0 0 26px 4px;*/
+		display: block;
+		padding: 104px 0 30px;
+		&.sharing--article{ padding-top:58px; padding-bottom: 30px}
+		.icon-print {
+			display: none
+		}
+		&.sharing-component-mobile {
+			display: none;
+		}
+		&.sharing-component-desktop {
+			padding: 62px 0 30px;
+			display: block;
+			ul.share-list{
+		    	&>li{
+					margin-right: 17px;
+					.icon-print {
+						display: block
+					}
+				}
+			}
+		}
+	}
+	/* Desktop last styles */
+	@media only print, only screen and (min-width: 980px) {
+		padding: 97px 0 30px 0;
+		&.sharing--article{ padding-top:62px; padding-bottom: 30px}
+		.icon-print {
+			display: block
+		}
+		&.sharing-component-desktop {
+			padding: 62px 0 30px 0;
+			ul.share-list{
+		    	&>li{
+					margin-right: 27px;
+				}
+			}
+		}
+	}
+}	

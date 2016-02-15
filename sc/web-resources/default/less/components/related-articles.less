@@ -1,0 +1,58 @@
+/* related-articles component */
+.related-articles {
+	/* Mobile first styles */
+	padding: 22px 20px 20px 20px;
+	border-bottom: 1px solid #eff0f0;
+	margin-bottom: 30px;
+	.title-topic {
+		font: @bold 18px/30px 'BrandonGrotesqueBold';
+		color: #333333;
+		margin:0;
+		padding:0;
+	}
+	.list-topic {
+		margin:0;
+		padding:1px 0 0 0;
+		list-style: none;
+		li {
+			font: @regular 18px/36px 'Impressum-Lig';
+			font-style: italic;
+			color: #ff2e37;
+			a {
+				color: #ff2e37;
+				&:hover, &:focus{					
+					text-decoration: none;
+					border-bottom: 2px dotted #ff2e37;
+				}
+			}
+		}
+	}
+	/* Tablet next styles */
+	@media only print, only screen and (min-width: 720px) {
+		padding: 21px 0 48px 14px;
+		border-bottom: none;
+		margin-bottom: 0;
+		.title-topic {
+			font: @bold 18px/24px 'BrandonGrotesqueBold';
+		}
+		.list-topic {
+			padding-top: 1px;
+			li {
+				font: @regular 13px/26px 'Impressum-Lig';
+				font-style: italic;
+			}
+		}
+	}
+	/* Desktop last styles */
+	@media only print, only screen and (min-width: 980px) {
+		padding: 19px 0 37px 178px;
+		.list-topic {
+			padding-top: 2px;
+			li {
+				font: @regular 13px/30px 'Impressum-Lig';
+				font-style: italic;
+				padding-left: 1px;
+			}
+		}
+	}
+}	

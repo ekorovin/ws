@@ -1,0 +1,50 @@
+.mobile-home-search {
+	.clearfix();
+	#gradient .vertical(#ffcb05, #ffb902);
+	padding: 10px 15px;
+	form {
+		float: left;
+		width: 85%;
+		margin: 0;
+		input {
+			width: 95%;
+			margin: 0;
+		}
+	}
+	a {
+		display: inline-block;
+		width: 15%;
+		height: 30px;
+		background: url(/web-resources/default/img/p-search-mag-glass.png) center no-repeat;
+		text-indent: 9999px;
+		overflow: hidden;
+	}
+	
+	@media only print, only screen and (min-width: 720px) {
+		display: none !important;
+	}
+	
+}
+.mobile-home-locations {
+	background: url(/web-resources/default/img/mobile-home-locations.png) top center no-repeat;
+	overflow: hidden;
+	padding: 15px 15px;
+	.locations {
+		color: #fff;
+		height: 24px;
+		line-height: 24px;
+		text-transform: uppercase;
+		font: @regular 14px/20px 'BrandonTextRegular';
+		display: inline-block;
+		width: 100%;
+		text-align: center;
+		img {
+			margin-right: 10px;
+			margin-top: -5px;
+		}
+	}
+	
+	@media only print, only screen and (min-width: 720px) {
+		display: none !important;
+	}
+}

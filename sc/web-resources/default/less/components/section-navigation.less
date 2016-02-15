@@ -1,0 +1,129 @@
+ .section-navigation{
+ 	/* Mobile first styles */
+ 	margin: 40px 20/320*100% 14px;
+	position:relative;
+
+			.section-name{
+				background:url('/web-resources/default/img/choose-a-section.png') no-repeat;
+				font:@regular 14px 'BrandonGrotesque';/*line-height:20px psd*/
+				color:#444;
+				text-transform:uppercase;
+				width:264px;
+				height:25px;
+				display:block;
+				padding:8px 0 0 16px;				
+				margin:0; 
+			}
+
+			.list-section-name{
+				display: none;				
+				width: 280px; 
+				z-index: 999;
+				top: 0px;
+				left: 0px;
+				position: absolute;
+				border-radius: 0 0 5px 5px;
+				overflow: hidden;
+				border: 1px solid #b3b3b3;
+				max-height: 217px;
+
+				ul{
+
+					list-style-type: none;
+					margin:0;
+					padding:0;
+ 
+					li{
+						position: static;						
+						padding: 0 7px;
+						background: #e6e6e6;
+						margin: 0px;
+						border-top: 1px solid #f7f7f7;
+						border-bottom: 1px solid #d5d5d5;
+
+						h3{
+							margin: 0;
+							font: @regular 14px/29px 'BrandonGrotesque';
+						}
+
+						a{					
+						    height: 100%;
+							/*line-height: 29px;*/
+							font: @regular 14px/29px 'BrandonGrotesque';
+							background: none;
+							padding: 0px;
+							border: none;
+							color:#444;
+							text-decoration: none;
+							display: block;
+							-webkit-tap-highlight-color: rgba(0,0,0,0);
+						}
+					}
+				}
+			}
+
+ 	/* Tablet next styles */
+	@media only print, only screen and (min-width: 720px) {
+		margin: 54px 0 0;
+		
+		.section-name{
+			background:none;
+			font:@medium 30px/28px 'BrandonGrotesqueMedium';
+			color:#ff2e35;
+			text-transform:capitalize;
+			width:auto;
+			height:auto;
+			padding:5px 0 11px 0px;				
+			margin:0; 
+		}
+
+		.list-section-name{
+			display: block;	
+			position: static;
+			width:140/220*100%;
+			.border-radius(none);
+			overflow: hidden;
+			border:none;
+			max-height: none;
+			
+			ul{
+
+				li{
+					position: static;					
+					padding: 0px 0 6px;
+					background:none;
+					border:none;
+					
+					h3{
+						margin: 0;
+						font:@bold 14px/20px 'BrandonGrotesqueBold'; 
+						color:#8c1515;
+						text-transform: uppercase;
+						padding:14px 0 4px;						
+					}
+
+					a{	
+						font: @regular 14px/20px 'BrandonTextRegular';
+						padding: 0px;
+						border: none;
+						color:#333;
+						text-transform: uppercase;						
+					}
+
+					&:first-child{
+						h3{padding-top:0;}
+					}
+
+				}
+
+			}
+
+			
+		}
+	}
+ 
+	/* Desktop last styles */
+	@media only print, only screen and (min-width: 980px) {
+		
+	}
+ } 
