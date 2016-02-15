@@ -2,12 +2,12 @@
   "CodeKitInfo" : "This is a CodeKit project configuration file. It is designed to sync project settings across multiple machines. Modifying the contents of this file can be a poor life decision if you don't know what you're doing. This file is not useful unless accompanied by the project that created it in CodeKit. For more information, see: http:\/\/incident57.com\/codekit",
   "creatorBuild" : "8403",
   "files" : {
-    "\/pr-10-10-2013.shtml" : {
+    "\/pr-10-10-2013.html : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/pr-10-10-2013.shtml",
+      "inputAbbreviatedPath" : "\/pr-10-10-2013.html,
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -166,12 +166,12 @@
       "initialSize" : 22330,
       "fileType" : 4096
     },
-    "\/news-press.shtml" : {
+    "\/news-press.html : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/news-press.shtml",
+      "inputAbbreviatedPath" : "\/news-press.html,
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -186,12 +186,12 @@
       "initialSize" : 6349,
       "fileType" : 8192
     },
-    "\/pr-06-06-2014.shtml" : {
+    "\/pr-06-06-2014.html : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/pr-06-06-2014.shtml",
+      "inputAbbreviatedPath" : "\/pr-06-06-2014.html,
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -314,21 +314,21 @@
       "initialSize" : 54076,
       "fileType" : 4096
     },
-    "\/pr-10-31-2012.shtml" : {
+    "\/pr-10-31-2012.html : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/pr-10-31-2012.shtml",
+      "inputAbbreviatedPath" : "\/pr-10-31-2012.html,
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/simeio-iic.shtml" : {
+    "\/simeio-iic.html : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/simeio-iic.shtml",
+      "inputAbbreviatedPath" : "\/simeio-iic.html,
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -468,12 +468,12 @@
       "initialSize" : 31478,
       "fileType" : 4096
     },
-    "\/privacy-statement.shtml" : {
+    "\/privacy-statement.html : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/privacy-statement.shtml",
+      "inputAbbreviatedPath" : "\/privacy-statement.html,
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -499,12 +499,12 @@
       "initialSize" : 108493,
       "fileType" : 4096
     },
-    "\/awards.shtml" : {
+    "\/awards.html : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/awards.shtml",
+      "inputAbbreviatedPath" : "\/awards.html,
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -702,21 +702,21 @@
       "initialSize" : 2891,
       "fileType" : 4096
     },
-    "\/company.shtml" : {
+    "\/company.html : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/company.shtml",
+      "inputAbbreviatedPath" : "\/company.html,
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/careers.shtml" : {
+    "\/careers.html : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/careers.shtml",
+      "inputAbbreviatedPath" : "\/careers.html,
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -751,12 +751,12 @@
       "initialSize" : 22788,
       "fileType" : 4096
     },
-    "\/pr-07-23-2012.shtml" : {
+    "\/pr-07-23-2012.html : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/pr-07-23-2012.shtml",
+      "inputAbbreviatedPath" : "\/pr-07-23-2012.html,
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -771,12 +771,12 @@
       "initialSize" : 4324,
       "fileType" : 8192
     },
-    "\/business-ready-iam-cloud.shtml" : {
+    "\/business-ready-iam-cloud.html : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/business-ready-iam-cloud.shtml",
+      "inputAbbreviatedPath" : "\/business-ready-iam-cloud.html,
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -797,12 +797,12 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/site-map.shtml" : {
+    "\/site-map.html : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/site-map.shtml",
+      "inputAbbreviatedPath" : "\/site-map.html,
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -837,12 +837,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/pr-07-12-2011.shtml" : {
+    "\/pr-07-12-2011.html : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/pr-07-12-2011.shtml",
+      "inputAbbreviatedPath" : "\/pr-07-12-2011.html,
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -1097,12 +1097,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/professional-services.shtml" : {
+    "\/professional-services.html : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/professional-services.shtml",
+      "inputAbbreviatedPath" : "\/professional-services.html,
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -1117,12 +1117,12 @@
       "initialSize" : 22265,
       "fileType" : 4096
     },
-    "\/leadership.shtml" : {
+    "\/leadership.html : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/leadership.shtml",
+      "inputAbbreviatedPath" : "\/leadership.html,
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -1258,12 +1258,12 @@
       "outputAbbreviatedPath" : "\/js\/scripts.min.js",
       "fileType" : 64
     },
-    "\/contact-us.shtml" : {
+    "\/contact-us.html : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/contact-us.shtml",
+      "inputAbbreviatedPath" : "\/contact-us.html,
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -1311,12 +1311,12 @@
       "initialSize" : 17454,
       "fileType" : 4096
     },
-    "\/expert-managed-services.shtml" : {
+    "\/expert-managed-services.html : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/expert-managed-services.shtml",
+      "inputAbbreviatedPath" : "\/expert-managed-services.html,
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -1381,12 +1381,12 @@
       "initialSize" : 27030,
       "fileType" : 4096
     },
-    "\/newsletters.shtml" : {
+    "\/newsletters.html : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/newsletters.shtml",
+      "inputAbbreviatedPath" : "\/newsletters.html,
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -1544,12 +1544,12 @@
       "initialSize" : 2854,
       "fileType" : 8192
     },
-    "\/resources.shtml" : {
+    "\/resources.html : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/resources.shtml",
+      "inputAbbreviatedPath" : "\/resources.html,
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -1762,12 +1762,12 @@
       "initialSize" : 189500,
       "fileType" : 4096
     },
-    "\/pr-10-14-2011.shtml" : {
+    "\/pr-10-14-2011.html : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/pr-10-14-2011.shtml",
+      "inputAbbreviatedPath" : "\/pr-10-14-2011.html,
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -1888,12 +1888,12 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/pr-11-04-2014.shtml" : {
+    "\/pr-11-04-2014.html : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/pr-11-04-2014.shtml",
+      "inputAbbreviatedPath" : "\/pr-11-04-2014.html,
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -1969,12 +1969,12 @@
       "initialSize" : 105241,
       "fileType" : 4096
     },
-    "\/pr-11-26-2013.shtml" : {
+    "\/pr-11-26-2013.html : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/pr-11-26-2013.shtml",
+      "inputAbbreviatedPath" : "\/pr-11-26-2013.html,
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -2000,12 +2000,12 @@
       "initialSize" : 13570,
       "fileType" : 8192
     },
-    "\/index.shtml" : {
+    "\/index.html : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/index.shtml",
+      "inputAbbreviatedPath" : "\/index.html,
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -2037,12 +2037,12 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/pr-01-09-2014.shtml" : {
+    "\/pr-01-09-2014.html : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/pr-01-09-2014.shtml",
+      "inputAbbreviatedPath" : "\/pr-01-09-2014.html,
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -2647,12 +2647,12 @@
       "outputAbbreviatedPath" : "\/js\/jquery-2.1.1.min.min.js",
       "fileType" : 64
     },
-    "\/press-releases.shtml" : {
+    "\/press-releases.html : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/press-releases.shtml",
+      "inputAbbreviatedPath" : "\/press-releases.html,
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -3457,12 +3457,12 @@
       "initialSize" : 34586,
       "fileType" : 8192
     },
-    "\/pr-09-22-2013.shtml" : {
+    "\/pr-09-22-2013.html : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/pr-09-22-2013.shtml",
+      "inputAbbreviatedPath" : "\/pr-09-22-2013.html,
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -3947,12 +3947,12 @@
       "initialSize" : 22149,
       "fileType" : 4096
     },
-    "\/pr-07-27-2012.shtml" : {
+    "\/pr-07-27-2012.html : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/pr-07-27-2012.shtml",
+      "inputAbbreviatedPath" : "\/pr-07-27-2012.html,
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
